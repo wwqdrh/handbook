@@ -1,5 +1,8 @@
-.DS_Store
+migrations
 .vscode
+.dev.env
+.prod.env
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
