@@ -23,3 +23,11 @@ func NewListNode(nums []int) *ListNode {
 	}
 	return root
 }
+
+func (l *ListNode) ToSlice() (res []int) {
+	for l != nil {
+		res = append(res, l.Val)
+		l = l.Next
+	}
+	return
+}

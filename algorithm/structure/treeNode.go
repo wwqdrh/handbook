@@ -36,6 +36,9 @@ func NewTreeNode(nums []string) *TreeNode {
 			}
 		}
 		idx++
+		if idx == length {
+			break
+		}
 
 		if nums[idx] != "null" {
 			if val, err := strconv.Atoi(nums[idx]); err == nil {
@@ -69,6 +72,13 @@ func (t *TreeNode) ToString() string {
 
 		queue.Remove(cur)
 	}
-
-	return strings.Join(res, ",")
+	idx := len(res) - 1
+	for ; idx >= 0; idx-- {
+		if res[idx] == "null" {
+			idx--
+		} else {
+			break
+		}
+	}
+	return strings.Join(res[:idx+1], ",")
 }
