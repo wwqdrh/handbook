@@ -31,3 +31,10 @@ func (l *ListNode) ToSlice() (res []int) {
 	}
 	return
 }
+
+// 随机节点
+type ListRandNode struct {
+	Val    int
+	Next   *ListRandNode
+	Random *ListRandNode
+}
