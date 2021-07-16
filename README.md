@@ -1,5 +1,5 @@
 # handbook
-关于Python/Golang的编码手册
+关于Python/Golang/Rust的编码手册
 
 
 # 主要内容
