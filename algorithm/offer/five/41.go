@@ -72,7 +72,7 @@ func (this *MedianFinder) FindMedian() float64 {
 	}
 	minData, maxData := *(this.minData), *(this.maxData)
 	if this.minData.Len() == this.maxData.Len() {
-		return float64((minData[0] + maxData[0]) / 2)
+		return float64(minData[0]+maxData[0]) / 2
 	} else {
 		return float64(minData[0])
 	}

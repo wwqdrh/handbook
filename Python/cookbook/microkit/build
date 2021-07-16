@@ -1,0 +1,3 @@
+go build -buildmode=c-shared -o microkit/libs/consul.so libs/consul.go
+
+find microkit/libs/ -name "*.h" -type f -delete
