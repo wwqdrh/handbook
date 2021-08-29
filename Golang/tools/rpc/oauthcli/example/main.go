@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	"github.com/agtorre/go-cookbook/chapter6/oauthcli"
+	"wwqdrh/handbook/tools/rpc/oauthcli"
 )
 
 func main() {

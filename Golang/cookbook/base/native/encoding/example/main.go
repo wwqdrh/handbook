@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/agtorre/go-cookbook/chapter3/encoding"
+	"wwqdrh/handbook/cookbook/base/native/encoding"
 )
 
 func main() {

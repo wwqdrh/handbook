@@ -1,6 +1,6 @@
 package main
 
-import "github.com/agtorre/go-cookbook/chapter6/decorator"
+import "wwqdrh/handbook/tools/rpc/decorator"
 
 func main() {
 	if err := decorator.Exec(); err != nil {

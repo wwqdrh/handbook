@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/agtorre/go-cookbook/chapter11/graphql/cards"
 	"github.com/graphql-go/graphql"
+	"wwqdrh/handbook/tools/micro1/graphql/cards"
 )
 
 func main() {

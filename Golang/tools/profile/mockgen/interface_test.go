@@ -4,7 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/agtorre/go-cookbook/chapter8/mockgen/internal"
+	"wwqdrh/handbook/tools/profile/mockgen/internal"
+
 	"github.com/golang/mock/gomock"
 )
 

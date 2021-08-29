@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter4/basicerrors"
+	"wwqdrh/handbook/cookbook/base/native/basicerrors"
 )
 
 func main() {

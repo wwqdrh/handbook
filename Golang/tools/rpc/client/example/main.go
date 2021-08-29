@@ -1,6 +1,6 @@
 package main
 
-import "github.com/agtorre/go-cookbook/chapter6/client"
+import "wwqdrh/handbook/tools/rpc/client"
 
 func main() {
 	// secure and op!

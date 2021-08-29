@@ -1,6 +1,6 @@
 package main
 
-import "github.com/agtorre/go-cookbook/chapter1/tempfiles"
+import "wwqdrh/handbook/tools/micro/tempfiles"
 
 func main() {
 	if err := tempfiles.WorkWithTemp(); err != nil {

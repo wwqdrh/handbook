@@ -1,8 +1,8 @@
 FROM golang:alpine
 
 ENV GOPATH /code/
-ADD . /code/src/github.com/agtorre/go-cookbook/chapter10/monitoring
-WORKDIR /code/src/github.com/agtorre/go-cookbook/chapter10/monitoring
+ADD . /code/src/wwqdrh/handbook/tools/micro0/monitoring
+WORKDIR /code/src/wwqdrh/handbook/tools/micro0/monitoring
 RUN go build
 
-ENTRYPOINT /code/src/github.com/agtorre/go-cookbook/chapter10/monitoring/monitoring
+ENTRYPOINT /code/src/wwqdrh/handbook/tools/micro0/monitoring/monitoring

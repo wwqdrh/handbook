@@ -1,3 +1,0 @@
-location / {
-    rewrite .* /index.php last;
-}

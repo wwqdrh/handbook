@@ -6,7 +6,7 @@ import (
 	"net/http"
 	_ "net/http/pprof"
 
-	"github.com/agtorre/go-cookbook/chapter13/pprof/crypto"
+	"wwqdrh/handbook/tools/micro3/pprof/crypto"
 )
 
 func main() {

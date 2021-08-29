@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter2/ansicolor"
+	"wwqdrh/handbook/cookbook/base/system/ansicolor"
 )
 
 func main() {

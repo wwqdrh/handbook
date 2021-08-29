@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter6/grpc/greeter"
+	"wwqdrh/handbook/tools/rpc/grpc/greeter"
+
 	"golang.org/x/net/context"
 )
 

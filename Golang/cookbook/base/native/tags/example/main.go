@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter3/tags"
+	"wwqdrh/handbook/cookbook/base/native/tags"
 )
 
 func main() {

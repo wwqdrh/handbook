@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter1/interfaces"
+	"wwqdrh/handbook/tools/micro/interfaces"
 )
 
 func main() {

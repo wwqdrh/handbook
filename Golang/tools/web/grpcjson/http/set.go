@@ -4,8 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/agtorre/go-cookbook/chapter7/grpcjson/internal"
-	"github.com/agtorre/go-cookbook/chapter7/grpcjson/keyvalue"
+	"wwqdrh/handbook/tools/web/grpcjson/internal"
+	"wwqdrh/handbook/tools/web/grpcjson/keyvalue"
+
 	"github.com/apex/log"
 )
 

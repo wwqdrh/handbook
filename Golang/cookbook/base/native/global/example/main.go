@@ -1,6 +1,6 @@
 package main
 
-import "github.com/agtorre/go-cookbook/chapter4/global"
+import "wwqdrh/handbook/cookbook/base/native/global"
 
 func main() {
 	if err := global.UseLog(); err != nil {

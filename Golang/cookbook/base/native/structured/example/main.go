@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter4/structured"
+	"wwqdrh/handbook/cookbook/base/native/structured"
 )
 
 func main() {

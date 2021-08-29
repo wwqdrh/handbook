@@ -1,6 +1,6 @@
 package main
 
-import "github.com/agtorre/go-cookbook/chapter1/templates"
+import "wwqdrh/handbook/tools/micro/templates"
 
 func main() {
 	if err := templates.RunTemplate(); err != nil {

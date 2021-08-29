@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/agtorre/go-cookbook/chapter7/negotiate"
+	"wwqdrh/handbook/tools/web/negotiate"
 )
 
 func main() {

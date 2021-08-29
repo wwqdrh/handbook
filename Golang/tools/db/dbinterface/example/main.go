@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/agtorre/go-cookbook/chapter5/database"
-	"github.com/agtorre/go-cookbook/chapter5/dbinterface"
+	"wwqdrh/handbook/tools/db/database"
+	"wwqdrh/handbook/tools/db/dbinterface"
+
 	_ "github.com/go-sql-driver/mysql" //we import supported libraries for database/sql
 )
 

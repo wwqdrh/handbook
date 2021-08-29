@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/agtorre/go-cookbook/chapter6/async"
+	"wwqdrh/handbook/tools/rpc/async"
 )
 
 func main() {

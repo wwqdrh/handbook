@@ -1,6 +1,6 @@
 package main
 
-import "github.com/agtorre/go-cookbook/chapter6/rest"
+import "wwqdrh/handbook/tools/rpc/rest"
 
 func main() {
 	if err := rest.Exec(); err != nil {

@@ -7,7 +7,7 @@ import (
 
 	"net/http/httptest"
 
-	"github.com/agtorre/go-cookbook/chapter13/vendoring/models"
+	"wwqdrh/handbook/tools/micro3/vendoring/models"
 )
 
 func TestController_GetHandler(t *testing.T) {

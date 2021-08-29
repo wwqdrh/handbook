@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/agtorre/go-cookbook/chapter7/grpcjson/internal"
+	"wwqdrh/handbook/tools/web/grpcjson/internal"
 )
 
 func main() {

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/agtorre/go-cookbook/chapter10/discovery"
 	consul "github.com/hashicorp/consul/api"
+	"wwqdrh/handbook/tools/micro0/discovery"
 )
 
 func main() {

@@ -1,6 +1,6 @@
 package handlers
 
-import "github.com/agtorre/go-cookbook/chapter13/vendoring/models"
+import "wwqdrh/handbook/tools/micro3/vendoring/models"
 
 type Controller struct {
 	db models.DB

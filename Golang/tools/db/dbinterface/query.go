@@ -3,7 +3,7 @@ package dbinterface
 import (
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter5/database"
+	"wwqdrh/handbook/tools/db/database"
 )
 
 // Query grabs a new connection

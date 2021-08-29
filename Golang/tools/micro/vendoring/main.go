@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/agtorre/go-cookbook/chapter13/vendoring/handlers"
-	"github.com/agtorre/go-cookbook/chapter13/vendoring/models"
 	"github.com/sirupsen/logrus"
+	"wwqdrh/handbook/tools/micro3/vendoring/handlers"
+	"wwqdrh/handbook/tools/micro3/vendoring/models"
 )
 
 func main() {

@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/agtorre/go-cookbook/chapter7/grpcjson/internal"
-	"github.com/agtorre/go-cookbook/chapter7/grpcjson/keyvalue"
+	"wwqdrh/handbook/tools/web/grpcjson/internal"
+	"wwqdrh/handbook/tools/web/grpcjson/keyvalue"
+
 	"google.golang.org/grpc"
 )
 

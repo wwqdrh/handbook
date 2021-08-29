@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/agtorre/go-cookbook/chapter11/reactive"
+	"wwqdrh/handbook/tools/micro1/reactive"
 )
 
 func main() {

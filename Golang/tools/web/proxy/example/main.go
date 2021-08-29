@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/agtorre/go-cookbook/chapter7/proxy"
+	"wwqdrh/handbook/tools/web/proxy"
 )
 
 func main() {

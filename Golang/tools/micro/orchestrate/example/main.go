@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/agtorre/go-cookbook/chapter10/orchestrate"
 	mgo "gopkg.in/mgo.v2"
+	"wwqdrh/handbook/tools/micro0/orchestrate"
 )
 
 func main() {

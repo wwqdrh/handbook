@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/agtorre/go-cookbook/chapter6/grpc/greeter"
+	"wwqdrh/handbook/tools/rpc/grpc/greeter"
+
 	"google.golang.org/grpc"
 )
 

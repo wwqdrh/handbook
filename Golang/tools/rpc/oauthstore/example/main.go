@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/agtorre/go-cookbook/chapter6/oauthstore"
+	"wwqdrh/handbook/tools/rpc/oauthstore"
 
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/github"

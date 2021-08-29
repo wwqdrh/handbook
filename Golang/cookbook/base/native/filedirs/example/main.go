@@ -1,6 +1,6 @@
 package main
 
-import "cookbook/chapter01/filedirs"
+import "wwqdrh/handbook/cookbook/base/native/filedirs"
 
 func main() {
 	if err := filedirs.Operate(); err != nil {

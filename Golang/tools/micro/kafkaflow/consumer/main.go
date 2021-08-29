@@ -1,7 +1,8 @@
 package main
 
 import (
-	"github.com/agtorre/go-cookbook/chapter11/kafkaflow"
+	"wwqdrh/handbook/tools/micro/kafkaflow"
+
 	flow "github.com/trustmaster/goflow"
 	sarama "gopkg.in/Shopify/sarama.v1"
 )

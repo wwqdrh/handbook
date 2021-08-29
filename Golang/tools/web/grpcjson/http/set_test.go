@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/agtorre/go-cookbook/chapter7/grpcjson/internal"
+	"wwqdrh/handbook/tools/web/grpcjson/internal"
 )
 
 func TestController_SetHandler(t *testing.T) {

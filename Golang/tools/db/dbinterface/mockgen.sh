@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-mockgen -destination mocks_test.go -package dbinterface github.com/agtorre/go-cookbook/chapter5/dbinterface DB,Transaction
+mockgen -destination mocks_test.go -package dbinterface wwqdrh/handbook/tools/db/dbinterface DB,Transaction

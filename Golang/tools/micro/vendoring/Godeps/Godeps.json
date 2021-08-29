@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/agtorre/go-cookbook/chapter13/vendoring",
+	"ImportPath": "wwqdrh/handbook/tools/micro3/vendoring",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v79",
 	"Packages": [

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/agtorre/go-cookbook/chapter12/firebase"
+	"wwqdrh/handbook/tools/micro2/firebase"
 )
 
 func main() {
