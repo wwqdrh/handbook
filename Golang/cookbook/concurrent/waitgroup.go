@@ -34,3 +34,14 @@ func WaitGroup() {
 	// 即所有协程的工作都已经完成。
 	wg.Wait()
 }
+
+func WaitTimeout(wg *sync.WaitGroup, timeout time.Duration) bool {
+	ch := make(chan bool, 1)
+	go time.AfterFunc(timeout, func() { ch <- true })
+	go func() {
+		wg.Wait()
+		ch <- false
+	}()
+
+	return <-ch
+}

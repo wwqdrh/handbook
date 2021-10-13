@@ -28,58 +28,39 @@ func swap(a []int, i, j int) {
 // 非比较类排序算法
 ////////////////////
 
-//计数排序
-func CountSort(a []int) []int {
-	maxValue := getMaxInArr(a)
-	bucketLen := maxValue + 1
-	bucket := make([]int, bucketLen) // 初始为0的数组
-	res := make([]int, len(a))
-
-	length := len(a)
-	for i := 0; i < length; i++ {
-		bucket[a[i]] += 1
+//计数排序: 找到最大值 按照值来创建桶
+func CountSort(nums []int) (res []int) {
+	maxVal := getMaxInArr(nums)
+	bucket := make([]int, maxVal+1)
+	for _, num := range nums {
+		bucket[num]++
 	}
 
-	sortedIndex := 0
-	for j := 0; j < bucketLen; j++ {
-		for bucket[j] > 0 {
-			res[sortedIndex] = j
-			sortedIndex += 1
-			bucket[j] -= 1
+	for i, cnt := range bucket {
+		for ; cnt > 0; cnt-- {
+			res = append(res, i)
 		}
 	}
-
-	return res
+	return
 }
 
-//桶排序
-func BucketSort(nums []int) []int {
-	a := make([]int, len(nums))
-	copy(a, nums)
-	//桶数
-	num := len(a)
-	//k（数组最大值）
-	max := getMaxInArr(a)
-	//二维切片
-	buckets := make([][]int, num)
-	//分配入桶
-	index := 0
-	for i := 0; i < num; i++ {
-		index = a[i] * (num - 1) / max //分配桶index = value * (n-1) /k
-		buckets[index] = append(buckets[index], a[i])
+// 桶排序 按照元素个数建桶 在求元素的所在的桶编号的时候 需要 num * (n - 1) / maxNum 表示一个值占多少个桶乘上num就能知道在哪个桶
+// 按照桶的粒度是有序的 然后再在桶内进行排序
+func BucketSort(nums []int) (res []int) {
+	buckets := make([][]int, len(nums))
+
+	maxVal, length := getMaxInArr(nums), len(nums)
+	for _, num := range nums {
+		index := num * (length - 1) / maxVal
+		buckets[index] = append(buckets[index], num)
 	}
-	//桶内排序
-	tmpPos := 0
-	for i := 0; i < num; i++ {
-		bucketLen := len(buckets[i])
-		if bucketLen > 0 {
-			//桶内可以调用不同排序算法
-			InsertionSort(buckets[i])
-			copy(a[tmpPos:], buckets[i])
-			tmpPos += bucketLen
-		}
+
+	// 对桶内进行排序
+	for _, bucket := range buckets {
+		cur := InsertionSort(bucket)
+		res = append(res, cur...)
 	}
-	return a
+	return
 }
 
 // 基数排序
