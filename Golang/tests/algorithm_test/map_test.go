@@ -4,11 +4,11 @@ import (
 	"log"
 	"testing"
 	"time"
-	"wwqdrh/handbook/algorithm/maptype"
+	"wwqdrh/handbook/algorithm/mapping"
 )
 
 func TestConcurrentMap(t *testing.T) {
-	mapval := maptype.NewMap()
+	mapval := mapping.NewMap()
 
 	for i := 0; i < 10; i++ {
 		go func() {
@@ -29,5 +29,5 @@ func TestConcurrentMap(t *testing.T) {
 
 // 测试高并发读写，写多
 func TestMultiRWMap(t *testing.T) {
-	maptype.MockMultiVisit()
+	mapping.MockMultiVisit()
 }

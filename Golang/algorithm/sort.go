@@ -115,93 +115,88 @@ func RadixSort(nums []int) []int {
 	return a
 }
 
-//冒泡
-func BubbleSort(a []int) []int {
-	q := len(a)
-	f := true
-	for i := 0; i < q-1; i++ { //有多少个数字需要比较 注意不和自己比较所以减一个
-		{
-			for j := 0; j < q-i-1; j++ { //某个数字需要和别的多少个数字比较 排好序的不用比较
-				if a[j] > a[j+1] {
-					swap(a, j, j+1)
-					f = false
-				}
-			}
-			if f {
-				return a
+// 冒泡排序
+// 每一趟排序把最大的移到末尾
+func BubbleSort(nums []int, cb func(i, j int) bool) []int {
+	length := len(nums)
+	for i := 0; i < length-1; i++ {
+		f := true // 如果一趟下来是有序的
+		for j := 0; j < length-i-1; j++ {
+			if !cb(j, j+1) {
+				nums[j], nums[j+1] = nums[j+1], nums[j]
+				f = false
 			}
 		}
+		if f {
+			break
+		}
 	}
-	return a
+	return nums
 }
 
-//快速
-func QuickSort(a []int, low, high int) []int {
+// 快速排序
+// 分治的思想 将比基数大的放在右边 比基数小的放在左边 然后递归处理
+func QuickSort(nums []int, low, high int) []int {
 	if low >= high {
-		return a
+		return nums
 	}
-	start := a[low]
+
+	start := nums[low]
 	i := low
 	for j := low + 1; j <= high; j++ {
-		if a[j] <= start {
+		if nums[j] <= start {
 			i++
 			if i != j {
-				swap(a, i, j)
+				nums[i], nums[j] = nums[j], nums[i]
 			}
 		}
 	}
-	a[i], a[low] = a[low], a[i]
-	QuickSort(a, low, i-1)
-	QuickSort(a, i+1, high)
-	return a
+	nums[i], nums[low] = nums[low], nums[i]
+	QuickSort(nums, low, i-1)
+	QuickSort(nums, i+1, high)
+	return nums
 }
 
-//插入排序
-func InsertionSort(a []int) []int {
-	for i := 0; i < len(a)-1; i++ {
-		pre := i - 1
-		cre := a[i]
-		for pre >= 0 && a[pre] > cre {
-			a[pre+1] = a[pre]
-			pre -= 1
+// 插入排序
+// 每一步将需要排序的元素插入到前面已经有序的数列中
+func InsertionSort(nums []int) []int {
+	for i := 1; i < len(nums); i++ {
+		cur := nums[i]
+		j := i - 1
+		for ; j >= 0 && nums[j] > cur; j-- {
+			nums[j+1] = nums[j]
 		}
-		a[pre+1] = cre
+		nums[j+1] = cur
 	}
-	return a
+	return nums
 }
 
-//希尔排序
-func ShellSort(a []int) []int {
-	length := len(a)
-
-	gap := 1
-	for gap > 0 {
+// 希尔排序 简单插入排序的改进 将待排序的数组按照一定增量进行分组
+// 跳跃式分组 对每组中的元素进行排序
+// 随着增量逐渐变为1那么就是对整个数组进行排序 这时数组已经有序
+func ShellSort(nums []int) []int {
+	length := len(nums)
+	for gap := len(nums) / 2; gap > 0; gap = gap / 2 {
 		for i := gap; i < length; i++ {
-			temp := a[i]
-			j := i - gap
-			for j >= 0 && a[j] > temp {
-				a[j+gap] = a[j]
-				j -= gap
+			for j := i; j-gap >= 0 && nums[j] < nums[j-gap]; j -= gap {
+				nums[j], nums[j-gap] = nums[j-gap], nums[j]
 			}
-			a[j+gap] = temp
 		}
-		//重新设置间隔
-		gap = gap / 3
 	}
-	return a
+	return nums
 }
 
-//选择排序
+// 选择排序
+// 第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，
+// 然后再从剩余的未排序元素中寻找到最小（大）元素
 func SelectionSort(a []int) []int {
 	l := len(a)
 	for i := 0; i < l-1; i++ {
-		min := a[i]
 		for j := i + 1; j < l; j++ {
-			if min > a[j] {
-				min = a[j]
+			if a[i] > a[j] {
+				a[i], a[j] = a[j], a[i]
 			}
 		}
-		a[i], min = min, a[i]
 	}
 	return a
 }
@@ -256,25 +251,21 @@ func MergeSort(a []int) []int {
 //归并
 func merge(left []int, right []int) []int {
 	var result []int
-	for len(left) != 0 && len(right) != 0 {
-		if left[0] <= right[0] {
-			result = append(result, left[0])
-			left = left[1:]
+	leftIdx, rightIdx := 0, 0
+	for (leftIdx < len(left)) && (rightIdx < len(right)) {
+		if left[leftIdx] <= right[rightIdx] {
+			result = append(result, left[leftIdx])
+			leftIdx++
 		} else {
-			result = append(result, right[0])
-			right = right[1:]
+			result = append(result, right[rightIdx])
+			rightIdx++
 		}
 	}
-
-	for len(left) != 0 {
-		result = append(result, left[0])
-		left = left[1:]
+	if leftIdx < len(left) {
+		result = append(result, left[leftIdx:]...)
 	}
-
-	for len(right) != 0 {
-		result = append(result, right[0])
-		right = right[1:]
+	if rightIdx < len(right) {
+		result = append(result, right[rightIdx:]...)
 	}
-
 	return result
 }
