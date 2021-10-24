@@ -33,3 +33,43 @@ func (l *LinkedList) ToSlice() []interface{} {
 
 	return res
 }
+
+// 倒数第k个节点
+func (l *LinkedList) LastK(k int) interface{} {
+	slow, fast := l.root, l.root
+	for i := 0; i < k; i++ {
+		if fast == nil {
+			return nil
+		}
+		fast = fast.next
+	}
+
+	for fast != nil {
+		slow, fast = slow.next, fast.next
+	}
+
+	return slow.val
+}
+
+func (l *LinkedList) Reversed() {
+	var prev *LinkedListNode
+
+	for cur := l.root; cur != nil; {
+		temp := cur.next
+
+		cur.next = prev
+		prev = cur
+		cur = temp
+	}
+
+	l.root = prev
+}
+
+func (l *LinkedList) Merge(other *LinkedList) {
+	cur := l.root
+	for cur.next != nil {
+		cur = cur.next
+	}
+
+	cur.next = other.root
+}

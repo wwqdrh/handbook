@@ -4,8 +4,10 @@
 > 依赖镜像的搭建在docker-compose-env.yml中(属于公共部分), 按需使用
 
 
-- [类微博点赞系统，读多写少](/webolike/README.md)
-- [一个安全的对外API设计](/restapi/README.md)
+- [类微博点赞系统，读多写少](./webolike/README.md)
+- [一个安全的对外API设计](./restapi/README.md)
+- [短链服务](./shorturl/README.md)
+
 
 ## TODO
 面向对象解决问题：员工、经理签到，员工可以签到，经理可以根据员工id打印表，可以查看倒数第n个员工签到。考虑时间复杂度时间复杂度，最差不能到 n^2，我用了一个链表，为n。主要考察面向对象的能力，考虑好权限问题，及多种实现方式

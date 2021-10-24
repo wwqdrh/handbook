@@ -1,7 +1,6 @@
 package concurrent
 
 import (
-	"bytes"
 	"fmt"
 	"sync"
 )
@@ -9,51 +8,45 @@ import (
 // 使用两个goroutine交替打印序列
 // 一个打印数字另外一个答应字母
 // 使用channel控制打印进度，数字打印完通知字母打印，字母打印通知数字打印，以此类推
-func MultiPrint() string {
-	outBuf := bytes.NewBufferString("")
-
+func MultiPrint() {
 	letter, number := make(chan bool), make(chan bool)
-	wait := sync.WaitGroup{}
+	wait := &sync.WaitGroup{}
+	wait.Add(2)
 
 	go func() {
 		i := 1
-		for {
-			select {
-			case <-number:
-				outBuf.WriteString(fmt.Sprint(i))
-				i++
-				outBuf.WriteString(fmt.Sprint(i))
-				i++
-				letter <- true
-			}
+		for range number {
+			fmt.Print(i)
+			i++
+			fmt.Print(i)
+			i++
+			letter <- true
 		}
+		wait.Done()
 	}()
-	wait.Add(1)
-	go func(wait *sync.WaitGroup) {
+	go func() {
 		str := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 		i := 0
-		for {
-			select {
-			case <-letter:
-				if i >= 26 {
-					wait.Done()
-					return
-				}
-				outBuf.WriteString(str[i : i+1])
-				i++
-
-				if i >= 26 {
-					wait.Done()
-					return
-				}
-				outBuf.WriteString(str[i : i+1])
-				i++
-				number <- true
+		for range letter {
+			if i >= 26 {
+				wait.Done()
+				break
 			}
+			fmt.Print(str[i : i+1])
+			i++
+
+			if i >= 26 {
+				wait.Done()
+				break
+			}
+			fmt.Print(str[i : i+1])
+			i++
+			number <- true
 		}
-	}(&wait)
+		close(number)
+		close(letter)
+	}()
 
 	number <- true
 	wait.Wait()
-	return outBuf.String()
 }
