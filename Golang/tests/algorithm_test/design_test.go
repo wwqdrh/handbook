@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"sync"
+	"testing"
 	"time"
 	"wwqdrh/handbook/algorithm/design"
 )
@@ -86,4 +87,10 @@ func ExampleConsumerQueue() {
 	// 3
 	// 4
 	// 5
+}
+
+func BenchmarkSprintf(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		go design.OnceInstance()
+	}
 }
