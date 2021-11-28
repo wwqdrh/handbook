@@ -27,10 +27,9 @@ class ListNode:
 
 
 class BroswerHistory:
-
     def __init__(self, host: str):
-        self.root = ListNode(host)    # 根url
-        self.cur = self.root    # 当前url
+        self.root = ListNode(host)  # 根url
+        self.cur = self.root  # 当前url
 
     def visit(self, url: str):
         node = ListNode(url, back=self.cur)

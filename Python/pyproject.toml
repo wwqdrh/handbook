@@ -8,6 +8,7 @@ authors = ["wwqdrh <huiloademail@163.com>"]
 python = "^3.9"
 psutil = "^5.8.0"
 yagmail = "^0.14.260"
+playwright = "^1.17.0"
 
 [tool.poetry.dev-dependencies]
 pytest-asyncio = "^0.15.1"
