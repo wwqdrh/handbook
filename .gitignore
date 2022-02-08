@@ -1,6 +1,7 @@
 .DS_Store
 .vscode
 WORK.md
+vendor
 
 
 # Byte-compiled / optimized / DLL files
