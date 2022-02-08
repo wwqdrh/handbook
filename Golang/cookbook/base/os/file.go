@@ -227,3 +227,24 @@ func TempFileExample() {
 	err = ioutil.WriteFile(fname, []byte{1, 2}, 0666)
 	check(err)
 }
+
+// 判断文件是否存在
+func FileExists(path string) bool {
+	_, err := os.Stat(path)
+	if err == nil {
+		return true
+	}
+	if os.IsNotExist(err) {
+		return false
+	}
+	return true
+}
+
+// 判断是否是目录
+func IsDir(path string) bool {
+	s, err := os.Stat(path)
+	if err != nil {
+		return false
+	}
+	return s.IsDir()
+}

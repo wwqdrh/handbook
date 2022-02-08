@@ -112,3 +112,20 @@ func StructModifyByName(fields2 ...reflect.StructField) {
 		fmt.Printf("%s %s", cur.Name, cur.Tag)
 	}
 }
+
+// 遍历结构体字段
+type User struct {
+	Name string `json:"name" validator:"not_empty;in(1,2)"`
+	Age  int    `json:"age" validator:"not_empty;in(1,2,3)"`
+}
+
+func IterStructField() {
+	user := User{Name: "json", Age: 25}
+	getType := reflect.TypeOf(user)
+	getValue := reflect.ValueOf(user)
+	for i := 0; i < getType.NumField(); i++ {
+		field := getType.Field(i)
+		value := getValue.Field(i).Interface()
+		fmt.Printf("%s %s: %v = %v\n", field.Name, field.Tag, field.Type, value)
+	}
+}

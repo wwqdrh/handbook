@@ -1,0 +1,3 @@
+data:
+  driver: "postgres"
+  dsn: "postgres://postgres:postgres@office.zx-tech.net:5433/material?sslmode=disable"

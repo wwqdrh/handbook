@@ -24,6 +24,7 @@ func InitConnect() {
 			Password: "123456",
 		},
 	)
+	// collection := client.Database("baz").Collection("qux")
 	client, err = mongo.Connect(ctx, clientOpts)
 	if err != nil {
 		log.Fatal(err)

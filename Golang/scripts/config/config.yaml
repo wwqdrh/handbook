@@ -1,0 +1,10 @@
+server:
+  build_info: ""
+  addr: ":8090"
+  session_path: "/tmp/hst_session"
+  reset_admin: ""
+  oauth2_server: "https://oauth2.mundossp.com"
+  version: false
+data:
+  driver: "postgres"
+  dsn: "postgres://postgres:postgres@postgres/material?sslmode=disable"

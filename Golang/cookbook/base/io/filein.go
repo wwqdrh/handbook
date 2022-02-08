@@ -66,3 +66,84 @@ func FileInExample() {
 	// （通常这个操作应该在 `Open` 操作后立即使用 `defer` 来完成）。
 	f.Close()
 }
+
+func ReadFile() {
+	//1、一次性读取文件内容,还有一个 ReadAll的函数，也能读取
+	data, err := ioutil.ReadFile("./util/file.go")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(string(data))
+
+	//2、逐行读取
+	file, err := os.Open("./util/file.go") //打开
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer file.Close() //关闭
+
+	line := bufio.NewReader(file)
+	for {
+		content, _, err := line.ReadLine()
+		if err == io.EOF {
+			break
+		}
+		fmt.Println(string(content))
+	}
+
+	//3、按照字节数读取
+	file, err = os.Open("./util/file.go")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer file.Close()
+	//读取数据
+	bs := make([]byte, 4)
+	for {
+		_, err = file.Read(bs)
+		if err == io.EOF {
+			break
+		}
+		fmt.Print(string(bs))
+	}
+}
+
+func WriteFile() {
+	// 会覆盖 不存在则创建
+	content := []byte("测试1\n测试2\n")
+	err := ioutil.WriteFile("test.txt", content, 0644)
+	if err != nil {
+		panic(err)
+	}
+
+	// 添加新内容
+	var str = "测试1\n测试2\n"
+	var filename = "./test.txt"
+	var f *os.File
+	var err1 error
+	if checkFileIsExist(filename) { //如果文件存在
+		f, err1 = os.OpenFile(filename, os.O_APPEND, 0666) //打开文件
+		fmt.Println("文件存在")
+	} else {
+		f, err1 = os.Create(filename) //创建文件
+		fmt.Println("文件不存在")
+	}
+	defer f.Close()
+	if err1 != nil {
+		panic(err1)
+	}
+	w := bufio.NewWriter(f) //创建新的 Writer 对象
+	n, _ := w.WriteString(str)
+	fmt.Printf("写入 %d 个字节n", n)
+	w.Flush()
+}
+
+func checkFileIsExist(filename string) bool {
+	if _, err := os.Stat(filename); os.IsNotExist(err) {
+		return false
+	}
+	return true
+}

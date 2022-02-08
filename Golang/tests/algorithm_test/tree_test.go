@@ -1,6 +1,7 @@
 package algorithm_test
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 	"wwqdrh/handbook/algorithm/tree"
@@ -114,3 +115,72 @@ func TestUnionFindSet(t *testing.T) {
 		t.Error("unionfindset error")
 	}
 }
+func ExampleSegmentTree(t *testing.T) {
+	multiplication := func(v1, v2 int) int {
+		return v1 * v2
+	}
+
+	a := tree.NewSegmentTree([]int{-1, 1, 2, -3, 4, 5, 6}, multiplication)
+	var resp int
+
+	resp, _ = a.Query(2, 5)
+	fmt.Println(resp)
+	a.Update(2, -2)
+	resp, _ = a.Query(2, 5)
+	fmt.Println(resp)
+
+	// output: -120
+	// 120
+}
+
+func TestPlainTrieTree(t *testing.T) {
+	tree := tree.NewTrieTree("")
+	tree.Insert("abcdefghijk")
+	tree.Insert("djaklsda")
+
+	if tree.Search("abcdefgh") {
+		t.Error("abcdefghijk---abcdefgh")
+	}
+	if !tree.Search("abcdefghijk") {
+		t.Error("abcdefghijk---abcdefgh")
+	}
+	if !tree.Search("djaklsda") {
+		t.Error("djaklsda---djaklsda")
+	}
+	if tree.Search("djaklsd") {
+		t.Error("djaklsda---djaklsd")
+	}
+}
+
+// func TestConcurrentTrie(t *testing.T) {
+// 	tree := datastruct.NewTrieTree("")
+// 	wg := sync.WaitGroup{}
+// 	wg.Add(10)
+// 	go func() { tree.Insert("abcdefghijk"); wg.Done() }()
+// 	go func() { tree.Insert("djaklsda"); wg.Done() }()
+// 	go func() { tree.Insert("dasdada"); wg.Done() }()
+// 	go func() { tree.Insert("djdaoias"); wg.Done() }()
+// 	go func() { tree.Insert("asdias"); wg.Done() }()
+// 	go func() { tree.Insert("aidoasefghijk"); wg.Done() }()
+// 	go func() { tree.Insert("dasmmda"); wg.Done() }()
+// 	go func() { tree.Insert("ucxzicjnada"); wg.Done() }()
+// 	go func() { tree.Insert("nxzsndaas"); wg.Done() }()
+// 	go func() { tree.Insert("asdpoiqas"); wg.Done() }()
+// 	wg.Wait()
+
+// 	if !tree.Search("abcdefghijk") {
+// 		t.Error("字典树错误")
+// 	}
+
+// 	if !tree.Search("aidoasefghijk") {
+// 		t.Error("字典树错误")
+// 	}
+
+// 	if !tree.Search("nxzsndaas") {
+// 		t.Error("字典树错误")
+// 	}
+
+// 	if !tree.Search("asdpoiqa") {
+// 		t.Error("字典树错误")
+// 	}
+// }
