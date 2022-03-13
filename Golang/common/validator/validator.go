@@ -9,6 +9,137 @@ import (
 	"strings"
 )
 
+type validateType int
+
+const (
+	NotNull validateType = iota
+)
+
+type FieldMeta struct {
+	Name     string            // 字段名
+	NickName string            // 可能由json等指定
+	Tag      map[string]string // 标签 按照空格分割
+	Value    reflect.Value     // 字段值
+	Type     reflect.Type      // 字段的类型
+}
+
+func Validator(data interface{}) error {
+	for _, item := range IterStructField(data) {
+		if err := ValidatorField(item); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+// 返回结构体的所有字段、值、tag
+func IterStructField(data interface{}) []*FieldMeta {
+	res := []*FieldMeta{}
+	getType := reflect.TypeOf(data)
+	getValue := reflect.ValueOf(data)
+
+	if fmt.Sprint(getType.Kind()) == "ptr" {
+		getType = getType.Elem()
+		getValue = getValue.Elem()
+	}
+
+	for i := 0; i < getType.NumField(); i++ {
+		field := getType.Field(i)
+		// value := getValue.Field(i).Interface()
+
+		tagMap := map[string]string{}
+		for _, item := range strings.Fields(string(field.Tag)) {
+			t := strings.Split(item, ":")
+			tagMap[t[0]] = t[1][1 : len(t[1])-1] // 将"“去掉
+		}
+		nickName := field.Name
+		if val, ok := tagMap["json"]; ok {
+			nickName = val
+		}
+
+		res = append(res, &FieldMeta{
+			Name:     field.Name,
+			NickName: nickName,
+			Value:    getValue.Field(i),
+			Tag:      tagMap,
+			Type:     field.Type,
+		})
+	}
+	return res
+}
+
+func ValidatorField(field *FieldMeta) error {
+	var (
+		val string
+		ok  bool
+	)
+	if val, ok = field.Tag["validator"]; !ok {
+		return nil
+	}
+	errMsg := []string{}
+	for _, item := range strings.Split(val, ";") {
+		if err := validator(item, field.NickName, field.Value); err != nil {
+			errMsg = append(errMsg, err.Error())
+		}
+	}
+	if len(errMsg) == 0 {
+		return nil
+	}
+	return errors.New(strings.Join(errMsg, "\n"))
+}
+
+// 校验 not_empty
+func validator(validate string, name string, value reflect.Value) error {
+	switch {
+	case validate == "not_empty":
+		return notEmpty(name, value)
+	case strings.Index(validate, "in") == 0:
+		return in(name, value, validate)
+	default:
+		return nil
+	}
+}
+
+func notEmpty(name string, value reflect.Value) error {
+	var flag bool
+	switch value.Kind() {
+	case reflect.String:
+		flag = value.Len() == 0
+	case reflect.Bool:
+		flag = !value.Bool()
+	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
+		flag = value.Int() == 0
+	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64, reflect.Uintptr:
+		flag = value.Uint() == 0
+	case reflect.Float32, reflect.Float64:
+		flag = value.Float() == 0
+	case reflect.Interface, reflect.Ptr:
+		flag = value.IsNil()
+	default:
+		flag = reflect.DeepEqual(value.Interface(), reflect.Zero(value.Type()).Interface())
+	}
+	if flag {
+		return fmt.Errorf("%s: 不能为空", name)
+	} else {
+		return nil
+	}
+}
+
+func in(name string, value reflect.Value, validate string) error {
+	validate = validate[3 : len(validate)-1]
+	flag := false
+	for _, item := range strings.Split(validate, ",") {
+		if item == fmt.Sprint(value.Interface()) {
+			flag = true
+			break
+		}
+	}
+	if !flag {
+		return fmt.Errorf("%s: 需要 %s", name, validate)
+	}
+	return nil
+}
+
 type Rules map[string][]string
 
 type RulesMap map[string]Rules

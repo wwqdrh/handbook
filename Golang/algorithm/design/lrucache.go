@@ -100,3 +100,7 @@ func (c *LruCache) Del(key interface{}) {
 		}
 	}
 }
+
+func (c *LruCache) Len() int {
+	return c.l.Len()
+}

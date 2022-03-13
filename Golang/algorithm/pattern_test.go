@@ -8,3 +8,7 @@ func TestLongestSubStr(t *testing.T) {
 		t.Error("出错")
 	}
 }
+
+func TestSunday(t *testing.T) {
+	SundaySearch("baaaabaaaabaaaabaaaa", "aaaaa")
+}
