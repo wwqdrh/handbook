@@ -4,7 +4,10 @@ package concurrent
 // 然而，我们可以使用带一个 `default` 子句的 `select`
 // 来实现 _非阻塞_ 的发送、接收，甚至是非阻塞的多路 `select`。
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func ChannelExample() {
 	messages := make(chan string)
@@ -128,4 +131,34 @@ func CloseChannel() {
 
 	// 使用前面学到的[通道同步](channel-synchronization)方法等待任务结束。
 	<-done
+}
+
+// 多生产者多消费者模型
+func consumer(cname string, ch chan int) {
+
+	//可以循环 for i := range ch 来不断从 channel 接收值，直到它被关闭。
+
+	for i := range ch {
+		fmt.Println("consumer-----------", cname, ":", i)
+	}
+	fmt.Println("ch closed.")
+}
+
+func producer(pname string, ch chan int) {
+	for i := 0; i < 4; i++ {
+		fmt.Println("producer--", pname, ":", i)
+		ch <- i
+	}
+}
+
+func MultiProducerConsumer() {
+	//用channel来传递"产品", 不再需要自己去加锁维护一个全局的阻塞队列
+	ch := make(chan int)
+	go producer("生产者1", ch)
+	go producer("生产者2", ch)
+	go consumer("消费者1", ch)
+	go consumer("消费者2", ch)
+	time.Sleep(10 * time.Second)
+	close(ch)
+	time.Sleep(10 * time.Second)
 }
