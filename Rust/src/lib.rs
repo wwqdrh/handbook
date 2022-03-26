@@ -3,6 +3,8 @@ use std::{
     thread,
 };
 
+pub mod rand;
+
 // 定义类型以及模块，表示该部分会与应用主体相独立
 pub mod boost;
 pub mod cook;

@@ -8,7 +8,6 @@
 // use data::structure;
 // use super::server::http;
 use cookbook::server::http;
-use cookbook::server::rocket;
 
 fn main() {
     //  * 1、cargo项目管理工具，直接在cargo.toml中添加依赖然后cargo更新
@@ -34,5 +33,5 @@ fn main() {
 
     // http::single_http_server();
     // http::thread_pool_http_server();
-    rocket::run_rocket_server();
+    // rocket::run_rocket_server();
 }

@@ -1,5 +1,0 @@
-package logging
-
-func Setup() {
-
-}
