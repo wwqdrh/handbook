@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"crypto/tls"
+	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -88,4 +89,25 @@ func PostFormRequest(url string, arrs []string) *http.Request {
 	}
 	req.Header.Set("Content-Type", writer.FormDataContentType())
 	return req
+}
+
+func Handle(url string, method string, kind string, data []byte) ([]byte, error) {
+	client := &http.Client{}
+
+	switch method {
+	case "post":
+		req, err := http.NewRequest("POST", url, bytes.NewBuffer(data))
+		if err != nil {
+			return nil, err
+		}
+		req.SetBasicAuth("sendmail", "1f018f3c27b3330d0f")
+		req.Header.Set("Content-Type", "application/json")
+		resp, err := client.Do(req)
+		if err != nil {
+			log.Fatal(err)
+		}
+		return ioutil.ReadAll(resp.Body)
+	default:
+		return []byte{}, errors.New("暂未支持该方法")
+	}
 }
