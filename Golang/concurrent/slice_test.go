@@ -74,6 +74,33 @@ func TestSafeSliceV2(t *testing.T) {
 	fmt.Println("执行结束")
 }
 
+// go test ./concurrent -v -run ^TestSafeSliceV2_1$ -race
+func TestSafeSliceV2_1(t *testing.T) {
+	safeSlice := NewSafeSlice()
+	wait := sync.WaitGroup{}
+	wait.Add(conRead + conWrite)
+
+	for i := 0; i < conWrite; i++ {
+		go func() {
+			defer wait.Done()
+			for cur := 1; cur <= num; cur++ {
+				safeSlice.SafeSliceAppend(cur)
+			}
+		}()
+	}
+	for i := 0; i < conRead; i++ {
+		go func() {
+			defer wait.Done()
+			for c := 0; c < 5; c++ {
+				// fmt.Printf("第%d次执行", c)
+				safeSlice.SafeSliceReadV2_1()
+			}
+		}()
+	}
+	wait.Wait()
+	fmt.Println("执行结束")
+}
+
 // testing.go:1152: race detected during execution of test
 // --- FAIL: TestSafeSliceV3 (0.53s)
 // === CONT

@@ -12,8 +12,9 @@ import (
 // 1、写只需要往后append
 // 2、读的时候只需要从现有的range
 type SafeSlice struct {
-	data  []interface{}
-	mutex sync.Mutex
+	data         []interface{}
+	safeSliceLen int64
+	mutex        sync.Mutex
 }
 
 type SafeSliceByNode struct {
@@ -54,8 +55,9 @@ func NewSafeSliceByNode() *SafeSliceByNode {
 // 并发安全的sliceappend
 func (s *SafeSlice) SafeSliceAppend(value interface{}) {
 	s.mutex.Lock()
-	defer s.mutex.Unlock()
 	s.data = append(s.data, value)
+	s.mutex.Unlock()
+	atomic.AddInt64(&s.safeSliceLen, 1)
 }
 
 // 并发安全的sliceread
@@ -73,6 +75,18 @@ func (s *SafeSlice) SafeSliceReadV1() string {
 // 测试存在race
 func (s *SafeSlice) SafeSliceReadV2() string {
 	length := len(s.data)
+	res := []string{}
+	for i := 0; i < length; i++ {
+		res = append(res, fmt.Sprint(s.data[i]))
+	}
+	return strings.Join(res, ",")
+}
+
+// v2_1版本: atomic获取长度，使用下标访问
+// s.data访问的时候是竞态是会检测出来的
+// 测试存在race
+func (s *SafeSlice) SafeSliceReadV2_1() string {
+	length := int(atomic.LoadInt64(&s.safeSliceLen))
 	res := []string{}
 	for i := 0; i < length; i++ {
 		res = append(res, fmt.Sprint(s.data[i]))
