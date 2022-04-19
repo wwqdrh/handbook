@@ -21,6 +21,9 @@ type SafeSliceByNode struct {
 	tail   *sliceNode
 	length int64
 	mutex  sync.Mutex
+
+	// v2版本需要用到的
+	ch chan interface{} // 通道用来接收添加数据
 }
 
 type sliceNode struct {
@@ -36,12 +39,16 @@ func NewSafeSlice() *SafeSlice {
 }
 
 func NewSafeSliceByNode() *SafeSliceByNode {
-	return &SafeSliceByNode{
+	s := &SafeSliceByNode{
 		head:   nil,
 		tail:   nil,
 		length: 0,
 		mutex:  sync.Mutex{},
+		ch:     make(chan interface{}, 100),
 	}
+	go s.runAppend()
+
+	return s
 }
 
 // 并发安全的sliceappend
@@ -84,32 +91,63 @@ func (s *SafeSlice) SafeSliceReadV3() string {
 	return strings.Join(res, ",")
 }
 
-func (s *SafeSliceByNode) SafeSliceAppend(value interface{}) {
-	s.mutex.Lock()
-	defer s.mutex.Unlock()
+// v2才会用到
+func (s *SafeSliceByNode) runAppend() {
+	for item := range s.ch {
+		cur := &sliceNode{
+			Val: item,
+		}
+		if atomic.LoadInt64(&s.length) == 0 {
+			s.head = cur
+			s.tail = cur
+		} else {
+			s.tail.Next = cur
+			s.tail = cur
+		}
+		atomic.AddInt64(&s.length, 1)
+	}
+}
 
+// 清理操作
+func (s *SafeSliceByNode) Close() {
+	// 暂时不需要等待没有加载完的，因为程序本来就要关闭了
+	close(s.ch)
+}
+
+// 普通append
+func (s *SafeSliceByNode) SafeSliceAppend(value interface{}) {
 	cur := &sliceNode{
 		Val: value,
 	}
-	if s.length == 0 {
+	s.mutex.Lock()
+	if atomic.LoadInt64(&s.length) == 0 {
 		s.head = cur
 		s.tail = cur
-		atomic.AddInt64(&s.length, 1)
 	} else {
 		s.tail.Next = cur
 		s.tail = cur
-		atomic.AddInt64(&s.length, 1)
 	}
+	s.mutex.Unlock()
+	atomic.AddInt64(&s.length, 1)
+}
+
+// 基于channel
+func (s *SafeSliceByNode) SafeSliceAppendV2(value interface{}) {
+	s.ch <- value
 }
 
 func (s *SafeSliceByNode) SafeSliceRead() string {
 	length := atomic.LoadInt64(&s.length)
 	res := []string{}
 
-	cur := s.head
+	var cur *sliceNode
 	for i := 0; i < int(length); i++ {
+		if i == 0 {
+			cur = s.head
+		} else {
+			cur = cur.Next
+		}
 		res = append(res, fmt.Sprint(cur.Val))
-		cur = cur.Next
 	}
 	return strings.Join(res, ",")
 }

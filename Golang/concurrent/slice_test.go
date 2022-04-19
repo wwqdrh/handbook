@@ -4,13 +4,12 @@ import (
 	"fmt"
 	"sync"
 	"testing"
-	"time"
 )
 
 const (
-	conRead  = 5
-	conWrite = 5
-	num      = 100 // 写的个数
+	conRead  = 100
+	conWrite = 100
+	num      = 1000 // 写的个数
 )
 
 // testing.go:1152: race detected during execution of test
@@ -35,8 +34,8 @@ func TestSafeSliceV1(t *testing.T) {
 		go func() {
 			defer wait.Done()
 			for c := 0; c < 5; c++ {
-				fmt.Printf("第%d次执行, %s", c, safeSlice.SafeSliceReadV1())
-				time.Sleep(100 * time.Millisecond)
+				// fmt.Printf("第%d次执行", c)
+				safeSlice.SafeSliceReadV1()
 			}
 		}()
 	}
@@ -66,8 +65,8 @@ func TestSafeSliceV2(t *testing.T) {
 		go func() {
 			defer wait.Done()
 			for c := 0; c < 5; c++ {
-				fmt.Printf("第%d次执行, %s", c, safeSlice.SafeSliceReadV2())
-				time.Sleep(100 * time.Millisecond)
+				// fmt.Printf("第%d次执行", c)
+				safeSlice.SafeSliceReadV2()
 			}
 		}()
 	}
@@ -97,8 +96,8 @@ func TestSafeSliceV3(t *testing.T) {
 		go func() {
 			defer wait.Done()
 			for c := 0; c < 5; c++ {
-				fmt.Printf("第%d次执行, %s", c, safeSlice.SafeSliceReadV3())
-				time.Sleep(100 * time.Millisecond)
+				// fmt.Printf("第%d次执行", c)
+				safeSlice.SafeSliceReadV3()
 			}
 		}()
 	}
@@ -126,11 +125,39 @@ func TestSafeSliceV4(t *testing.T) {
 		go func() {
 			defer wait.Done()
 			for c := 0; c < 5; c++ {
-				fmt.Printf("第%d次执行, %s", c, safeSlice.SafeSliceRead())
-				time.Sleep(100 * time.Millisecond)
+				// fmt.Printf("第%d次执行", c)
+				safeSlice.SafeSliceRead()
 			}
 		}()
 	}
 	wait.Wait()
+	fmt.Println("执行结束")
+}
+
+// channel接收并添加元素
+func TestSafeSliceV5(t *testing.T) {
+	safeSlice := NewSafeSliceByNode()
+	wait := sync.WaitGroup{}
+	wait.Add(conRead + conWrite)
+
+	for i := 0; i < conWrite; i++ {
+		go func() {
+			defer wait.Done()
+			for cur := 1; cur <= num; cur++ {
+				safeSlice.SafeSliceAppendV2(cur)
+			}
+		}()
+	}
+	for i := 0; i < conRead; i++ {
+		go func() {
+			defer wait.Done()
+			for c := 0; c < 5; c++ {
+				// fmt.Printf("第%d次执行", c)
+				safeSlice.SafeSliceRead()
+			}
+		}()
+	}
+	wait.Wait()
+	safeSlice.Close()
 	fmt.Println("执行结束")
 }
