@@ -18,3 +18,11 @@ path = "examples/rsnake.rs"
 [[example]]
 name = "ipsniffer"
 path = "examples/ipsniffer.rs"
+
+[[example]]
+name = "chat-server"
+path = "examples/chat-server.rs"
+
+[[example]]
+name = "chat-client"
+path = "examples/chat-client.rs"
