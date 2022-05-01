@@ -13,6 +13,7 @@ pub mod server;
 
 // examples
 pub mod rsnake;
+pub mod ipsniffer;
 
 enum Message {
     NewJob(Job),

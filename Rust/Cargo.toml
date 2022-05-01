@@ -14,3 +14,7 @@ piston_window = "0.122.0"
 [[example]]
 name = "rsnake"
 path = "examples/rsnake.rs"
+
+[[example]]
+name = "ipsniffer"
+path = "examples/ipsniffer.rs"
