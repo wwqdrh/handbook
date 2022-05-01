@@ -11,6 +11,9 @@ pub mod cook;
 pub mod data;
 pub mod server;
 
+// examples
+pub mod rsnake;
+
 enum Message {
     NewJob(Job),
     Terminate,
