@@ -23,7 +23,9 @@ require (
 	github.com/frankban/quicktest v1.13.1 // indirect
 	github.com/fsnotify/fsnotify v1.5.1
 	github.com/garyburd/redigo v1.6.2
+	github.com/go-oauth2/oauth2/v4 v4.4.3 // indirect
 	github.com/go-redis/redis/v8 v8.11.4
+	github.com/go-session/session v3.1.2+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/go-yaml/yaml v2.1.0+incompatible
 	github.com/gogf/gf v1.16.6
