@@ -38,6 +38,7 @@ func main() {
 		u := config.AuthCodeURL("xyz",
 			oauth2.SetAuthURLParam("code_challenge", genCodeChallengeS256("s256example")),
 			oauth2.SetAuthURLParam("code_challenge_method", "S256"))
+		// 生成的跳转链接：http://localhost:9096/oauth/authorize?client_id=222222&code_challenge=Qn3Kywp0OiU4NK_AFzGPlmrcYJDJ13Abj_jdL08Ahg8%3D&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A9094%2Foauth2&response_type=code&scope=all&state=xyz
 		http.Redirect(w, r, u, http.StatusFound)
 	})
 
