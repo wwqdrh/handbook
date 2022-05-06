@@ -14,6 +14,8 @@ require (
 	github.com/apex/go-apex v1.0.0
 	github.com/apex/log v1.9.0
 	github.com/buaazp/fasthttprouter v0.1.1
+	github.com/casbin/casbin v1.9.1 // indirect
+	github.com/casbin/casbin/v2 v2.45.0 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/eapache/go-resiliency v1.2.0 // indirect
 	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect
