@@ -12,3 +12,12 @@ func TestLongestSubStr(t *testing.T) {
 func TestSunday(t *testing.T) {
 	SundaySearch("baaaabaaaabaaaabaaaa", "aaaaa")
 }
+
+func TestKMPString(t *testing.T) {
+	if StringKMP("abcdecdfg", "cdfg") != 5 {
+		t.Error("KMP算法出错")
+	}
+	if StringKMP("abcdecdeffg", "cdef") != 5 {
+		t.Error("KMP算法出错")
+	}
+}

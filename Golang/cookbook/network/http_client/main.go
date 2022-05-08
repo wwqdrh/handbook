@@ -1,4 +1,4 @@
-package main
+package http_client
 
 import (
 	"bytes"
@@ -15,7 +15,7 @@ import (
 	"time"
 )
 
-func main() {
+func StartClient() {
 	// 创建连接池
 	transport := &http.Transport{
 		DialContext: (&net.Dialer{
