@@ -57,6 +57,8 @@ require (
 	github.com/tus/tusd v1.9.0
 	github.com/valyala/fasthttp v1.29.0
 	github.com/zabawaba99/firego v0.0.0-20190331000051-3bcc4b6a4599 // indirect
+	go.etcd.io/etcd/api/v3 v3.5.4 // indirect
+	go.etcd.io/etcd/client/v3 v3.5.4
 	go.mongodb.org/mongo-driver v1.5.4
 	go.opentelemetry.io/otel v1.5.0
 	go.opentelemetry.io/otel/sdk v1.5.0
