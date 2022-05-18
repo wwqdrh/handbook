@@ -559,8 +559,9 @@ github.com/jedisct1/go-minisign v0.0.0-20190909160543-45766022959e/go.mod h1:G1C
 github.com/jessevdk/go-flags v0.0.0-20141203071132-1679536dcc89/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJSGM75WSRxI=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
-github.com/jinzhu/now v1.1.2 h1:eVKgfIdy9b6zbWBMgFpfDPoAMifwSZagU9HmEU6zgiI=
 github.com/jinzhu/now v1.1.2/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
+github.com/jinzhu/now v1.1.4 h1:tHnRBy1i5F2Dh8BAFxqFzxKqqvezXrL2OW1TnX+Mlas=
+github.com/jinzhu/now v1.1.4/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
 github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
 github.com/jmespath/go-jmespath v0.4.0/go.mod h1:T8mJZnbsbmF+m6zOOFylbeCJqk5+pHWvzYPziyZiYoo=
 github.com/jmespath/go-jmespath/internal/testify v1.5.1/go.mod h1:L3OGu8Wl2/fWfCI6z80xFu9LTZmf1ZRjMHUOPmWr69U=
@@ -1548,8 +1549,9 @@ gopkg.in/zabawaba99/firego.v1 v1.0.0-20190331000051-3bcc4b6a4599 h1:6tee3tOL08HN
 gopkg.in/zabawaba99/firego.v1 v1.0.0-20190331000051-3bcc4b6a4599/go.mod h1:rigVqetXSZPScx4X6R9+URJkQcxn9EDiqJxFuY2XQW0=
 gorm.io/driver/mysql v1.2.0 h1:l8+9VwjjyzEkw0PNPBOr2JHhLOGVk7XEnl5hk42bcvs=
 gorm.io/driver/mysql v1.2.0/go.mod h1:4RQmTg4okPghdt+kbe6e1bTXIQp7Ny1NnBn/3Z6ghjk=
-gorm.io/gorm v1.22.3 h1:/JS6z+GStEQvJNW3t1FTwJwG/gZ+A7crFdRqtvG5ehA=
 gorm.io/gorm v1.22.3/go.mod h1:F+OptMscr0P2F2qU97WT1WimdH9GaQPoDW7AYd5i2Y0=
+gorm.io/gorm v1.23.5 h1:TnlF26wScKSvknUC/Rn8t0NLLM22fypYBlvj1+aH6dM=
+gorm.io/gorm v1.23.5/go.mod h1:l2lP/RyAtc1ynaTjFksBde/O8v9oOGIApu2/xRitmZk=
 gotest.tools v2.2.0+incompatible/go.mod h1:DsYFclhRJ6vuDpmuTbkuFWG+y2sxOXAzmJt81HFBacw=
 honnef.co/go/tools v0.0.0-20190102054323-c2f93a96b099/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=

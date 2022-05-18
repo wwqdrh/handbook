@@ -85,5 +85,5 @@ require (
 	gopkg.in/redis.v5 v5.2.9
 	gopkg.in/zabawaba99/firego.v1 v1.0.0-20190331000051-3bcc4b6a4599
 	gorm.io/driver/mysql v1.2.0
-	gorm.io/gorm v1.22.3
+	gorm.io/gorm v1.23.5
 )
