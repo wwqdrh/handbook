@@ -75,5 +75,61 @@ func Server2() {
 
 	// 最后，我们调用 `ListenAndServe` 并带上端口和 handler。
 	// nil 表示使用我们刚刚设置的默认路由器。
-	http.ListenAndServe(":8090", nil)
+	srv := http.Server{
+		Addr:    fmt.Sprintf(":%d", addr),
+		Handler: http,
+	}
+	go func() {
+		if err := srv.ListenAndServe(); err != nil {
+			fmt.Println("api exit...")
+			return
+		}
+	}()
+
+	quit := make(chan os.Signal, 1)
+	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+	// 在此阻塞
+	<-quit
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	if err := srv.Shutdown(ctx); err != nil {
+		fmt.Println("server shutdown error")
+	}
+}
+
+////////////////////
+// 文件相关
+////////////////////
+func upload(w http.ResponseWriter, r *http.Request) {
+	file, head, err := r.FormFile("my_file")
+	if err != nil {
+		fmt.Sprintln(err)
+		fmt.Fprintln(w, err)
+
+		return
+	}
+
+	localFileDir := "/tmp/upload/"
+	err = os.MkdirAll(localFileDir, 0777)
+	if err != nil {
+		fmt.Sprintln(err)
+		fmt.Fprintln(w, err)
+
+		return
+	}
+
+	localFilePath := localFileDir + head.Filename
+
+	localFile, err := os.Create(localFilePath)
+	if err != nil {
+		fmt.Sprintln(err)
+		fmt.Fprintln(w, err)
+
+		return
+	}
+	defer localFile.Close()
+
+	io.Copy(localFile, file)
+	fmt.Fprintln(w, localFilePath)
+
 }
