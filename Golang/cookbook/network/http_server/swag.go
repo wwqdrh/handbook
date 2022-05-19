@@ -11,7 +11,7 @@ import (
 // 提供引入swag的样例代码
 
 func SwaggerInstall(handler *http.Handler) {
-	handler.Handle("/swagger/", httpSwagger.Handler())
+	handler.HandleFunc("/swagger/", httpSwagger.Handler())
 }
 
 // 示例

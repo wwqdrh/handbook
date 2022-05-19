@@ -1,7 +1,343 @@
-package main
+package http_server
+
+import (
+	"bytes"
+	"encoding/json"
+	"errors"
+	"fmt"
+	"io"
+	"mime/multipart"
+	"net/http"
+	"net/textproto"
+	"reflect"
+	"strconv"
+	"strings"
+	"sync"
+	"time"
+	"unsafe"
+
+	"github.com/go-playground/validator/v10"
+)
 
 ////////////////////
-// 参数解析
+// 封装
+////////////////////
+
+// form
+
+const defaultMemory = 32 << 20
+
+type formBinding struct{}
+type formPostBinding struct{}
+type formMultipartBinding struct{}
+
+func (formBinding) Name() string {
+	return "form"
+}
+
+func (formBinding) Bind(req *http.Request, obj interface{}) error {
+	if err := req.ParseForm(); err != nil {
+		return err
+	}
+	if err := req.ParseMultipartForm(defaultMemory); err != nil && !errors.Is(err, http.ErrNotMultipart) {
+		return err
+	}
+	if err := mapForm(obj, req.Form); err != nil {
+		return err
+	}
+	return validate(obj)
+}
+
+func (formPostBinding) Name() string {
+	return "form-urlencoded"
+}
+
+func (formPostBinding) Bind(req *http.Request, obj interface{}) error {
+	if err := req.ParseForm(); err != nil {
+		return err
+	}
+	if err := mapForm(obj, req.PostForm); err != nil {
+		return err
+	}
+	return validate(obj)
+}
+
+func (formMultipartBinding) Name() string {
+	return "multipart/form-data"
+}
+
+func (formMultipartBinding) Bind(req *http.Request, obj interface{}) error {
+	if err := req.ParseMultipartForm(defaultMemory); err != nil {
+		return err
+	}
+	if err := mappingByPtr(obj, (*multipartRequest)(req), "form"); err != nil {
+		return err
+	}
+
+	return validate(obj)
+}
+
+type multipartRequest http.Request
+
+var _ setter = (*multipartRequest)(nil)
+
+var (
+	// ErrMultiFileHeader multipart.FileHeader invalid
+	ErrMultiFileHeader = errors.New("unsupported field type for multipart.FileHeader")
+
+	// ErrMultiFileHeaderLenInvalid array for []*multipart.FileHeader len invalid
+	ErrMultiFileHeaderLenInvalid = errors.New("unsupported len of array for []*multipart.FileHeader")
+)
+
+// TrySet tries to set a value by the multipart request with the binding a form file
+func (r *multipartRequest) TrySet(value reflect.Value, field reflect.StructField, key string, opt setOptions) (bool, error) {
+	if files := r.MultipartForm.File[key]; len(files) != 0 {
+		return setByMultipartFormFile(value, field, files)
+	}
+
+	return setByForm(value, field, r.MultipartForm.Value, key, opt)
+}
+
+func setByMultipartFormFile(value reflect.Value, field reflect.StructField, files []*multipart.FileHeader) (isSet bool, err error) {
+	switch value.Kind() {
+	case reflect.Ptr:
+		switch value.Interface().(type) {
+		case *multipart.FileHeader:
+			value.Set(reflect.ValueOf(files[0]))
+			return true, nil
+		}
+	case reflect.Struct:
+		switch value.Interface().(type) {
+		case multipart.FileHeader:
+			value.Set(reflect.ValueOf(*files[0]))
+			return true, nil
+		}
+	case reflect.Slice:
+		slice := reflect.MakeSlice(value.Type(), len(files), len(files))
+		isSet, err = setArrayOfMultipartFormFiles(slice, field, files)
+		if err != nil || !isSet {
+			return isSet, err
+		}
+		value.Set(slice)
+		return true, nil
+	case reflect.Array:
+		return setArrayOfMultipartFormFiles(value, field, files)
+	}
+	return false, ErrMultiFileHeader
+}
+
+func setArrayOfMultipartFormFiles(value reflect.Value, field reflect.StructField, files []*multipart.FileHeader) (isSet bool, err error) {
+	if value.Len() != len(files) {
+		return false, ErrMultiFileHeaderLenInvalid
+	}
+	for i := range files {
+		set, err := setByMultipartFormFile(value.Index(i), field, files[i:i+1])
+		if err != nil || !set {
+			return set, err
+		}
+	}
+	return true, nil
+}
+
+// query
+type queryBinding struct{}
+
+func (queryBinding) Name() string {
+	return "query"
+}
+
+func (queryBinding) Bind(req *http.Request, obj interface{}) error {
+	values := req.URL.Query()
+	if err := mapForm(obj, values); err != nil {
+		return err
+	}
+	return validate(obj)
+}
+
+// header
+
+type headerBinding struct{}
+
+func (headerBinding) Name() string {
+	return "header"
+}
+
+func (headerBinding) Bind(req *http.Request, obj interface{}) error {
+
+	if err := mapHeader(obj, req.Header); err != nil {
+		return err
+	}
+
+	return validate(obj)
+}
+
+func mapHeader(ptr interface{}, h map[string][]string) error {
+	return mappingByPtr(ptr, headerSource(h), "header")
+}
+
+type headerSource map[string][]string
+
+var _ setter = headerSource(nil)
+
+func (hs headerSource) TrySet(value reflect.Value, field reflect.StructField, tagValue string, opt setOptions) (bool, error) {
+	return setByForm(value, field, hs, textproto.CanonicalMIMEHeaderKey(tagValue), opt)
+}
+
+// json
+
+// EnableDecoderUseNumber is used to call the UseNumber method on the JSON
+// Decoder instance. UseNumber causes the Decoder to unmarshal a number into an
+// interface{} as a Number instead of as a float64.
+var EnableDecoderUseNumber = false
+
+// EnableDecoderDisallowUnknownFields is used to call the DisallowUnknownFields method
+// on the JSON Decoder instance. DisallowUnknownFields causes the Decoder to
+// return an error when the destination is a struct and the input contains object
+// keys which do not match any non-ignored, exported fields in the destination.
+var EnableDecoderDisallowUnknownFields = false
+
+type jsonBinding struct{}
+
+func (jsonBinding) Name() string {
+	return "json"
+}
+
+func (jsonBinding) Bind(req *http.Request, obj interface{}) error {
+	if req == nil || req.Body == nil {
+		return errors.New("invalid request")
+	}
+	return decodeJSON(req.Body, obj)
+}
+
+func (jsonBinding) BindBody(body []byte, obj interface{}) error {
+	return decodeJSON(bytes.NewReader(body), obj)
+}
+
+func decodeJSON(r io.Reader, obj interface{}) error {
+	decoder := json.NewDecoder(r)
+	if EnableDecoderUseNumber {
+		decoder.UseNumber()
+	}
+	if EnableDecoderDisallowUnknownFields {
+		decoder.DisallowUnknownFields()
+	}
+	if err := decoder.Decode(obj); err != nil {
+		return err
+	}
+	return validate(obj)
+}
+
+////////////////////
+// validator
+////////////////////
+var Validator StructValidator = &defaultValidator{}
+
+type StructValidator interface {
+	// ValidateStruct can receive any kind of type and it should never panic, even if the configuration is not right.
+	// If the received type is a slice|array, the validation should be performed travel on every element.
+	// If the received type is not a struct or slice|array, any validation should be skipped and nil must be returned.
+	// If the received type is a struct or pointer to a struct, the validation should be performed.
+	// If the struct is not valid or the validation itself fails, a descriptive error should be returned.
+	// Otherwise nil must be returned.
+	ValidateStruct(interface{}) error
+
+	// Engine returns the underlying validator engine which powers the
+	// StructValidator implementation.
+	Engine() interface{}
+}
+
+type defaultValidator struct {
+	once     sync.Once
+	validate *validator.Validate
+}
+
+type SliceValidationError []error
+
+// Error concatenates all error elements in SliceValidationError into a single string separated by \n.
+func (err SliceValidationError) Error() string {
+	n := len(err)
+	switch n {
+	case 0:
+		return ""
+	default:
+		var b strings.Builder
+		if err[0] != nil {
+			fmt.Fprintf(&b, "[%d]: %s", 0, err[0].Error())
+		}
+		if n > 1 {
+			for i := 1; i < n; i++ {
+				if err[i] != nil {
+					b.WriteString("\n")
+					fmt.Fprintf(&b, "[%d]: %s", i, err[i].Error())
+				}
+			}
+		}
+		return b.String()
+	}
+}
+
+var _ StructValidator = &defaultValidator{}
+
+// ValidateStruct receives any kind of type, but only performed struct or pointer to struct type.
+func (v *defaultValidator) ValidateStruct(obj interface{}) error {
+	if obj == nil {
+		return nil
+	}
+
+	value := reflect.ValueOf(obj)
+	switch value.Kind() {
+	case reflect.Ptr:
+		return v.ValidateStruct(value.Elem().Interface())
+	case reflect.Struct:
+		return v.validateStruct(obj)
+	case reflect.Slice, reflect.Array:
+		count := value.Len()
+		validateRet := make(SliceValidationError, 0)
+		for i := 0; i < count; i++ {
+			if err := v.ValidateStruct(value.Index(i).Interface()); err != nil {
+				validateRet = append(validateRet, err)
+			}
+		}
+		if len(validateRet) == 0 {
+			return nil
+		}
+		return validateRet
+	default:
+		return nil
+	}
+}
+
+// validateStruct receives struct type
+func (v *defaultValidator) validateStruct(obj interface{}) error {
+	v.lazyinit()
+	return v.validate.Struct(obj)
+}
+
+// Engine returns the underlying validator engine which powers the default
+// Validator instance. This is useful if you want to register custom validations
+// or struct level validations. See validator GoDoc for more info -
+// https://pkg.go.dev/github.com/go-playground/validator/v10
+func (v *defaultValidator) Engine() interface{} {
+	v.lazyinit()
+	return v.validate
+}
+
+func (v *defaultValidator) lazyinit() {
+	v.once.Do(func() {
+		v.validate = validator.New()
+		v.validate.SetTagName("binding")
+	})
+}
+
+func validate(obj interface{}) error {
+	if Validator == nil {
+		return nil
+	}
+	return Validator.ValidateStruct(obj)
+}
+
+////////////////////
+// 参数解析 tag解析，类型转换
 ////////////////////
 
 func mapForm(ptr interface{}, form map[string][]string) error {

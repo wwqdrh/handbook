@@ -1,4 +1,15 @@
-package main
+package http_server
+
+import (
+	"bytes"
+	"io"
+	"mime/multipart"
+	"net/http"
+	"net/http/httptest"
+	"os"
+	"path/filepath"
+	"testing"
+)
 
 func TestUploadFile(t *testing.T) {
 	path := "/home/ubuntu/test.go" //要上传文件所在路径
