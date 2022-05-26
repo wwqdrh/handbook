@@ -1,8 +1,22 @@
-# handbook
-关于Python/Golang/Rust的编码手册
+> Maybe it's chaotic, but my own code practice
 
-# 主要内容
+关于Python、Golang、Rust、...的编码手册
 
-- 1、[Python](./Python/README.md)
-- 2、[Golang](./Golang/README.md)
-- 3、[Rust](./Rust/README.md)
+
+## Golang
+
+- 算法模板
+- 语法相关
+- 各类sdk
+
+## Python
+
+- 语法相关
+
+## Rust
+
+- 语法相关
+
+## Javascript
+
+- snippt代码

@@ -1,6 +1,7 @@
 package algorithm
 
 import (
+	"fmt"
 	"math"
 	"math/rand"
 	"time"
@@ -297,3 +298,79 @@ func StringKMP(mainStr, subStr string) int {
 // 基本思路就是从右往左进行字符匹 配，遇到不匹配的字符后从坏字符表和好后缀表找一个最大的右移值，将模式串右移继续匹配。
 // BM算法 对后缀蛮力匹配算法的改进
 func StringBM() {}
+
+////////////////////
+// 回文
+////////////////////
+
+//用于存储最后长度最长的子串中间字符的信息
+type str struct {
+	i   int //位置
+	num int //数值
+}
+
+func Manacher(s string) string {
+	length := len(s)
+	btyestr := []byte(s)
+
+	if length < 2 {
+		return s
+	}
+
+	bytestr2 := make([]byte, 2*length+1)
+	p := make([]int, 2*length+1)
+
+	for m := 0; m < length; m++ {
+
+		bytestr2[2*m] = 1
+		bytestr2[2*m+1] = btyestr[m]
+
+	}
+	bytestr2[2*length] = 1
+
+	fmt.Println(bytestr2)
+
+	//在每个字符间插入相同的字符
+	for i := 0; i < len(bytestr2); i++ {
+
+		p[i] = 1
+		if i != 0 && i != 2*length {
+			for j := 1; ; j++ {
+				if bytestr2[i-j] == bytestr2[i+j] {
+					p[i] = p[i] + 1
+				} else {
+					break
+				}
+				if i-j == 0 || i+j == 2*length {
+					break
+				}
+			}
+		}
+	}
+
+	maxdata := str{0, 1}
+
+	for j := 0; j < 2*length+1; j++ {
+
+		if p[j] > maxdata.num {
+
+			maxdata.i = j
+			maxdata.num = p[j]
+		}
+	}
+
+	bytestr3 := make([]byte, maxdata.num-1)
+	//找出最长子串，跳过之前我自己添加的字符
+	for h := 0; h < maxdata.num-1; h++ {
+		if (maxdata.num-1)%2 == 0 {
+			//跳过之前我自己添加的字符，所以+2*h
+			bytestr3[h] = bytestr2[maxdata.i+2-maxdata.num+2*h]
+		} else {
+			bytestr3[h] = bytestr2[maxdata.i+2-maxdata.num+2*h]
+		}
+
+	}
+
+	ss := string(bytestr3)
+	return ss
+}
