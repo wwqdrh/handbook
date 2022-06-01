@@ -16,6 +16,12 @@ pub mod rsnake;
 pub mod ipsniffer;
 pub mod chat;
 
+// html
+pub mod html;
+
+// system
+pub mod os;
+
 enum Message {
     NewJob(Job),
     Terminate,
