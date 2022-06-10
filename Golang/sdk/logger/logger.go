@@ -155,11 +155,17 @@ func LoggerWithColor() {
 		ErrorOutputPaths: []string{"stderr"},
 	}
 	config.EncoderConfig.EncodeLevel = zapcore.LowercaseColorLevelEncoder //这里可以指定颜色
-	// 构建日志
+
+	// infolevel 构建日志
 	ZapLog_V1, err := config.Build()
 	if err != nil {
 		panic(fmt.Sprintf("log 初始化失败: %v", err))
 	}
 
 	ZapLog_V1.Info("log 初始化成功")
+
+	// 动态调整
+	config.Level.SetLevel(zap.WarnLevel)
+	warnLogger, _ := config.Build()
+	warnLogger.Info("log 初始化成功")
 }
