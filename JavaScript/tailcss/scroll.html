@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <style>
+        /* Styles required only for the example above */
+        .scrollspy-example {
+            position: relative;
+            height: 200px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid grid-cols-3">
+        <div class="col-span-2">
+            <div data-bs-spy="scroll" data-bs-target="#scrollspy1" data-bs-offset="200" class="scrollspy-example">
+                <section id="example-1">
+                    <h3 class="text-xl font-semibold pt-5 pb-3">Section 1</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                </section>
+                <section id="example-2">
+                    <h3 class="text-xl font-semibold pt-5 pb-3">Section 2</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                </section>
+                <section id="example-3">
+                    <h3 class="text-xl font-semibold pt-5 pb-3">Section 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                    <section id="example-sub-A">
+                        <h3 class="text-xl font-semibold pt-5 pb-3">Subsection A</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                            minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                            quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                            minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                            quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                        </p>
+                    </section>
+                    <section id="example-sub-B">
+                        <h3 class="text-xl font-semibold pt-5 pb-3">Subsection B</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                            minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                            quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                            minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                            quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                        </p>
+                    </section>
+                </section>
+                <section id="example-4">
+                    <h3 class="text-xl font-semibold pt-5 pb-3">Section 4</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore earum natus vel
+                        minima quod error maxime, molestias ut. Fuga dignissimos nisi nemo necessitatibus
+                        quisquam obcaecati et reiciendis quaerat accusamus numquam.
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div>
+            <!-- Scrollspy -->
+            <div id="scrollspy1" class="sticky-top pl-3 text-sm">
+                <ul class="nav nav-pills menu-sidebar">
+                    <li class="py-1">
+                        <a class="nav-link" href="#example-1">Section 1</a>
+                    </li>
+                    <li class="py-1">
+                        <a class="nav-link" href="#example-2">Section 2</a>
+                    </li>
+                    <li class="py-1">
+                        <a class="nav-link" href="#example-3">Section 3</a>
+                        <ul class="nav flex-column pl-3">
+                            <li class="py-1">
+                                <a class="nav-link" href="#example-sub-A">Subsection A</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#example-sub-B">Subsection B</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="py-1">
+                        <a class="nav-link" href="#example-4">Section 4</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Scrollspy -->
+        </div>
+    </div>
+    <!-- Back to top button -->
+    <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
+        class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out hidden bottom-5 right-5 fixed"
+        id="btn-back-to-top">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+            </path>
+        </svg>
+    </button>
+
+    <!-- Explanation -->
+    <div class="container mt-4 text-center text-gray-800" style="height: 2000px">
+        <p class="mb-4">
+            Start scrolling the page and a strong <strong>"Back to top" button </strong> will appear
+            in the <strong>bottom right corner</strong> of the screen.
+        </p>
+        <p>Click this button and you will be taken to the top of the page.</p>
+    </div>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById('btn-back-to-top');
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = 'block';
+            } else {
+                mybutton.style.display = 'none';
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener('click', backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</head>
+
+<body>
+    <div class="w-full bg-gray-200 rounded-full">
+        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-l-full"
+            style="width: 25%"> 25%</div>
+    </div>
+
+    <div class="w-full bg-gray-200 h-1 mb-6">
+        <div class="bg-green-500 h-1" style="width: 25%"></div>
+    </div>
+    <div class="w-full bg-gray-200 h-1 mb-6">
+        <div class="bg-blue-400 h-1" style="width: 50%"></div>
+    </div>
+    <div class="w-full bg-gray-200 h-1 mb-6">
+        <div class="bg-yellow-500 h-1" style="width: 75%"></div>
+    </div>
+    <div class="w-full bg-gray-200 h-1">
+        <div class="bg-red-600 h-1" style="width: 100%"></div>
+    </div>
+</body>
+
+</html>

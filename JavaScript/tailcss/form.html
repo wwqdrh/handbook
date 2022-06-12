@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</head>
+
+<body>
+    <!-- checkbox -->
+    <div class="flex justify-center">
+        <div>
+            <div class="form-check">
+                <input
+                    class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                    Default checkbox
+                </label>
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked">
+                    Checked checkbox
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- checkbox -->
+
+    <!-- radio -->
+    <div class="flex justify-center">
+        <div>
+            <div class="form-check">
+                <input
+                    class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+                    Default radio
+                </label>
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                    Default checked radio
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- radio -->
+
+    <!-- range -->
+    <div class="relative pt-1">
+        <label for="customRange1" class="form-label">Example range</label>
+        <input type="range" class="
+            form-range
+            appearance-none
+            w-full
+            h-6
+            p-0
+            bg-transparent
+            focus:outline-none focus:ring-0 focus:shadow-none
+          " id="customRange1" />
+    </div>
+    <div class="relative pt-1">
+        <label for="customRange3" class="form-label">Example range</label>
+        <input type="range" class="
+            form-range
+            appearance-none
+            w-full
+            h-6
+            p-0
+            bg-transparent
+            focus:outline-none focus:ring-0 focus:shadow-none
+          " min="0" max="5" step="0.5" id="customRange3" />
+    </div>
+    <!-- range -->
+    <!-- timepicker -->
+    <div class="flex justify-center">
+        <div class="timepicker relative form-floating mb-3 xl:w-96">
+            <input type="text"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                placeholder="Select a date" />
+            <label for="floatingInput" class="text-gray-700">Select a time</label>
+        </div>
+    </div>
+    <!-- timepicker -->
+    <!-- datepicker -->
+    <div class="flex items-center justify-center">
+        <div class="datepicker relative form-floating mb-3 xl:w-96">
+            <input type="text"
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                placeholder="Select a date" />
+            <label for="floatingInput" class="text-gray-700">Select a date</label>
+        </div>
+    </div>
+    <!-- datepicker -->
+
+    <!-- file -->
+    <div class="flex justify-center">
+        <div class="mb-3 w-96">
+            <label for="formFileMultiple" class="form-label inline-block mb-2 text-gray-700">Multiple files input
+                example</label>
+            <input class="form-control
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file"
+                id="formFileMultiple" multiple>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div class="mb-3 w-96">
+            <label for="formFile" class="form-label inline-block mb-2 text-gray-700">Default file input example</label>
+            <input class="form-control
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="formFile">
+        </div>
+    </div>
+    <!-- Custom scripts -->
+    <script type="text/javascript">
+        const checkbox = document.getElementById("flexCheckIndeterminate");
+        checkbox.indeterminate = true;
+    </script>
+    <!-- file -->
+
+    <!-- search -->
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <div class="input-group relative flex flex-wrap items-stretch w-full mb-4">
+                <input type="search"
+                    class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                <button
+                    class="btn inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
+                    type="button" id="button-addon2">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- search -->
+    <!-- switch -->
+    <div class="flex justify-center">
+        <div class="form-check form-switch">
+            <input
+                class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+                type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label inline-block text-gray-800" for="flexSwitchCheckDefault">Default switch
+                checkbox input</label>
+        </div>
+    </div>
+    <!-- switch -->
+    <!-- formtemplate -->
+    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <form>
+            <div class="form-group mb-6">
+                <label for="exampleInputEmail2" class="form-label inline-block mb-2 text-gray-700">Email address</label>
+                <input type="email" class="form-control
+              block
+              w-full
+              px-3
+              py-1.5
+              text-base
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0
+              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputEmail2"
+                    aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group mb-6">
+                <label for="exampleInputPassword2" class="form-label inline-block mb-2 text-gray-700">Password</label>
+                <input type="password" class="form-control block
+              w-full
+              px-3
+              py-1.5
+              text-base
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0
+              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword2"
+                    placeholder="Password">
+            </div>
+            <div class="flex justify-between items-center mb-6">
+                <div class="form-group form-check">
+                    <input type="checkbox"
+                        class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        id="exampleCheck2">
+                    <label class="form-check-label inline-block text-gray-800" for="exampleCheck2">Remember me</label>
+                </div>
+                <a href="#!"
+                    class="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out">Forgot
+                    password?</a>
+            </div>
+            <button type="submit" class="
+            w-full
+            px-6
+            py-2.5
+            bg-blue-600
+            text-white
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            rounded
+            shadow-md
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
+            transition
+            duration-150
+            ease-in-out">Sign in</button>
+            <p class="text-gray-800 mt-6 text-center">Not a member? <a href="#!"
+                    class="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out">Register</a>
+            </p>
+        </form>
+    </div>
+
+    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
+        <form>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="form-group mb-6">
+                    <input type="text" class="form-control
+                block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-gray-700
+                bg-white bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput123"
+                        aria-describedby="emailHelp123" placeholder="First name">
+                </div>
+                <div class="form-group mb-6">
+                    <input type="text" class="form-control
+                block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-gray-700
+                bg-white bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput124"
+                        aria-describedby="emailHelp124" placeholder="Last name">
+                </div>
+            </div>
+            <div class="form-group mb-6">
+                <input type="email" class="form-control block
+              w-full
+              px-3
+              py-1.5
+              text-base
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0
+              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
+                    placeholder="Email address">
+            </div>
+            <div class="form-group mb-6">
+                <input type="password" class="form-control block
+              w-full
+              px-3
+              py-1.5
+              text-base
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0
+              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput126"
+                    placeholder="Password">
+            </div>
+            <div class="form-group form-check text-center mb-6">
+                <input type="checkbox"
+                    class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+                    id="exampleCheck25" checked>
+                <label class="form-check-label inline-block text-gray-800" for="exampleCheck25">Subscribe to our
+                    newsletter</label>
+            </div>
+            <button type="submit" class="
+            w-full
+            px-6
+            py-2.5
+            bg-blue-600
+            text-white
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            rounded
+            shadow-md
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
+            transition
+            duration-150
+            ease-in-out">Sign up</button>
+        </form>
+    </div>
+    <!-- formtemplate -->
+</body>
+
+</html>

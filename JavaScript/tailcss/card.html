@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</head>
+
+<body>
+    <!-- card1 -->
+    <div class="flex justify-center">
+        <div class="rounded-lg shadow-lg bg-white max-w-sm">
+            <a href="#!">
+                <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt="" />
+            </a>
+            <div class="p-6">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Card title</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </p>
+                <button type="button"
+                    class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+            </div>
+        </div>
+    </div>
+    <!-- card2 -->
+    <div class="flex justify-center">
+        <div class="rounded-lg shadow-lg bg-white max-w-sm">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt="" />
+            </a>
+            <div class="p-6">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Card title</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </p>
+                <button type="button"
+                    class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+            </div>
+        </div>
+    </div>
+    <!-- card3 -->
+    <div class="flex justify-center">
+        <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+                src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="" />
+            <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Card title</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This
+                    content is a little bit longer.
+                </p>
+                <p class="text-gray-600 text-xs">Last updated 3 mins ago</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

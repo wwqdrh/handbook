@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</head>
+
+<body>
+    <nav class="rounded-md w-full">
+        <ol class="list-reset flex">
+            <li class="text-gray-500">Home</li>
+        </ol>
+    </nav>
+
+    <br />
+
+    <nav class="rounded-md w-full">
+        <ol class="list-reset flex">
+            <li><a href="#" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <li class="text-gray-500">Library</li>
+        </ol>
+    </nav>
+
+    <br />
+
+    <nav class="rounded-md w-full">
+        <ol class="list-reset flex">
+            <li><a href="#" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <li><a href="#" class="text-blue-600 hover:text-blue-700">Library</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <li class="text-gray-500">Data</li>
+        </ol>
+    </nav>
+
+    <nav class="bg-grey-light rounded-md w-full">
+        <ol class="list-reset flex">
+            <li><a href="#" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2"></span></li>
+            <li><a href="#" class="text-blue-600 hover:text-blue-700">Library</a></li>
+            <li><span class="text-gray-500 mx-2"></span></li>
+            <li class="text-gray-500">Data</li>
+        </ol>
+    </nav>
+
+    <!-- navbar -->
+    <nav class="
+  relative
+  w-full
+  flex flex-wrap
+  items-center
+  justify-between
+  py-4
+  bg-gray-100
+  text-gray-500
+  hover:text-gray-700
+  focus:text-gray-700
+  shadow-lg
+  navbar navbar-expand-lg navbar-light
+  ">
+        <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+            <button class="
+      navbar-toggler
+      text-gray-500
+      border-0
+      hover:shadow-none hover:no-underline
+      py-2
+      px-2.5
+      bg-transparent
+      focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
+    " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                    </path>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
+                <a class="
+        flex
+        items-center
+        text-gray-900
+        hover:text-gray-900
+        focus:text-gray-900
+        mt-2
+        lg:mt-0
+        mr-1
+      " href="#">
+                    <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" style="height: 15px"
+                        alt="" loading="lazy" />
+                </a>
+                <!-- Left links -->
+                <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0"
+                            href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Team</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0"
+                            href="#">Projects</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+
+            <!-- Right elements -->
+            <div class="flex items-center relative">
+                <!-- Icon -->
+                <a class="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4" href="#">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" class="w-4"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                        </path>
+                    </svg>
+                </a>
+                <div class="dropdown relative">
+                    <a class="
+          text-gray-500
+          hover:text-gray-700
+          focus:text-gray-700
+          mr-4
+          dropdown-toggle
+          hidden-arrow
+          flex items-center
+        " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="w-4"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z">
+                            </path>
+                        </svg>
+                        <span
+                            class="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5">1</span>
+                    </a>
+                    <ul class="
+      dropdown-menu
+      min-w-max
+      absolute
+      hidden
+      bg-white
+      text-base
+      z-50
+      float-left
+      py-2
+      list-none
+      text-left
+      rounded-lg
+      shadow-lg
+      mt-1
+      hidden
+      m-0
+      bg-clip-padding
+      border-none
+      left-auto
+      right-0
+    " aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <a class="
+          dropdown-item
+          text-sm
+          py-2
+          px-4
+          font-normal
+          block
+          w-full
+          whitespace-nowrap
+          bg-transparent
+          text-gray-700
+          hover:bg-gray-100
+        " href="#">Action</a>
+                        </li>
+                        <li>
+                            <a class="
+          dropdown-item
+          text-sm
+          py-2
+          px-4
+          font-normal
+          block
+          w-full
+          whitespace-nowrap
+          bg-transparent
+          text-gray-700
+          hover:bg-gray-100
+        " href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="
+          dropdown-item
+          text-sm
+          py-2
+          px-4
+          font-normal
+          block
+          w-full
+          whitespace-nowrap
+          bg-transparent
+          text-gray-700
+          hover:bg-gray-100
+        " href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown relative">
+                    <a class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton2"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-full"
+                            style="height: 25px; width: 25px" alt="" loading="lazy" />
+                    </a>
+                    <ul class="
+    dropdown-menu
+    min-w-max
+    absolute
+    hidden
+    bg-white
+    text-base
+    z-50
+    float-left
+    py-2
+    list-none
+    text-left
+    rounded-lg
+    shadow-lg
+    mt-1
+    hidden
+    m-0
+    bg-clip-padding
+    border-none
+    left-auto
+    right-0
+  " aria-labelledby="dropdownMenuButton2">
+                        <li>
+                            <a class="
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        bg-transparent
+        text-gray-700
+        hover:bg-gray-100
+      " href="#">Action</a>
+                        </li>
+                        <li>
+                            <a class="
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        bg-transparent
+        text-gray-700
+        hover:bg-gray-100
+      " href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        bg-transparent
+        text-gray-700
+        hover:bg-gray-100
+      " href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right elements -->
+        </div>
+    </nav>
+
+    <!-- slidenav -->
+    <div class="w-60 h-full shadow-md bg-white absolute" id="sidenavSecExample">
+        <div class="pt-4 pb-2 px-6">
+            <a href="#!">
+                <div class="flex items-center">
+                    <div class="shrink-0">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp" class="rounded-full w-10"
+                            alt="Avatar">
+                    </div>
+                    <div class="grow ml-3">
+                        <p class="text-sm font-semibold text-blue-600">Jason McCoel</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <ul class="relative px-1">
+            <li class="relative">
+                <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="primary">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+                        </path>
+                    </svg>
+                    <span>Non-collapsible link</span>
+                </a>
+            </li>
+            <li class="relative" id="sidenavSecEx2">
+                <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer"
+                    data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSidenavSecEx2" aria-expanded="false" aria-controls="collapseSidenavSecEx2">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path fill="currentColor"
+                            d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
+                        </path>
+                    </svg>
+                    <span>Collapsible item 1</span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                        </path>
+                    </svg>
+                </a>
+                <ul class="relative accordion-collapse collapse" id="collapseSidenavSecEx2"
+                    aria-labelledby="sidenavSecEx2" data-bs-parent="#sidenavSecExample">
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 1</a>
+                    </li>
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="relative" id="sidenavSecEx3">
+                <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer"
+                    data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSidenavSecEx3" aria-expanded="false" aria-controls="collapseSidenavSecEx3">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65 64-64v-48c0-35.35-28.65-64-64-64h-16c-17.67 0-32 14.33-32 32v112c0 17.67 14.33 32 32 32h16zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0z">
+                        </path>
+                    </svg>
+                    <span>Collapsible item 2</span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                        </path>
+                    </svg>
+                </a>
+                <ul class="relative accordion-collapse collapse" id="collapseSidenavSecEx3"
+                    aria-labelledby="sidenavSecEx3" data-bs-parent="#sidenavSecExample">
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 3</a>
+                    </li>
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 4</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr class="my-2">
+        <ul class="relative px-1">
+            <li class="relative">
+                <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="primary">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z">
+                        </path>
+                    </svg>
+                    <span>Non-collapsible link</span>
+                </a>
+            </li>
+            <li class="relative" id="sidenavXxEx2">
+                <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer"
+                    data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSidenavXxEx2" aria-expanded="false" aria-controls="collapseSidenavXxEx2">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments"
+                        class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z">
+                        </path>
+                    </svg>
+                    <span>Collapsible item 3</span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                        </path>
+                    </svg>
+                </a>
+                <ul class="relative accordion-collapse collapse" id="collapseSidenavXxEx2"
+                    aria-labelledby="sidenavXxEx2" data-bs-parent="#sidenavSecExample">
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 5</a>
+                    </li>
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 6</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="relative" id="sidenavXxEx3">
+                <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out cursor-pointer"
+                    data-mdb-ripple="true" data-mdb-ripple-color="primary" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSidenavXxEx3" aria-expanded="false" aria-controls="collapseSidenavXxEx3">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                        </path>
+                    </svg>
+                    <span>Collapsible item 4</span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 ml-auto" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                        </path>
+                    </svg>
+                </a>
+                <ul class="relative accordion-collapse collapse" id="collapseSidenavXxEx3"
+                    aria-labelledby="sidenavXxEx3" data-bs-parent="#sidenavSecExample">
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 7</a>
+                    </li>
+                    <li class="relative">
+                        <a href="#!"
+                            class="flex items-center text-xs py-4 pl-12 pr-6 h-6 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-blue-50 transition duration-300 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="primary">Link 8</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="text-center bottom-0 absolute w-full">
+            <hr class="m-0">
+            <p class="py-2 text-sm text-gray-700">tailwind-elements.com</p>
+        </div>
+    </div>
+
+
+    <!-- menu -->
+    <nav class="navbar navbar-expand-lg shadow-lg py-2 bg-gray-50 relative flex items-center w-full justify-between">
+        <div class="px-6">
+            <button
+                class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentY"
+                aria-controls="navbarSupportedContentY" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-5" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                    </path>
+                </svg>
+            </button>
+            <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+                <ul class="navbar-nav mr-auto flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                            href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Regular link</a>
+                    </li>
+                    <li class="nav-item dropdown static">
+                        <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out dropdown-toggle flex items-center whitespace-nowrap"
+                            href="#" data-mdb-ripple="true" data-mdb-ripple-color="light" type="button"
+                            id="dropdownMenuButtonY" data-bs-toggle="dropdown" aria-expanded="false">Mega menu
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
+                                class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                                </path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu w-full mt-0 hidden shadow-lg bg-white absolute left-0 top-full"
+                            aria-labelledby="dropdownMenuButtonY">
+                            <div class="px-6 lg:px-8 py-5">
+                                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Lorem ipsum</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Dolor
+                                            sit</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Amet
+                                            consectetur</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Cras
+                                            justo odio</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Adipisicing
+                                            elit</a>
+                                    </div>
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Explit voluptas</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Perspiciatis
+                                            quo</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Cras
+                                            justo odio</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Laudant
+                                            maiores</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Provident
+                                            dolor</a>
+                                    </div>
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Iste quaerato</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Cras
+                                            justo odio</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Est
+                                            iure</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Praesentium</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Laboriosam</a>
+                                    </div>
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Cras justo odio</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Saepe</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Vel
+                                            alias</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Sunt
+                                            doloribus</a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-2 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out">Cum
+                                            dolores</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg shadow-lg py-2 bg-gray-50 relative flex items-center w-full justify-between">
+        <div class="px-6">
+            <button
+                class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentQ"
+                aria-controls="navbarSupportedContentQ" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-5" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                    </path>
+                </svg>
+            </button>
+            <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentQ">
+                <ul class="navbar-nav mr-auto flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                            href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Regular link</a>
+                    </li>
+                    <li class="nav-item dropdown static">
+                        <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out dropdown-toggle flex items-center whitespace-nowrap"
+                            href="#" data-mdb-ripple="true" data-mdb-ripple-color="light" type="button"
+                            id="dropdownMenuButtonQ" data-bs-toggle="dropdown" aria-expanded="false">Mega menu
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
+                                class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                                </path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu w-full mt-0 hidden shadow-lg bg-white absolute left-0 top-full"
+                            aria-labelledby="dropdownMenuButtonQ">
+                            <div class="px-6 lg:px-8 py-5">
+                                <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Lorem ipsum</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Explit voluptas</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Iste quaerato</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="bg-white text-gray-600">
+                                        <p
+                                            class="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">
+                                            Cras justo odio</p>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                        <a href="#!" aria-current="true"
+                                            class="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
+                                            <div class="shrink-0">
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
+                                                    class="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                                            </div>
+                                            <div class="grow ml-4">
+                                                <p class="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
+                                                <p><u>15.07.2021</u></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- footer -->
+    <footer class="text-center lg:text-left bg-gray-100 text-gray-600">
+        <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
+            <div class="mr-12 hidden lg:block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div class="flex justify-center">
+                <a href="#!" class="mr-6 text-gray-600">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="w-2.5"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#!" class="mr-6 text-gray-600">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="w-4"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#!" class="mr-6 text-gray-600">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="w-3.5"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                        <path fill="currentColor"
+                            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#!" class="mr-6 text-gray-600">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="w-3.5"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#!" class="mr-6 text-gray-600">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="w-3.5"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#!" class="text-gray-600">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="w-4"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path fill="currentColor"
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="mx-6 py-10 text-center md:text-left">
+            <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="">
+                    <h6 class="
+                  uppercase
+                  font-semibold
+                  mb-4
+                  flex
+                  items-center
+                  justify-center
+                  md:justify-start
+                ">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes" class="w-4 mr-3"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z">
+                            </path>
+                        </svg>
+                        Tailwind ELEMENTS
+                    </h6>
+                    <p>
+                        Here you can use rows and columns to organize your footer content. Lorem ipsum dolor
+                        sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="">
+                    <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                        Products
+                    </h6>
+                    <p class="mb-4">
+                        <a href="#!" class="text-gray-600">Angular</a>
+                    </p>
+                    <p class="mb-4">
+                        <a href="#!" class="text-gray-600">React</a>
+                    </p>
+                    <p class="mb-4">
+                        <a href="#!" class="text-gray-600">Vue</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-gray-600">Laravel</a>
+                    </p>
+                </div>
+                <div class="">
+                    <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                        Useful links
+                    </h6>
+                    <p class="mb-4">
+                        <a href="#!" class="text-gray-600">Pricing</a>
+                    </p>
+                    <p class="mb-4">
+                        <a href="#!" class="text-gray-600">Settings</a>
+                    </p>
+                    <p class="mb-4">
+                        <a href="#!" class="text-gray-600">Orders</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-gray-600">Help</a>
+                    </p>
+                </div>
+                <div class="">
+                    <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                        Contact
+                    </h6>
+                    <p class="flex items-center justify-center md:justify-start mb-4">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="w-4 mr-4"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+                            </path>
+                        </svg>
+                        New York, NY 10012, US
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start mb-4">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
+                            class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                            </path>
+                        </svg>
+                        info@example.com
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start mb-4">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="w-4 mr-4"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
+                            </path>
+                        </svg>
+                        + 01 234 567 88
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="print" class="w-4 mr-4"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z">
+                            </path>
+                        </svg>
+                        + 01 234 567 89
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-6 bg-gray-200">
+            <span>© 2021 Copyright:</span>
+            <a class="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Tailwind Elements</a>
+        </div>
+    </footer>
+    <footer class="text-center bg-gray-900 text-white">
+        <div class="container px-6 pt-6">
+            <div class="flex justify-center mb-6">
+                <a href="#!" type="button"
+                    class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
+                        class="w-2 h-full mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="#!" type="button"
+                    class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
+                        class="w-3 h-full mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="#!" type="button"
+                    class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google"
+                        class="w-3 h-full mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                        <path fill="currentColor"
+                            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="#!" type="button"
+                    class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                        class="w-3 h-full mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="#!" type="button"
+                    class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in"
+                        class="w-3 h-full mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="#!" type="button"
+                    class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
+                        class="w-3 h-full mx-auto" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path fill="currentColor"
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <div>
+                <form action="">
+                    <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
+                        <div class="md:ml-auto md:mb-6">
+                            <p class="">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+
+                        <div class="md:mb-6">
+                            <input type="text" class="
+                      form-control
+                      block
+                      w-full
+                      px-3
+                      py-1.5
+                      text-base
+                      font-normal
+                      text-gray-700
+                      bg-white bg-clip-padding
+                      border border-solid border-gray-300
+                      rounded
+                      transition
+                      ease-in-out
+                      m-0
+                      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                    " id="exampleFormControlInput1" placeholder="Email address" />
+                        </div>
+
+                        <div class="md:mr-auto mb-6">
+                            <button type="submit"
+                                class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mb-6">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-2">
+                <div class="mb-6">
+                    <h5 class="uppercase font-bold mb-2.5">Links</h5>
+
+                    <ul class="list-none mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h5 class="uppercase font-bold mb-2.5">Links</h5>
+
+                    <ul class="list-none mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h5 class="uppercase font-bold mb-2.5">Links</h5>
+
+                    <ul class="list-none mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h5 class="uppercase font-bold mb-2.5">Links</h5>
+
+                    <ul class="list-none mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="https://tailwind-elements.com/">Tailwind Elements</a>
+        </div>
+    </footer>
+</body>
+
+</html>
