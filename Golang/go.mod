@@ -76,7 +76,7 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
 	go.uber.org/zap v1.19.1 // indirect
-	golang.org/x/crypto v0.0.0-20211117183948-ae814b36b871
+	golang.org/x/crypto v0.0.0-20220214200702-86341886e292
 	golang.org/x/net v0.0.0-20220425223048-2871e0cb64e4
 	golang.org/x/oauth2 v0.0.0-20220309155454-6242fa91716a
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
@@ -89,6 +89,9 @@ require (
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 	gopkg.in/redis.v5 v5.2.9
 	gopkg.in/zabawaba99/firego.v1 v1.0.0-20190331000051-3bcc4b6a4599
-	gorm.io/driver/mysql v1.2.0
-	gorm.io/gorm v1.23.5
+	gorm.io/driver/mysql v1.3.2
+	gorm.io/driver/postgres v1.3.7 // indirect
+	gorm.io/gorm v1.23.6
+	gorm.io/plugin/dbresolver v1.2.1 // indirect
+	gorm.io/sharding v0.5.1 // indirect
 )
