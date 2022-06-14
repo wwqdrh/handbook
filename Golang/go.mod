@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	cloud.google.com/go/datastore v1.1.0
-	github.com/BurntSushi/toml v0.4.1
+	github.com/BurntSushi/toml v1.0.0
 	github.com/DataDog/zstd v1.4.8 // indirect
 	github.com/Shopify/toxiproxy v2.1.4+incompatible // indirect
 	github.com/afex/hystrix-go v0.0.0-20180502004556-fa1af6a1f4f5
@@ -14,6 +14,7 @@ require (
 	github.com/buaazp/fasthttprouter v0.1.1
 	github.com/casbin/casbin v1.9.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/dtm-labs/dtmcli v1.14.2 // indirect
 	github.com/eapache/go-resiliency v1.2.0 // indirect
 	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect
 	github.com/eapache/queue v1.1.0 // indirect
@@ -29,6 +30,8 @@ require (
 	github.com/go-session/session v3.1.2+incompatible
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/go-yaml/yaml v2.1.0+incompatible
+	github.com/gobuffalo/genny v0.1.1 // indirect
+	github.com/gobuffalo/gogen v0.1.1 // indirect
 	github.com/gogf/gf v1.16.6
 	github.com/gogf/gf/v2 v2.0.4
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
@@ -43,7 +46,9 @@ require (
 	github.com/hashicorp/go-msgpack v1.1.5 // indirect
 	github.com/hashicorp/go-uuid v1.0.2 // indirect
 	github.com/hashicorp/raft v1.3.2
+	github.com/karrick/godirwalk v1.10.3 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0
+	github.com/lithammer/shortuuid v3.0.0+incompatible // indirect
 	github.com/mattn/go-sqlite3 v1.14.13 // indirect
 	github.com/miekg/dns v1.1.43 // indirect
 	github.com/olekukonko/tablewriter v0.0.5
@@ -69,7 +74,7 @@ require (
 	github.com/zabawaba99/firego v0.0.0-20190331000051-3bcc4b6a4599 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.4
 	go.etcd.io/etcd/client/v3 v3.5.4
-	go.mongodb.org/mongo-driver v1.7.4
+	go.mongodb.org/mongo-driver v1.8.3
 	go.opentelemetry.io/otel v1.5.0
 	go.opentelemetry.io/otel/sdk v1.5.0
 	go.opentelemetry.io/otel/trace v1.5.0
