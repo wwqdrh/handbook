@@ -55,6 +55,7 @@ require (
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.12.1
+	github.com/rabbitmq/amqp091-go v1.3.4 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475
 	github.com/reactivex/rxgo v1.0.1
 	github.com/samuel/go-zookeeper v0.0.0-20201211165307-7117e9ea2414
@@ -63,6 +64,7 @@ require (
 	github.com/smartystreets/goconvey v1.7.2
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.10.1
+	github.com/streadway/amqp v1.0.0 // indirect
 	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/stretchr/testify v1.7.1
 	github.com/swaggo/http-swagger v1.2.8
@@ -71,6 +73,7 @@ require (
 	github.com/trustmaster/goflow v0.0.0-20210124103720-b48b2ee88975
 	github.com/tus/tusd v1.9.0
 	github.com/valyala/fasthttp v1.29.0
+	github.com/wwqdrh/logger v0.0.0-20220613093122-f085c567ee9e // indirect
 	github.com/zabawaba99/firego v0.0.0-20190331000051-3bcc4b6a4599 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.4
 	go.etcd.io/etcd/client/v3 v3.5.4
@@ -80,7 +83,6 @@ require (
 	go.opentelemetry.io/otel/trace v1.5.0
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
-	go.uber.org/zap v1.19.1 // indirect
 	golang.org/x/crypto v0.0.0-20220214200702-86341886e292
 	golang.org/x/net v0.0.0-20220425223048-2871e0cb64e4
 	golang.org/x/oauth2 v0.0.0-20220309155454-6242fa91716a
