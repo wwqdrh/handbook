@@ -3,9 +3,9 @@ package report
 import (
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/libraryqueue/databus"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/queue/databus"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var (

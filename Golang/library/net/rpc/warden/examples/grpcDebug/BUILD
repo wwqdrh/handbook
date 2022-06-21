@@ -9,7 +9,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["client.go"],
-    importpath = "wwqdrh/handbook/librarynet/rpc/warden/examples/grpcDebug",
+    importpath = "wwqdrh/handbook/library/net/rpc/warden/examples/grpcDebug",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

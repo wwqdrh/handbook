@@ -24,7 +24,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["direct.go"],
-    importpath = "wwqdrh/handbook/librarynet/rpc/warden/resolver/direct",
+    importpath = "wwqdrh/handbook/library/net/rpc/warden/resolver/direct",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

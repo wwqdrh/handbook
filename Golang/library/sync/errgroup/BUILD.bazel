@@ -7,7 +7,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["errgroup.go"],
-    importpath = "wwqdrh/handbook/librarysync/errgroup",
+    importpath = "wwqdrh/handbook/library/sync/errgroup",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

@@ -8,7 +8,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["stat.go"],
-    importpath = "wwqdrh/handbook/librarystat",
+    importpath = "wwqdrh/handbook/library/stat",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//library/stat/prom:go_default_library"],

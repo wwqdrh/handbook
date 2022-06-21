@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"sync"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/trace"
 )
 
 var fm sync.Map

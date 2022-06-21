@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	nmd "wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarystat/summary"
-	"wwqdrh/handbook/librarystat/sys/cpu"
+	"wwqdrh/handbook/library/ecode"
+	nmd "wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/stat/summary"
+	"wwqdrh/handbook/library/stat/sys/cpu"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"

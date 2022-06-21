@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	xtime "wwqdrh/handbook/librarytime"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var once sync.Once

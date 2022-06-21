@@ -2,8 +2,8 @@ package resolver
 
 import (
 	"context"
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarynaming"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/naming"
 )
 
 type mockDiscoveryBuilder struct {

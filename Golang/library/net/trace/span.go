@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	protogen "wwqdrh/handbook/librarynet/trace/proto"
+	protogen "wwqdrh/handbook/library/net/trace/proto"
 )
 
 const (

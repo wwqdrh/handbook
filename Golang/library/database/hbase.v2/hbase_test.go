@@ -11,7 +11,7 @@ import (
 
 	"github.com/tsuna/gohbase/hrpc"
 
-	xtime "wwqdrh/handbook/librarytime"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var addrs []string

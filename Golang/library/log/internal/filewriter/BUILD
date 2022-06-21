@@ -20,7 +20,7 @@ go_library(
         "filewriter.go",
         "option.go",
     ],
-    importpath = "wwqdrh/handbook/librarylog/internal/filewriter",
+    importpath = "wwqdrh/handbook/library/log/internal/filewriter",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

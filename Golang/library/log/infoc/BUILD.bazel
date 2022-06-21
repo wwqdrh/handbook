@@ -7,7 +7,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["infoc.go"],
-    importpath = "wwqdrh/handbook/librarylog/infoc",
+    importpath = "wwqdrh/handbook/library/log/infoc",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

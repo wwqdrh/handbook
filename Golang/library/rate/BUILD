@@ -8,7 +8,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["rate.go"],
-    importpath = "wwqdrh/handbook/libraryrate",
+    importpath = "wwqdrh/handbook/library/rate",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

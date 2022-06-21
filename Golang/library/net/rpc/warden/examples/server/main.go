@@ -9,12 +9,12 @@ import (
 	"syscall"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	epb "wwqdrh/handbook/libraryecode/pb"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/rpc/warden"
-	pb "wwqdrh/handbook/librarynet/rpc/warden/proto/testproto"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/ecode"
+	epb "wwqdrh/handbook/library/ecode/pb"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/rpc/warden"
+	pb "wwqdrh/handbook/library/net/rpc/warden/proto/testproto"
+	xtime "wwqdrh/handbook/library/time"
 
 	"github.com/golang/protobuf/ptypes"
 	"google.golang.org/grpc"

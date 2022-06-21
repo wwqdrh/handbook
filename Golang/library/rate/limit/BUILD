@@ -18,7 +18,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["limit.go"],
-    importpath = "wwqdrh/handbook/libraryrate/limit",
+    importpath = "wwqdrh/handbook/library/rate/limit",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

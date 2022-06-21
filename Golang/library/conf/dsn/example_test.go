@@ -3,8 +3,8 @@ package dsn_test
 import (
 	"log"
 
-	"wwqdrh/handbook/libraryconf/dsn"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/dsn"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 // Config struct

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
+	"wwqdrh/handbook/library/conf/env"
 
 	"github.com/naoina/toml"
 	"github.com/stretchr/testify/assert"

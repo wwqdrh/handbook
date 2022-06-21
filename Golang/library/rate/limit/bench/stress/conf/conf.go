@@ -3,13 +3,13 @@ package conf
 import (
 	"flag"
 
-	"wwqdrh/handbook/librarycache/memcache"
-	"wwqdrh/handbook/librarycache/redis"
-	"wwqdrh/handbook/librarydatabase/sql"
-	ecode "wwqdrh/handbook/libraryecode/tip"
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/cache/memcache"
+	"wwqdrh/handbook/library/cache/redis"
+	"wwqdrh/handbook/library/database/sql"
+	ecode "wwqdrh/handbook/library/ecode/tip"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/trace"
 
 	"github.com/BurntSushi/toml"
 )

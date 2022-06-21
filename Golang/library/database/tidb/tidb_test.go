@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 func TestMySQL(t *testing.T) {

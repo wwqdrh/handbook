@@ -6,8 +6,8 @@ import (
 	"os"
 	"runtime"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

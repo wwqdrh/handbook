@@ -35,7 +35,7 @@ go_library(
         "open_ecode.go",
         "status.go",
     ],
-    importpath = "wwqdrh/handbook/libraryecode",
+    importpath = "wwqdrh/handbook/library/ecode",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

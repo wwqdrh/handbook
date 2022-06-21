@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarynet/http/blademaster/tests"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/net/http/blademaster/tests"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 func TestClient(t *testing.T) {

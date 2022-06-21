@@ -42,7 +42,7 @@ go_library(
         "util.go",
         "verbose.go",
     ],
-    importpath = "wwqdrh/handbook/librarylog",
+    importpath = "wwqdrh/handbook/library/log",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

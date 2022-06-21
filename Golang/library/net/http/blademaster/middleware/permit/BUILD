@@ -29,7 +29,7 @@ go_library(
         "permit.go",
         "session.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/middleware/permit",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/middleware/permit",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/net/trace"
 )
 
 type mockTrace struct {

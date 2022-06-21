@@ -3,8 +3,8 @@ package supervisor
 import (
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
+	"wwqdrh/handbook/library/ecode"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
 )
 
 // Config supervisor conf.

@@ -11,8 +11,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/log"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var isClient bool

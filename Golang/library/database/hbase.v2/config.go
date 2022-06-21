@@ -1,7 +1,7 @@
 package hbase
 
 import (
-	xtime "wwqdrh/handbook/librarytime"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 // ZKConfig Server&Client settings.

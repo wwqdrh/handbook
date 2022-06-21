@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"wwqdrh/handbook/libraryconf/dsn"
+	"wwqdrh/handbook/library/conf/dsn"
 
 	"github.com/pkg/errors"
 )

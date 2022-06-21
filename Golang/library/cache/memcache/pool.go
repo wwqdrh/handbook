@@ -5,9 +5,9 @@ import (
 	"io"
 	"time"
 
-	"wwqdrh/handbook/librarycontainer/pool"
-	"wwqdrh/handbook/librarystat"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/container/pool"
+	"wwqdrh/handbook/library/stat"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var stats = stat.Cache

@@ -14,11 +14,11 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	xip "wwqdrh/handbook/librarynet/ip"
-	"wwqdrh/handbook/librarynet/netutil"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	xip "wwqdrh/handbook/library/net/ip"
+	"wwqdrh/handbook/library/net/netutil"
 
 	"github.com/pkg/errors"
 )

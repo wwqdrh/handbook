@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"time"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynaming/discovery"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/naming/discovery"
 )
 
 // this example creates a registry service to register instance info

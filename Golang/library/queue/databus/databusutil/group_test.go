@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/libraryqueue/databus"
-	"wwqdrh/handbook/librarysync/errgroup"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/queue/databus"
+	"wwqdrh/handbook/library/sync/errgroup"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 type testMsg struct {

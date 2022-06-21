@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
+	"wwqdrh/handbook/library/ecode"
 )
 
 var testConf = &Config{

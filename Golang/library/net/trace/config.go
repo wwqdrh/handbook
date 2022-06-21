@@ -8,8 +8,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"wwqdrh/handbook/libraryconf/dsn"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/dsn"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var _traceDSN = "unixgram:///var/run/dapper-collect/dapper-collect.sock"

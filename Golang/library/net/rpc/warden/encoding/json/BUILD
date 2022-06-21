@@ -8,7 +8,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["json.go"],
-    importpath = "wwqdrh/handbook/librarynet/rpc/warden/encoding/json",
+    importpath = "wwqdrh/handbook/library/net/rpc/warden/encoding/json",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

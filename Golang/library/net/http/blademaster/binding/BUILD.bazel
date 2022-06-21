@@ -16,7 +16,7 @@ go_library(
         "tags.go",
         "xml.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/binding",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/binding",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

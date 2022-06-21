@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	nmd "wwqdrh/handbook/librarynet/metadata"
-	wmeta "wwqdrh/handbook/librarynet/rpc/warden/metadata"
+	nmd "wwqdrh/handbook/library/net/metadata"
+	wmeta "wwqdrh/handbook/library/net/rpc/warden/metadata"
 
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/resolver"

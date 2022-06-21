@@ -4,9 +4,9 @@
 package testdata
 
 import (
-	"wwqdrh/handbook/librarynet/rpc/liverpc"
-	"wwqdrh/handbook/librarynet/rpc/liverpc/testdata/v1"
-	"wwqdrh/handbook/librarynet/rpc/liverpc/testdata/v2"
+	"wwqdrh/handbook/library/net/rpc/liverpc"
+	"wwqdrh/handbook/library/net/rpc/liverpc/testdata/v1"
+	"wwqdrh/handbook/library/net/rpc/liverpc/testdata/v2"
 )
 
 // Client that represents a liverpc room service api

@@ -3,12 +3,11 @@ package memcache
 import (
 	"bytes"
 	"encoding/json"
-	"errors"
 	"testing"
 	"time"
-	test "wwqdrh/handbook/librarycache/memcache/test"
+	test "wwqdrh/handbook/library/cache/memcache/test"
 
-	"github.com/bouk/monkey"
+	// "github.com/bouk/monkey"
 	"github.com/gogo/protobuf/proto"
 )
 
@@ -311,25 +310,25 @@ func TestGet(t *testing.T) {
 	}
 }
 
-func TestGetHasErr(t *testing.T) {
-	prepareEnv(t)
+// func TestGetHasErr(t *testing.T) {
+// 	prepareEnv(t)
 
-	st := &TestItem{Name: "json", Age: 10}
-	itemx := &Item{Key: "test", Object: st, Flags: FlagJSON}
-	c.Set(itemx)
+// 	st := &TestItem{Name: "json", Age: 10}
+// 	itemx := &Item{Key: "test", Object: st, Flags: FlagJSON}
+// 	c.Set(itemx)
 
-	expected := errors.New("some error")
-	monkey.Patch(scanGetReply, func(line []byte, item *Item) (size int, err error) {
-		return 0, expected
-	})
+// 	expected := errors.New("some error")
+// 	monkey.Patch(scanGetReply, func(line []byte, item *Item) (size int, err error) {
+// 		return 0, expected
+// 	})
 
-	if _, err := c.Get("test"); err.Error() != expected.Error() {
-		t.Errorf("conn.Get() unexpected error(%v)", err)
-	}
-	if err := c.(*conn).err; err.Error() != expected.Error() {
-		t.Errorf("unexpected error(%v)", err)
-	}
-}
+// 	if _, err := c.Get("test"); err.Error() != expected.Error() {
+// 		t.Errorf("conn.Get() unexpected error(%v)", err)
+// 	}
+// 	if err := c.(*conn).err; err.Error() != expected.Error() {
+// 		t.Errorf("unexpected error(%v)", err)
+// 	}
+// }
 
 func TestGet2(t *testing.T) {
 	prepareEnv(t)

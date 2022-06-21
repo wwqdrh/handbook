@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	xtime "wwqdrh/handbook/librarytime"
+	xtime "wwqdrh/handbook/library/time"
 
 	"github.com/stretchr/testify/assert"
 )

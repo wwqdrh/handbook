@@ -4,11 +4,11 @@ import (
 	"net/url"
 
 	mng "go-common/app/admin/main/manager/api"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/rpc/warden"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/rpc/warden"
 
 	"github.com/pkg/errors"
 )

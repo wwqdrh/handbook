@@ -24,7 +24,7 @@ go_library(
         "orm.go",
         "timestamp.go",
     ],
-    importpath = "wwqdrh/handbook/librarydatabase/orm",
+    importpath = "wwqdrh/handbook/library/database/orm",
     tags = ["automanaged"],
     deps = [
         "//library/ecode:go_default_library",

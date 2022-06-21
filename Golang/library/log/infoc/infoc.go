@@ -12,10 +12,10 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/netutil"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/netutil"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 const (

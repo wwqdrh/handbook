@@ -7,7 +7,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["interceptor.go"],
-    importpath = "wwqdrh/handbook/librarynet/rpc/interceptor",
+    importpath = "wwqdrh/handbook/library/net/rpc/interceptor",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

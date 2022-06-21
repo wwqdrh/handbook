@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryrate"
+	"wwqdrh/handbook/library/rate"
 )
 
 const (

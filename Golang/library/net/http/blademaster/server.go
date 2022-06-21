@@ -13,12 +13,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/dsn"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/ip"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarystat"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/dsn"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/ip"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/stat"
+	xtime "wwqdrh/handbook/library/time"
 
 	"github.com/pkg/errors"
 )

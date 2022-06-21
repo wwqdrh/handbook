@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/librarystat"
+	"wwqdrh/handbook/library/stat"
 
 	"github.com/pkg/errors"
 )

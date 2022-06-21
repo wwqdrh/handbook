@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/net/trace"
 )
 
 const (

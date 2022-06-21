@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	pb "wwqdrh/handbook/librarycache/memcache/test"
+	pb "wwqdrh/handbook/library/cache/memcache/test"
 )
 
 func TestItemUtil(t *testing.T) {

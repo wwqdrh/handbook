@@ -7,7 +7,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["server.go"],
-    importpath = "wwqdrh/handbook/librarynet/http",
+    importpath = "wwqdrh/handbook/library/net/http",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

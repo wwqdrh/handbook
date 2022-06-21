@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"time"
 
-	"wwqdrh/handbook/librarycache/memcache"
-	"wwqdrh/handbook/librarycontainer/pool"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/permit"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/cache/memcache"
+	"wwqdrh/handbook/library/container/pool"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/permit"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 // This example create a permit middleware instance and attach to several path,

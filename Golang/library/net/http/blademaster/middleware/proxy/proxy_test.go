@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
 
 	"github.com/stretchr/testify/assert"
 )

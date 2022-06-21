@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	xtime "wwqdrh/handbook/librarytime"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 type cfg1 struct {
@@ -66,7 +66,7 @@ func TestDecodeQuery(t *testing.T) {
 			},
 		},
 		{
-			name: "test wwqdrh/handbook/librarytime",
+			name: "test wwqdrh/handbook/library/time",
 			args: args{
 				query: url.Values{
 					"timeout": {"1s"},
@@ -77,7 +77,7 @@ func TestDecodeQuery(t *testing.T) {
 			cfg:  &cfg2{xtime.Duration(time.Second)},
 		},
 		{
-			name: "test empty wwqdrh/handbook/librarytime",
+			name: "test empty wwqdrh/handbook/library/time",
 			args: args{
 				query: url.Values{},
 				v:     &cfg2{},
@@ -86,7 +86,7 @@ func TestDecodeQuery(t *testing.T) {
 			cfg:  &cfg2{},
 		},
 		{
-			name: "test wwqdrh/handbook/librarytime",
+			name: "test wwqdrh/handbook/library/time",
 			args: args{
 				query: url.Values{},
 				v:     &cfg4{},

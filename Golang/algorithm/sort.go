@@ -7,6 +7,31 @@ import (
 	"sort"
 )
 
+// 奇偶重新排列
+func sortArrayByParity(nums []int) []int {
+	n := len(nums)
+	ans := make([]int, n)
+	left, right := 0, n-1
+	for _, num := range nums {
+		if num%2 == 0 {
+			ans[left] = num
+			left++
+		} else {
+			ans[right] = num
+			right--
+		}
+	}
+	return ans
+}
+
+func sortArrayBySort(nums []int) []int {
+	// arr := append([]int{}, nums...)
+	sort.Slice(nums, func(i, j int) bool {
+		return (nums[i] & 1) < (nums[j] & 1) // 将偶数位置的排在前面，即模2为0的
+	})
+	return nums
+}
+
 ////////////////////
 // 公共函数
 ////////////////////
@@ -569,18 +594,18 @@ func sortCollections() {
 
 	// 实数二分
 	// 最大化平均值 https://codeforces.com/edu/course/2/lesson/6/4/practice/contest/285069/problem/A
-	binarySearchF := func(l, r float64, f func(x float64) bool) float64 {
-		step := int(math.Log2((r - l) / eps)) // eps 取 1e-8 比较稳妥（一般来说是保留小数位+2）
-		for ; step > 0; step-- {
-			mid := (l + r) / 2
-			if f(mid) {
-				r = mid // 减小 x
-			} else {
-				l = mid // 增大 x
-			}
-		}
-		return (l + r) / 2
-	}
+	// binarySearchF := func(l, r float64, f func(x float64) bool) float64 {
+	// 	step := int(math.Log2((r - l) / eps)) // eps 取 1e-8 比较稳妥（一般来说是保留小数位+2）
+	// 	for ; step > 0; step-- {
+	// 		mid := (l + r) / 2
+	// 		if f(mid) {
+	// 			r = mid // 减小 x
+	// 		} else {
+	// 			l = mid // 增大 x
+	// 		}
+	// 	}
+	// 	return (l + r) / 2
+	// }
 
 	// 实数三分
 	// 另一种写法是用黄金比率，效率更高
@@ -588,20 +613,20 @@ func sortCollections() {
 	// https://codeforces.com/blog/entry/60702
 	// 模板题 https://www.luogu.com.cn/problem/P3382
 	// 题目推荐 https://cp-algorithms.com/num_methods/ternary_search.html#toc-tgt-4
-	ternarySearchF := func(l, r float64, f func(x float64) float64) float64 {
-		step := int(math.Log((r-l)/eps) / math.Log(1.5)) // eps 取 1e-8 比较稳妥（一般来说是保留小数位+2）
-		for ; step > 0; step-- {
-			m1 := l + (r-l)/3
-			m2 := r - (r-l)/3
-			v1, v2 := f(m1), f(m2)
-			if v1 < v2 {
-				r = m2 // 若求最大值写成 l = m1
-			} else {
-				l = m1 // 若求最大值写成 r = m2
-			}
-		}
-		return (l + r) / 2
-	}
+	// ternarySearchF := func(l, r float64, f func(x float64) float64) float64 {
+	// 	step := int(math.Log((r-l)/eps) / math.Log(1.5)) // eps 取 1e-8 比较稳妥（一般来说是保留小数位+2）
+	// 	for ; step > 0; step-- {
+	// 		m1 := l + (r-l)/3
+	// 		m2 := r - (r-l)/3
+	// 		v1, v2 := f(m1), f(m2)
+	// 		if v1 < v2 {
+	// 			r = m2 // 若求最大值写成 l = m1
+	// 		} else {
+	// 			l = m1 // 若求最大值写成 r = m2
+	// 		}
+	// 	}
+	// 	return (l + r) / 2
+	// }
 
 	// 整数三分·写法一
 	// 比较两个三分点值的大小，每次去掉 1/3 的区间
@@ -798,7 +823,8 @@ func sortCollections() {
 		searchRange, searchRange64,
 		binarySearchS1, binarySearchS2,
 		kthSmallest, kthSmallestRangeSum, kthSubsetSum,
-		binarySearchF, ternarySearchF, ternarySearchInt, ternarySearchInt2,
+		// binarySearchF, ternarySearchF,
+		ternarySearchInt, ternarySearchInt2,
 		search01,
 		parallelBinarySearch,
 		binaryLifting,

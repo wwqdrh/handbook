@@ -7,10 +7,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/trace"
-	"wwqdrh/handbook/libraryrate/limit/bench/stress/conf"
-	"wwqdrh/handbook/libraryrate/limit/bench/stress/http"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/trace"
+	"wwqdrh/handbook/library/rate/limit/bench/stress/conf"
+	"wwqdrh/handbook/library/rate/limit/bench/stress/http"
 )
 
 func main() {

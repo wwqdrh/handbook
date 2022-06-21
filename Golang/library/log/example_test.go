@@ -3,7 +3,7 @@ package log_test
 import (
 	"context"
 
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/log"
 )
 
 // This example will logging a text to log file.

@@ -15,9 +15,9 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	xhttp "wwqdrh/handbook/librarynet/http/blademaster"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/ecode"
+	xhttp "wwqdrh/handbook/library/net/http/blademaster"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 const (

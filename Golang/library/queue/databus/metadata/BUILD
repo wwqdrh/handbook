@@ -8,7 +8,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["metadata.go"],
-    importpath = "wwqdrh/handbook/libraryqueue/databus/metadata",
+    importpath = "wwqdrh/handbook/library/queue/databus/metadata",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//library/net/metadata:go_default_library"],

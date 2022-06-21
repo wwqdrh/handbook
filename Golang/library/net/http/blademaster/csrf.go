@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/log"
 )
 
 var (

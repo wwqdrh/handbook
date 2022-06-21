@@ -111,19 +111,19 @@ func miscCollection() {
 	}
 
 	// 用堆求前 k 小
-	smallK := func(a []int, k int) []int {
-		k++
-		q := hp{} // 最大堆
-		for _, v := range a {
-			if q.Len() < k || v < q.IntSlice[0] {
-				q.push(v)
-			}
-			if q.Len() > k {
-				q.pop() // 不断弹出更大的元素，留下的就是较小的
-			}
-		}
-		return q.IntSlice // 注意返回的不是有序数组
-	}
+	// smallK := func(a []int, k int) []int {
+	// 	k++
+	// 	q := hp{} // 最大堆
+	// 	for _, v := range a {
+	// 		if q.Len() < k || v < q.IntSlice[0] {
+	// 			q.push(v)
+	// 		}
+	// 		if q.Len() > k {
+	// 			q.pop() // 不断弹出更大的元素，留下的就是较小的
+	// 		}
+	// 	}
+	// 	return q.IntSlice // 注意返回的不是有序数组
+	// }
 
 	// floatStr must contain a .
 	// all decimal part must have same length
@@ -386,7 +386,7 @@ func miscCollection() {
 		getCycle,
 		recordPos,
 		partition,
-		smallK,
+		// smallK,
 		floatToRat,
 		isInt,
 		quickHashMapRead,

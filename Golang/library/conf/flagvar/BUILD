@@ -8,7 +8,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["flagvar.go"],
-    importpath = "wwqdrh/handbook/libraryconf/flagvar",
+    importpath = "wwqdrh/handbook/library/conf/flagvar",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

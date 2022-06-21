@@ -3,13 +3,13 @@ package cache_test
 import (
 	"time"
 
-	"wwqdrh/handbook/librarycache/memcache"
-	"wwqdrh/handbook/librarycontainer/pool"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/cache"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/cache/store"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/cache/memcache"
+	"wwqdrh/handbook/library/container/pool"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/cache"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/cache/store"
+	xtime "wwqdrh/handbook/library/time"
 
 	"github.com/pkg/errors"
 )

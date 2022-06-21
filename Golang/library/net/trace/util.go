@@ -8,8 +8,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarynet/metadata"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/net/metadata"
 )
 
 var _hostHash byte

@@ -11,10 +11,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	cmcd "wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	xhttp "wwqdrh/handbook/librarynet/http/blademaster"
-	xtime "wwqdrh/handbook/librarytime"
+	cmcd "wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	xhttp "wwqdrh/handbook/library/net/http/blademaster"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 const (

@@ -15,7 +15,7 @@ go_binary(
 go_library(
     name = "go_default_library",
     srcs = ["client.go"],
-    importpath = "wwqdrh/handbook/librarynet/rpc/warden/benchmark/bench/client",
+    importpath = "wwqdrh/handbook/library/net/rpc/warden/benchmark/bench/client",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

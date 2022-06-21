@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryrate"
+	"wwqdrh/handbook/library/rate"
 )
 
 func worker(qps int64, ch chan struct{}) {

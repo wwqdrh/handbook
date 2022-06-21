@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net"
 
-	"wwqdrh/handbook/librarynaming"
-	lz "wwqdrh/handbook/librarynaming/livezk"
-	"wwqdrh/handbook/librarynet/ip"
+	"wwqdrh/handbook/library/naming"
+	lz "wwqdrh/handbook/library/naming/livezk"
+	"wwqdrh/handbook/library/net/ip"
 )
 
 // Register self grpc service to live zookeeper

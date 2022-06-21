@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"wwqdrh/handbook/librarycontainer/queue/aqm"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/libraryrate"
-	"wwqdrh/handbook/libraryrate/vegas"
+	"wwqdrh/handbook/library/container/queue/aqm"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/rate"
+	"wwqdrh/handbook/library/rate/vegas"
 )
 
 var _ rate.Limiter = &Limiter{}

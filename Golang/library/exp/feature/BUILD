@@ -9,7 +9,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["feature_gate.go"],
-    importpath = "wwqdrh/handbook/libraryexp/feature",
+    importpath = "wwqdrh/handbook/library/exp/feature",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//vendor/github.com/pkg/errors:go_default_library"],

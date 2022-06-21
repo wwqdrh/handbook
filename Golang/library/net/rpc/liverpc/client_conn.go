@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/trace"
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/json-iterator/go"

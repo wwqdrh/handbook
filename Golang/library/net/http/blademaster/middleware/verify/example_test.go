@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/verify"
-	"wwqdrh/handbook/librarynet/metadata"
-	xtime "wwqdrh/handbook/librarytime"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/verify"
+	"wwqdrh/handbook/library/net/metadata"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 // This example create a identify middleware instance and attach to several path,

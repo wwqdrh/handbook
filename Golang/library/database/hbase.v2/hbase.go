@@ -9,9 +9,9 @@ import (
 	"github.com/tsuna/gohbase"
 	"github.com/tsuna/gohbase/hrpc"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/trace"
-	"wwqdrh/handbook/librarystat"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/trace"
+	"wwqdrh/handbook/library/stat"
 )
 
 var stats = stat.DB

@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/cache/store"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/cache/store"
 )
 
 const (

@@ -13,16 +13,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/libraryexp/feature"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynaming"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/netutil"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	xtime "wwqdrh/handbook/librarytime"
-	"wwqdrh/handbook/libraryxstr"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/exp/feature"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/naming"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/netutil"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	xtime "wwqdrh/handbook/library/time"
+	"wwqdrh/handbook/library/xstr"
 )
 
 const (

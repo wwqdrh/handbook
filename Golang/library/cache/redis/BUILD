@@ -36,7 +36,7 @@ go_library(
         "script.go",
         "trace.go",
     ],
-    importpath = "wwqdrh/handbook/librarycache/redis",
+    importpath = "wwqdrh/handbook/library/cache/redis",
     tags = ["automanaged"],
     deps = [
         "//library/container/pool:go_default_library",

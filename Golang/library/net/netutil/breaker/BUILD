@@ -27,7 +27,7 @@ go_library(
         "breaker.go",
         "sre_breaker.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/netutil/breaker",
+    importpath = "wwqdrh/handbook/library/net/netutil/breaker",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

@@ -3,7 +3,7 @@ package rpc
 import (
 	"strconv"
 
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/net/trace"
 )
 
 // TraceInfo propagate trace propagate gorpc call

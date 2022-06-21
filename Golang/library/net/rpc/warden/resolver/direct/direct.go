@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynet/rpc/warden/resolver"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/net/rpc/warden/resolver"
 )
 
 const (

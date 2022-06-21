@@ -28,7 +28,7 @@ go_library(
         "discovery.go",
         "shuffle.go",
     ],
-    importpath = "wwqdrh/handbook/librarynaming/discovery",
+    importpath = "wwqdrh/handbook/library/naming/discovery",
     tags = ["automanaged"],
     deps = [
         "//library/conf/env:go_default_library",

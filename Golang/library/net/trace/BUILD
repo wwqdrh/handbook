@@ -28,7 +28,7 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "wwqdrh/handbook/librarynet/trace",
+    importpath = "wwqdrh/handbook/library/net/trace",
     tags = ["manual"],
     deps = [
         "//library/conf/dsn:go_default_library",

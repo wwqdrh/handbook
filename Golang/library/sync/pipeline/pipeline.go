@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/librarynet/metadata"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/net/metadata"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 // ErrFull channel full error

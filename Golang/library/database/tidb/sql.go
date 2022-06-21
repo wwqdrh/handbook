@@ -8,9 +8,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/net/trace"
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/pkg/errors"

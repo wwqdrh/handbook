@@ -1,7 +1,7 @@
 package stat
 
 import (
-	"wwqdrh/handbook/librarystat/prom"
+	"wwqdrh/handbook/library/stat/prom"
 )
 
 // Stat interface.

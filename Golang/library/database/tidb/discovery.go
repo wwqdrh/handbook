@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynaming/discovery"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/naming/discovery"
 )
 
 var _schema = "tidb://"

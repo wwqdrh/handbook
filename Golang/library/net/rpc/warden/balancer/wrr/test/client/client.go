@@ -7,12 +7,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryexp/feature"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/rpc/warden"
-	pb "wwqdrh/handbook/librarynet/rpc/warden/proto/testproto"
-	"wwqdrh/handbook/librarynet/rpc/warden/resolver"
-	"wwqdrh/handbook/librarynet/rpc/warden/resolver/direct"
+	"wwqdrh/handbook/library/exp/feature"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/rpc/warden"
+	pb "wwqdrh/handbook/library/net/rpc/warden/proto/testproto"
+	"wwqdrh/handbook/library/net/rpc/warden/resolver"
+	"wwqdrh/handbook/library/net/rpc/warden/resolver/direct"
 )
 
 var addrs string

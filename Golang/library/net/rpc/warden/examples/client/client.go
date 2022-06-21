@@ -5,9 +5,9 @@ import (
 	"flag"
 	"fmt"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarynet/rpc/warden"
-	pb "wwqdrh/handbook/librarynet/rpc/warden/proto/testproto"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/net/rpc/warden"
+	pb "wwqdrh/handbook/library/net/rpc/warden/proto/testproto"
 
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/any"

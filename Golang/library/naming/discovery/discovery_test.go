@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/libraryexp/feature"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynet/http/blademaster"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/exp/feature"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/net/http/blademaster"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

@@ -9,10 +9,10 @@ import (
 	"strings"
 	"sync"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynaming"
-	wmeta "wwqdrh/handbook/librarynet/rpc/warden/metadata"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/naming"
+	wmeta "wwqdrh/handbook/library/net/rpc/warden/metadata"
 
 	"github.com/dgryski/go-farm"
 	"github.com/pkg/errors"

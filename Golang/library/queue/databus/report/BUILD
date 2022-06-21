@@ -12,7 +12,7 @@ go_library(
         "agent.go",
         "conf.go",
     ],
-    importpath = "wwqdrh/handbook/libraryqueue/databus/report",
+    importpath = "wwqdrh/handbook/library/queue/databus/report",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

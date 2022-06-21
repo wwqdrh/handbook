@@ -25,7 +25,7 @@ go_library(
         "key.go",
         "metadata.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/metadata",
+    importpath = "wwqdrh/handbook/library/net/metadata",
     tags = ["automanaged"],
 )
 

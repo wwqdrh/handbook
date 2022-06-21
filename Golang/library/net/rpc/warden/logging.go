@@ -9,10 +9,10 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/peer"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarystat"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/stat"
 )
 
 var (

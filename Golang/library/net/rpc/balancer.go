@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"sync/atomic"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarysync/errgroup"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/sync/errgroup"
 )
 
 const (

@@ -6,7 +6,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["statsd.go"],
-    importpath = "wwqdrh/handbook/librarystat/statsd",
+    importpath = "wwqdrh/handbook/library/stat/statsd",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//library/log:go_default_library"],

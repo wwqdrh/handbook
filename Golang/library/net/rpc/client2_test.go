@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynaming/discovery"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/naming/discovery"
+	xtime "wwqdrh/handbook/library/time"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

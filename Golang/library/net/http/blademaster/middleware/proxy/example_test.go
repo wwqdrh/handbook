@@ -1,8 +1,8 @@
 package proxy_test
 
 import (
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/proxy"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/proxy"
 )
 
 // This example create several reverse proxy to show how to use proxy middleware.

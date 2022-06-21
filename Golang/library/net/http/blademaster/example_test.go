@@ -5,11 +5,11 @@ import (
 	"log"
 	"time"
 
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/binding"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/auth"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/verify"
-	"wwqdrh/handbook/librarynet/http/blademaster/tests"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/binding"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/auth"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/verify"
+	"wwqdrh/handbook/library/net/http/blademaster/tests"
 )
 
 // This example start a http server and listen at port 8080,

@@ -45,7 +45,7 @@ filegroup(
 go_library(
     name = "go_default_library",
     srcs = ["base.go"],
-    importpath = "wwqdrh/handbook/librarynet/rpc/warden/balancer/wrr/test",
+    importpath = "wwqdrh/handbook/library/net/rpc/warden/balancer/wrr/test",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

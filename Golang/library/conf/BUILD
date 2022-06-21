@@ -31,7 +31,7 @@ go_library(
         "client.go",
         "client_v2.go",
     ],
-    importpath = "wwqdrh/handbook/libraryconf",
+    importpath = "wwqdrh/handbook/library/conf",
     tags = ["automanaged"],
     deps = [
         "//library/conf/env:go_default_library",

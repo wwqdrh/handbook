@@ -21,7 +21,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["pipeline.go"],
-    importpath = "wwqdrh/handbook/librarysync/pipeline",
+    importpath = "wwqdrh/handbook/library/sync/pipeline",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

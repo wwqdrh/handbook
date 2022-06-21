@@ -16,7 +16,7 @@ go_library(
         "json_encoder.go",
         "pool.go",
     ],
-    importpath = "wwqdrh/handbook/librarylog/internal",
+    importpath = "wwqdrh/handbook/library/log/internal",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarycache/memcache"
-	"wwqdrh/handbook/librarycontainer/pool"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/cache/memcache"
+	"wwqdrh/handbook/library/container/pool"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var (

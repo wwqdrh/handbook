@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarynet/http/blademaster/binding"
-	"wwqdrh/handbook/librarynet/http/blademaster/render"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/net/http/blademaster/binding"
+	"wwqdrh/handbook/library/net/http/blademaster/render"
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/gogo/protobuf/types"

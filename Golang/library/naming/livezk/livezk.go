@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynaming"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/naming"
+	xtime "wwqdrh/handbook/library/time"
 
 	"github.com/samuel/go-zookeeper/zk"
 )

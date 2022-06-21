@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"wwqdrh/handbook/libraryconf/paladin"
+	"wwqdrh/handbook/library/conf/paladin"
 
 	"github.com/stretchr/testify/assert"
 )

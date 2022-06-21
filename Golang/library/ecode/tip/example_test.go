@@ -3,10 +3,10 @@ package tip_test
 import (
 	"time"
 
-	"wwqdrh/handbook/libraryecode/tip"
-	xhttp "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/ecode/tip"
+	xhttp "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 func ExampleInit() {

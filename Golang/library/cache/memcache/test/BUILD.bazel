@@ -17,7 +17,7 @@ proto_library(
 go_proto_library(
     name = "proto_go_proto",
     compilers = ["@io_bazel_rules_go//proto:go_proto"],
-    importpath = "wwqdrh/handbook/librarycache/memcache/test",
+    importpath = "wwqdrh/handbook/library/cache/memcache/test",
     proto = ":proto_proto",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ go_library(
     name = "go_default_library",
     srcs = [],
     embed = [":proto_go_proto"],
-    importpath = "wwqdrh/handbook/librarycache/memcache/test",
+    importpath = "wwqdrh/handbook/library/cache/memcache/test",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["@com_github_golang_protobuf//proto:go_default_library"],

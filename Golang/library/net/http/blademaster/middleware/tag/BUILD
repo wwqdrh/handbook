@@ -9,7 +9,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["tag.go"],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/middleware/tag",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/middleware/tag",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//library/net/http/blademaster:go_default_library"],

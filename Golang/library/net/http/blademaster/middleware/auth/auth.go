@@ -2,10 +2,10 @@ package auth
 
 import (
 	idtv1 "go-common/app/service/main/identify/api/grpc"
-	"wwqdrh/handbook/libraryecode"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/rpc/warden"
+	"wwqdrh/handbook/library/ecode"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/rpc/warden"
 
 	"github.com/pkg/errors"
 )

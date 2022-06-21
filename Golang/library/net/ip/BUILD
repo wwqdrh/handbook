@@ -25,7 +25,7 @@ go_library(
         "ip.go",
         "zone.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/ip",
+    importpath = "wwqdrh/handbook/library/net/ip",
     tags = ["automanaged"],
 )
 

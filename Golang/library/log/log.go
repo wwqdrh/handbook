@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarylog/internal"
-	"wwqdrh/handbook/librarystat/prom"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/log/internal"
+	"wwqdrh/handbook/library/stat/prom"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 // Config log config.

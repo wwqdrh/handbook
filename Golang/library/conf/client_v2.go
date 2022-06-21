@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
 )
 
 const (

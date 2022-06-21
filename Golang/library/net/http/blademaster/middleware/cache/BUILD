@@ -21,7 +21,7 @@ proto_library(
 go_proto_library(
     name = "cache_go_proto",
     compilers = ["@io_bazel_rules_go//proto:gogofast_proto"],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/middleware/cache",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/middleware/cache",
     proto = ":cache_proto",
     tags = ["automanaged"],
     deps = ["@com_github_gogo_protobuf//gogoproto:go_default_library"],
@@ -54,7 +54,7 @@ go_library(
         "page.go",
     ],
     embed = [":cache_go_proto"],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/middleware/cache",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/middleware/cache",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

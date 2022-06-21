@@ -12,16 +12,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/librarycache/redis"
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarycontainer/pool"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynaming/discovery"
-	"wwqdrh/handbook/librarynet/netutil"
-	"wwqdrh/handbook/librarynet/trace"
-	"wwqdrh/handbook/librarystat/prom"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/cache/redis"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/container/pool"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/naming/discovery"
+	"wwqdrh/handbook/library/net/netutil"
+	"wwqdrh/handbook/library/net/trace"
+	"wwqdrh/handbook/library/stat/prom"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 const (

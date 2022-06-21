@@ -50,7 +50,7 @@ go_library(
         "trace.go",
         "utils.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

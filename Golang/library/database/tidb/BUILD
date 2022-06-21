@@ -27,7 +27,7 @@ go_library(
         "sql.go",
         "tidb.go",
     ],
-    importpath = "wwqdrh/handbook/librarydatabase/tidb",
+    importpath = "wwqdrh/handbook/library/database/tidb",
     tags = ["automanaged"],
     deps = [
         "//library/conf/env:go_default_library",

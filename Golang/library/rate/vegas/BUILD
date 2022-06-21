@@ -21,7 +21,7 @@ go_library(
         "sample.go",
         "vegas.go",
     ],
-    importpath = "wwqdrh/handbook/libraryrate/vegas",
+    importpath = "wwqdrh/handbook/library/rate/vegas",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//library/rate:go_default_library"],

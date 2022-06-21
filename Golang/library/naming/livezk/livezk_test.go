@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarynaming"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/naming"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var appdID = "main.arch.test6"

@@ -14,7 +14,7 @@ import (
 	"log"
 	"context"
 
-	"wwqdrh/handbook/librarytext/translate/chinese"
+	"wwqdrh/handbook/library/text/translate/chinese"
 )
 
 func main() {

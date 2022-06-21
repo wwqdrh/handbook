@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"wwqdrh/handbook/libraryconf/paladin"
+	"wwqdrh/handbook/library/conf/paladin"
 
 	"github.com/naoina/toml"
 )

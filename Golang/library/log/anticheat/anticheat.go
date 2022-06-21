@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarylog/infoc"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/metadata"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/log/infoc"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/metadata"
 )
 
 // AntiCheat send anti-cheating info to berserker.

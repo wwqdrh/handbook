@@ -8,9 +8,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/net/trace"
 
 	"github.com/pkg/errors"
 )

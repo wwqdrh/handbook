@@ -16,7 +16,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["cache.go"],
-    importpath = "wwqdrh/handbook/librarycache",
+    importpath = "wwqdrh/handbook/library/cache",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

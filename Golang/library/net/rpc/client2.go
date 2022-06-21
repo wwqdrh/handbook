@@ -8,12 +8,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynaming/discovery"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/naming/discovery"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 const (

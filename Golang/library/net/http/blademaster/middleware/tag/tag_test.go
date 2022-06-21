@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/tag"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/tag"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/log"
 
 	"github.com/pkg/errors"
 )

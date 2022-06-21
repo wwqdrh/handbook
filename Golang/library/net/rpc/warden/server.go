@@ -10,14 +10,14 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/dsn"
-	"wwqdrh/handbook/librarylog"
-	nmd "wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/trace"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/dsn"
+	"wwqdrh/handbook/library/log"
+	nmd "wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/trace"
+	xtime "wwqdrh/handbook/library/time"
 	//this package is for json format response
-	_ "wwqdrh/handbook/librarynet/rpc/warden/encoding/json"
-	"wwqdrh/handbook/librarynet/rpc/warden/status"
+	_ "wwqdrh/handbook/library/net/rpc/warden/encoding/json"
+	"wwqdrh/handbook/library/net/rpc/warden/status"
 
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"

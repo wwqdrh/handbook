@@ -8,10 +8,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	nmd "wwqdrh/handbook/librarynet/metadata"
-	wmeta "wwqdrh/handbook/librarynet/rpc/warden/metadata"
-	"wwqdrh/handbook/librarystat/summary"
+	"wwqdrh/handbook/library/log"
+	nmd "wwqdrh/handbook/library/net/metadata"
+	wmeta "wwqdrh/handbook/library/net/rpc/warden/metadata"
+	"wwqdrh/handbook/library/stat/summary"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/balancer"

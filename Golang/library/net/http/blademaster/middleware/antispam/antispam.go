@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	"wwqdrh/handbook/librarycache/redis"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
+	"wwqdrh/handbook/library/cache/redis"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
 
 	"github.com/pkg/errors"
 )

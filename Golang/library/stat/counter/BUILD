@@ -25,7 +25,7 @@ go_library(
         "gauge.go",
         "rolling.go",
     ],
-    importpath = "wwqdrh/handbook/librarystat/counter",
+    importpath = "wwqdrh/handbook/library/stat/counter",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

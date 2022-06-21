@@ -16,7 +16,7 @@ go_library(
     name = "go_default_library",
     srcs = ["main.go"],
     data = ["stress-test.toml"],
-    importpath = "wwqdrh/handbook/libraryrate/limit/bench/stress/cmd",
+    importpath = "wwqdrh/handbook/library/rate/limit/bench/stress/cmd",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

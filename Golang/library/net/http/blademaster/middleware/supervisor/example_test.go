@@ -2,8 +2,8 @@ package supervisor_test
 
 import (
 	"time"
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/supervisor"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/supervisor"
 )
 
 // This example create a supervisor middleware instance and attach to a blademaster engine,

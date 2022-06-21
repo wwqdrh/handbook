@@ -18,7 +18,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["summary.go"],
-    importpath = "wwqdrh/handbook/librarystat/summary",
+    importpath = "wwqdrh/handbook/library/stat/summary",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

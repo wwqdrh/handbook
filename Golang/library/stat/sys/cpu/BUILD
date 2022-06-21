@@ -36,7 +36,7 @@ go_library(
             "cpu_other.go",
         ],
     }),
-    importpath = "wwqdrh/handbook/librarystat/sys/cpu",
+    importpath = "wwqdrh/handbook/library/stat/sys/cpu",
     tags = ["manual"],
     visibility = ["//visibility:public"],
     deps = [

@@ -4,7 +4,7 @@ import (
 	"sync"
 	"testing"
 
-	"wwqdrh/handbook/libraryecode"
+	"wwqdrh/handbook/library/ecode"
 )
 
 var (

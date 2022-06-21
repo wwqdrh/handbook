@@ -1,10 +1,10 @@
 package tidb
 
 import (
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarystat"
-	"wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/stat"
+	"wwqdrh/handbook/library/time"
 
 	// database driver
 	_ "github.com/go-sql-driver/mysql"

@@ -27,7 +27,7 @@ go_library(
         "query.go",
         "update.go",
     ],
-    importpath = "wwqdrh/handbook/librarydatabase/elastic",
+    importpath = "wwqdrh/handbook/library/database/elastic",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

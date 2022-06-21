@@ -18,7 +18,7 @@ proto_library(
 go_proto_library(
     name = "tests_go_proto",
     compilers = ["@io_bazel_rules_go//proto:gogofast_proto"],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/tests",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/tests",
     proto = ":tests_proto",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
@@ -29,7 +29,7 @@ go_library(
     name = "go_default_library",
     srcs = [],
     embed = [":tests_go_proto"],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/tests",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/tests",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

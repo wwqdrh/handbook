@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarynet/rpc/warden"
-	pb "wwqdrh/handbook/librarynet/rpc/warden/proto/testproto"
-	"wwqdrh/handbook/librarynet/rpc/warden/resolver"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/net/rpc/warden"
+	pb "wwqdrh/handbook/library/net/rpc/warden/proto/testproto"
+	"wwqdrh/handbook/library/net/rpc/warden/resolver"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 type testServer struct {

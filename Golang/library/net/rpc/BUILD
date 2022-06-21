@@ -34,7 +34,7 @@ go_library(
         "server.go",
         "trace.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/rpc",
+    importpath = "wwqdrh/handbook/library/net/rpc",
     tags = ["automanaged"],
     deps = [
         "//library/conf/dsn:go_default_library",

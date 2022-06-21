@@ -4,7 +4,7 @@ import (
 	"sync"
 	"testing"
 
-	"wwqdrh/handbook/librarylog/infoc"
+	"wwqdrh/handbook/library/log/infoc"
 )
 
 var (

@@ -25,9 +25,9 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/librarycontainer/pool"
-	"wwqdrh/handbook/librarynet/trace"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/container/pool"
+	"wwqdrh/handbook/library/net/trace"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var beginTime, _ = time.Parse("2006-01-02 15:04:05", "2006-01-02 15:04:05")

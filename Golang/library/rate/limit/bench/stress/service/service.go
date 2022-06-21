@@ -1,7 +1,7 @@
 package service
 
 import (
-	"wwqdrh/handbook/libraryrate/limit/bench/stress/conf"
+	"wwqdrh/handbook/library/rate/limit/bench/stress/conf"
 )
 
 // Service struct

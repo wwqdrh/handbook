@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/libraryqueue/databus"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/queue/databus"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 const (

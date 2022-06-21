@@ -28,7 +28,7 @@ go_library(
         "backoff.go",
         "listen.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/netutil",
+    importpath = "wwqdrh/handbook/library/net/netutil",
     tags = ["automanaged"],
 )
 

@@ -6,13 +6,14 @@ import (
 	"errors"
 	"fmt"
 
-	"gorm.io/gorm"
-)
+	"database/sql"
+	"log"
+	"os"
+	"time"
 
-type (
-	PostgresDriver struct {
-		DB *gorm.DB
-	}
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 // postgres dsn: postgres://postgres:postgres@127.0.0.1:5433/db?sslmode=disable
@@ -48,53 +49,6 @@ func (j JSON) Value() (driver.Value, error) {
 // <<<types
 ////////////////////
 
-func (d *PostgresDriver) InitWithDB(db *gorm.DB) *PostgresDriver {
-	d.DB = db
-	return d
-}
-
-func (d *PostgresDriver) GetTableName(table interface{}) string {
-	if val, ok := table.(string); ok {
-		return val
-	}
-	stmt := &gorm.Statement{DB: d.DB}
-	stmt.Parse(table)
-	tableName := stmt.Schema.Table
-	return tableName
-}
-
-func (d *PostgresDriver) GetPrimary(table interface{}) ([]string, error) {
-	if val, ok := table.(string); ok {
-		return d.GetPrimaryWithName(val)
-	}
-	stmt := &gorm.Statement{DB: d.DB}
-	stmt.Parse(table)
-	return stmt.Schema.PrimaryFieldDBNames, nil
-}
-
-func (d *PostgresDriver) GetPrimaryWithName(tableName string) ([]string, error) {
-	rows, err := d.DB.Raw(`select pg_constraint.conname as pk_name,pg_attribute.attname as colname,pg_type.typname as typename from 
-	pg_constraint  inner join pg_class 
-	on pg_constraint.conrelid = pg_class.oid 
-	inner join pg_attribute on pg_attribute.attrelid = pg_class.oid 
-	and  pg_attribute.attnum = pg_constraint.conkey[1]
-	inner join pg_type on pg_type.oid = pg_attribute.atttypid
-	where pg_class.relname = ? 
-	and pg_constraint.contype='p'`, tableName).Rows()
-	if err != nil {
-		return nil, err
-	}
-
-	var pkName, colName, typeName string
-	res := []string{}
-	defer rows.Close()
-	for rows.Next() {
-		rows.Scan(&pkName, &colName, &typeName)
-		res = append(res, colName)
-	}
-	return res, nil
-}
-
 // 创建触发器是否成功
 func (d *PostgresDriver) CreateTrigger(sql string, triggerName string) error {
 	triggers := d.ListTrigger()
@@ -103,7 +57,7 @@ func (d *PostgresDriver) CreateTrigger(sql string, triggerName string) error {
 		return nil
 	}
 
-	if err := d.DB.Exec(sql).Error; err != nil {
+	if err := d.db.Exec(sql).Error; err != nil {
 		return err
 	}
 	return nil
@@ -115,7 +69,7 @@ func (d *PostgresDriver) CreateEventTrigger(sql, triggerName string) error {
 		// return errors.New("触发器已经存在")
 		return nil
 	}
-	if err := d.DB.Exec(sql).Error; err != nil {
+	if err := d.db.Exec(sql).Error; err != nil {
 		return err
 	}
 	return nil
@@ -127,7 +81,7 @@ func (d *PostgresDriver) DeleteTrigger(triggerName string) error {
 		return errors.New("触发器不存在")
 	}
 
-	if err := d.DB.Exec("delete from pg_trigger where tgname = ?", triggerName).Error; err != nil {
+	if err := d.db.Exec("delete from pg_trigger where tgname = ?", triggerName).Error; err != nil {
 		return err
 	}
 	return nil
@@ -137,7 +91,7 @@ func (d *PostgresDriver) ListTrigger() map[string]bool {
 	var res map[string]bool = map[string]bool{}
 	var triggerName string
 
-	rows, err := d.DB.Raw("select tgname from pg_trigger").Rows()
+	rows, err := d.db.Raw("select tgname from pg_trigger").Rows()
 	if err != nil {
 		return map[string]bool{}
 	}
@@ -155,7 +109,7 @@ func (d *PostgresDriver) ListEventTrigger() map[string]bool {
 	var res map[string]bool = map[string]bool{}
 	var triggerName string
 
-	rows, err := d.DB.Raw("select evtname from pg_event_trigger").Rows()
+	rows, err := d.db.Raw("select evtname from pg_event_trigger").Rows()
 	if err != nil {
 		return map[string]bool{}
 	}
@@ -166,4 +120,121 @@ func (d *PostgresDriver) ListEventTrigger() map[string]bool {
 	}
 
 	return res
+}
+
+var defaultLogger = logger.New(
+	log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer
+	logger.Config{
+		SlowThreshold:             time.Second,   // Slow SQL threshold
+		LogLevel:                  logger.Silent, // Log level
+		IgnoreRecordNotFoundError: true,          // Ignore ErrRecordNotFound error for logger
+		Colorful:                  false,         // Disable color
+	},
+)
+
+type PostgresDriver struct {
+	account         string
+	password        string
+	host            string
+	dbName          string
+	charset         string // utf8
+	ParseTime       bool   // true
+	loc             string // Local
+	maxIdleConns    int
+	maxOpenConns    int
+	connMaxLifetime time.Duration
+	db              *gorm.DB
+}
+
+func InitPostgresDriver(username, password, path, dbName string) (*PostgresDriver, error) {
+	driver := &PostgresDriver{
+		account:         username,
+		password:        password,
+		host:            path,
+		dbName:          dbName,
+		charset:         "utf8",
+		ParseTime:       true,
+		loc:             "Asia/Shanghai",
+		maxIdleConns:    10,
+		maxOpenConns:    100,
+		connMaxLifetime: time.Hour,
+	}
+	if err := driver.Connection(); err != nil {
+		return nil, err
+	}
+	return driver, nil
+}
+
+func (d *PostgresDriver) DB() *gorm.DB {
+	return d.db
+}
+
+func (d *PostgresDriver) DNS(db bool) string {
+	if db {
+		return fmt.Sprintf("postgres://%s:%s@%s/%s?sslmode=disable", d.account, d.password, d.host, d.dbName)
+	} else {
+		return fmt.Sprintf("postgres://%s:%s@%s?sslmode=disable", d.account, d.password, d.host)
+	}
+}
+
+func (d *PostgresDriver) Connection() error {
+	if d.db != nil {
+		return nil
+	}
+
+	try := func() (*gorm.DB, error) {
+		db, err := gorm.Open(postgres.New(postgres.Config{
+			DSN: d.DNS(true), // data source name // auto configure based on currently Postgres version
+		}), &gorm.Config{
+			Logger: defaultLogger,
+		})
+		if err != nil {
+			return nil, err
+		}
+		return db, nil
+	}
+
+	if db, err := try(); err != nil {
+		if err := d.CreateDatabase(d.dbName); err != nil {
+			return err
+		}
+		if db, err := try(); err != nil {
+			return err
+		} else {
+			d.db = db
+		}
+	} else {
+		d.db = db
+	}
+
+	sqlDB, err := d.db.DB()
+	if err != nil {
+		return err
+	}
+	// SetMaxIdleConns sets the maximum number of connections in the idle connection pool.
+	sqlDB.SetMaxIdleConns(d.maxIdleConns)
+
+	// SetMaxOpenConns sets the maximum number of open connections to the database.
+	sqlDB.SetMaxOpenConns(d.maxOpenConns)
+
+	// SetConnMaxLifetime sets the maximum amount of time a connection may be reused.
+	sqlDB.SetConnMaxLifetime(d.connMaxLifetime)
+
+	return nil
+}
+
+// CreateDatabase 创建新的数据库 指定名字，指定charset 引擎 之类
+func (d *PostgresDriver) CreateDatabase(name string) error {
+	db, err := sql.Open("postgres", d.DNS(false))
+	if err != nil {
+		return err
+	}
+	defer db.Close()
+
+	_, err = db.Exec(fmt.Sprintf(`CREATE DATABASE "%s" WITH OWNER "postgres" ENCODING 'UTF8';`, name))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }

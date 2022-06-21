@@ -8,7 +8,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["conf.go"],
-    importpath = "wwqdrh/handbook/libraryrate/limit/bench/stress/conf",
+    importpath = "wwqdrh/handbook/library/rate/limit/bench/stress/conf",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

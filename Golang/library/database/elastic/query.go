@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	httpx "wwqdrh/handbook/librarynet/http/blademaster"
-	timex "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/ecode"
+	httpx "wwqdrh/handbook/library/net/http/blademaster"
+	timex "wwqdrh/handbook/library/time"
 
 	"github.com/pkg/errors"
 )

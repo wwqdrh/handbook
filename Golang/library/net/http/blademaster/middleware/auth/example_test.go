@@ -3,10 +3,10 @@ package auth_test
 import (
 	"fmt"
 
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/auth"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/rpc/warden"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/auth"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/rpc/warden"
 )
 
 // This example create a identify middleware instance and attach to several path,

@@ -6,10 +6,10 @@ import (
 	"runtime"
 	"sync"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/trace"
-	"wwqdrh/handbook/librarystat/prom"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/trace"
+	"wwqdrh/handbook/library/stat/prom"
 )
 
 var (

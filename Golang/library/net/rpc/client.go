@@ -16,14 +16,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/libraryecode"
-	xlog "wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarynet/trace"
-	"wwqdrh/handbook/librarystat"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/ecode"
+	xlog "wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/net/trace"
+	"wwqdrh/handbook/library/stat"
+	xtime "wwqdrh/handbook/library/time"
 
 	perr "github.com/pkg/errors"
 )

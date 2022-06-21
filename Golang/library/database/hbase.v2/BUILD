@@ -24,7 +24,7 @@ go_library(
         "config.go",
         "hbase.go",
     ],
-    importpath = "wwqdrh/handbook/librarydatabase/hbase.v2",
+    importpath = "wwqdrh/handbook/library/database/hbase.v2",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

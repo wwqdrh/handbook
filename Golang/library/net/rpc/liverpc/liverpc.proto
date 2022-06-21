@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package liverpc;
 
-option go_package = "wwqdrh/handbook/librarynet/rpc/liverpc";
+option go_package = "wwqdrh/handbook/library/net/rpc/liverpc";
 
 
 message Header {

@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/librarycache/memcache"
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
+	"wwqdrh/handbook/library/cache/memcache"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
 )
 
 // Session http session.

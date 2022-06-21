@@ -17,7 +17,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["supervisor.go"],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/middleware/supervisor",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/middleware/supervisor",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

@@ -20,7 +20,7 @@ go_library(
         "dict.go",
         "opencc.go",
     ],
-    importpath = "wwqdrh/handbook/librarytext/translate/chinese",
+    importpath = "wwqdrh/handbook/library/text/translate/chinese",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

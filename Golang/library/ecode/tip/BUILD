@@ -18,7 +18,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["tip.go"],
-    importpath = "wwqdrh/handbook/libraryecode/tip",
+    importpath = "wwqdrh/handbook/library/ecode/tip",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

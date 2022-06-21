@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynaming"
-	"wwqdrh/handbook/librarynaming/discovery"
-	rcontext "wwqdrh/handbook/librarynet/rpc/context"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/naming"
+	"wwqdrh/handbook/library/naming/discovery"
+	rcontext "wwqdrh/handbook/library/net/rpc/context"
 )
 
 func TestBreaker(t *testing.T) {

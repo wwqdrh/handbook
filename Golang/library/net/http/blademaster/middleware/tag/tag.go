@@ -1,7 +1,7 @@
 package tag
 
 import (
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
 )
 
 // Tag create a tag into Keys field of context

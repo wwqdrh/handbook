@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarylog/internal"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/trace"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/log/internal"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/trace"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 const (

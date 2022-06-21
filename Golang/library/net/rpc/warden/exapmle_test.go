@@ -6,11 +6,11 @@ import (
 	"io"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarynet/rpc/warden"
-	pb "wwqdrh/handbook/librarynet/rpc/warden/proto/testproto"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/net/rpc/warden"
+	pb "wwqdrh/handbook/library/net/rpc/warden/proto/testproto"
+	xtime "wwqdrh/handbook/library/time"
 
 	"google.golang.org/grpc"
 )

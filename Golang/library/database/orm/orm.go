@@ -4,9 +4,9 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	xtime "wwqdrh/handbook/library/time"
 
 	// database driver
 	_ "github.com/go-sql-driver/mysql"

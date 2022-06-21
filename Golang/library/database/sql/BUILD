@@ -25,7 +25,7 @@ go_library(
         "mysql.go",
         "sql.go",
     ],
-    importpath = "wwqdrh/handbook/librarydatabase/sql",
+    importpath = "wwqdrh/handbook/library/database/sql",
     tags = ["automanaged"],
     deps = [
         "//library/ecode:go_default_library",

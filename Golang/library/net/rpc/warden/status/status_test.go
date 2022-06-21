@@ -13,8 +13,8 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/libraryecode/pb"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/ecode/pb"
 )
 
 func TestCodeConvert(t *testing.T) {

@@ -8,7 +8,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["dao.go"],
-    importpath = "wwqdrh/handbook/libraryrate/limit/bench/stress/dao",
+    importpath = "wwqdrh/handbook/library/rate/limit/bench/stress/dao",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

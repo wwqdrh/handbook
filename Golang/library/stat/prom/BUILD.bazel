@@ -6,7 +6,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["prometheus.go"],
-    importpath = "wwqdrh/handbook/librarystat/prom",
+    importpath = "wwqdrh/handbook/library/stat/prom",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//vendor/github.com/prometheus/client_golang/prometheus:go_default_library"],

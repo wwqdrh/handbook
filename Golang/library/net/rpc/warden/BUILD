@@ -44,7 +44,7 @@ go_library(
         "stats.go",
         "validate.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/rpc/warden",
+    importpath = "wwqdrh/handbook/library/net/rpc/warden",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

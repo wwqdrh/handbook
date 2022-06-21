@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarynaming/discovery"
-	"wwqdrh/handbook/libraryqueue/databus"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/naming/discovery"
+	"wwqdrh/handbook/library/queue/databus"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var (

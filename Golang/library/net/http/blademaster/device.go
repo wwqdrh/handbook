@@ -3,7 +3,7 @@ package blademaster
 import (
 	"strconv"
 
-	"wwqdrh/handbook/librarynet/metadata"
+	"wwqdrh/handbook/library/net/metadata"
 )
 
 const (

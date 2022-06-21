@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryqueue/databus/report"
+	"wwqdrh/handbook/library/queue/databus/report"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

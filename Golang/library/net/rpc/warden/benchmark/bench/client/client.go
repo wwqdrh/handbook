@@ -8,10 +8,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarynet/rpc/warden"
-	"wwqdrh/handbook/librarynet/rpc/warden/benchmark/bench/proto"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/net/rpc/warden"
+	"wwqdrh/handbook/library/net/rpc/warden/benchmark/bench/proto"
+	xtime "wwqdrh/handbook/library/time"
 
 	goproto "github.com/gogo/protobuf/proto"
 	"github.com/montanaflynn/stats"

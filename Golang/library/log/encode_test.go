@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarylog/internal"
+	"wwqdrh/handbook/library/log/internal"
 )
 
 func TestJsonEncode(t *testing.T) {

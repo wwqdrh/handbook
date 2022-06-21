@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/librarynet/metadata"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/net/metadata"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

@@ -3,7 +3,7 @@ package paladin
 import (
 	"context"
 	"flag"
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/log"
 )
 
 var (

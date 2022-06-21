@@ -3,7 +3,7 @@ package paladin_test
 import (
 	"testing"
 
-	"wwqdrh/handbook/libraryconf/paladin"
+	"wwqdrh/handbook/library/conf/paladin"
 
 	"github.com/stretchr/testify/assert"
 )

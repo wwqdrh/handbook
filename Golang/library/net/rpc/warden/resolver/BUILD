@@ -11,7 +11,7 @@ go_library(
         "resolver.go",
         "util.go",
     ],
-    importpath = "wwqdrh/handbook/librarynet/rpc/warden/resolver",
+    importpath = "wwqdrh/handbook/library/net/rpc/warden/resolver",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

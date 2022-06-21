@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"wwqdrh/handbook/librarynet/metadata"
+	"wwqdrh/handbook/library/net/metadata"
 
 	"github.com/stretchr/testify/assert"
 )

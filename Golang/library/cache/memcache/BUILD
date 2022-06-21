@@ -34,7 +34,7 @@ go_library(
         "trace.go",
         "util.go",
     ],
-    importpath = "wwqdrh/handbook/librarycache/memcache",
+    importpath = "wwqdrh/handbook/library/cache/memcache",
     tags = ["automanaged"],
     deps = [
         "//library/container/pool:go_default_library",

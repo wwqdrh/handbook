@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarycontainer/pool"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/container/pool"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 var p *Pool

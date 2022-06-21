@@ -3,10 +3,10 @@ package dao
 import (
 	"context"
 
-	"wwqdrh/handbook/librarycache/memcache"
-	"wwqdrh/handbook/librarycache/redis"
-	xsql "wwqdrh/handbook/librarydatabase/sql"
-	"wwqdrh/handbook/libraryrate/limit/bench/stress/conf"
+	"wwqdrh/handbook/library/cache/memcache"
+	"wwqdrh/handbook/library/cache/redis"
+	xsql "wwqdrh/handbook/library/database/sql"
+	"wwqdrh/handbook/library/rate/limit/bench/stress/conf"
 )
 
 // Dao dao

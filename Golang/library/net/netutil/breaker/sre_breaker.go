@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarystat/summary"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/stat/summary"
 )
 
 // sreBreaker is a sre CircuitBreaker pattern.

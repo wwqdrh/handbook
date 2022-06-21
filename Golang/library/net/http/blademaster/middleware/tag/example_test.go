@@ -1,8 +1,8 @@
 package tag_test
 
 import (
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/tag"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/tag"
 )
 
 // This example create a tag middleware instance and attach to a global.

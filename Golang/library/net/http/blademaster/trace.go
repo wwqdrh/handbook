@@ -6,8 +6,8 @@ import (
 	"net/http/httptrace"
 	"strconv"
 
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/trace"
 )
 
 const _defaultComponentName = "net/http"

@@ -3,8 +3,8 @@ package store
 import (
 	"context"
 
-	"wwqdrh/handbook/librarycache/memcache"
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/cache/memcache"
+	"wwqdrh/handbook/library/log"
 )
 
 // Memcache represents the cache with memcached persistence

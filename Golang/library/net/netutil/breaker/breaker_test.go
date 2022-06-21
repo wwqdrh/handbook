@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	xtime "wwqdrh/handbook/librarytime"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 func TestGroup(t *testing.T) {

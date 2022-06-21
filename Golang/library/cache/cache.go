@@ -5,8 +5,8 @@ import (
 	"runtime"
 	"sync"
 
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarystat/prom"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/stat/prom"
 )
 
 var (

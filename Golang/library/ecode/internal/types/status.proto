@@ -4,7 +4,7 @@ package bilibili.rpc;
 
 import "google/protobuf/any.proto";
 
-option go_package = "wwqdrh/handbook/libraryecode/internal/types;types";
+option go_package = "wwqdrh/handbook/library/ecode/internal/types;types";
 option java_multiple_files = true;
 option java_outer_classname = "StatusProto";
 option java_package = "com.bilibili.rpc";

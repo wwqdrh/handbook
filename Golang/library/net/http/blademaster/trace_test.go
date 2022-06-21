@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/net/trace"
 )
 
 func TestTrace(t *testing.T) {

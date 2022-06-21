@@ -22,7 +22,7 @@ filegroup(
 go_library(
     name = "go_default_library",
     srcs = ["syscall.go"],
-    importpath = "wwqdrh/handbook/librarysyscall",
+    importpath = "wwqdrh/handbook/library/syscall",
     tags = ["automanaged"],
 )
 

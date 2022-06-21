@@ -24,7 +24,7 @@ filegroup(
 go_library(
     name = "go_default_library",
     srcs = ["naming.go"],
-    importpath = "wwqdrh/handbook/librarynaming",
+    importpath = "wwqdrh/handbook/library/naming",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

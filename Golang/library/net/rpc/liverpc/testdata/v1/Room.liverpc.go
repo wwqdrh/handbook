@@ -13,7 +13,7 @@ package v1
 import context "context"
 
 import proto "github.com/golang/protobuf/proto"
-import "wwqdrh/handbook/librarynet/rpc/liverpc"
+import "wwqdrh/handbook/library/net/rpc/liverpc"
 
 var _ proto.Message // generate to suppress unused imports
 // Imports only used by utility functions:

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
+	"wwqdrh/handbook/library/log"
 )
 
 func Test_logFn(t *testing.T) {

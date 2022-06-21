@@ -22,7 +22,7 @@ filegroup(
 go_library(
     name = "go_default_library",
     srcs = ["time.go"],
-    importpath = "wwqdrh/handbook/librarytime",
+    importpath = "wwqdrh/handbook/library/time",
     tags = ["automanaged"],
 )
 

@@ -2,7 +2,7 @@ package ecode_test
 
 import (
 	"fmt"
-	"wwqdrh/handbook/libraryecode"
+	"wwqdrh/handbook/library/ecode"
 
 	"github.com/pkg/errors"
 )

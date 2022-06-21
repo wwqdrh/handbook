@@ -6,8 +6,8 @@ import (
 	"sync"
 	"testing"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarynet/rpc/context"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/net/rpc/context"
 
 	"golang.org/x/time/rate"
 )

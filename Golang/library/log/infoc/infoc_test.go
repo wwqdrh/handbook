@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/librarynet/metadata"
+	"wwqdrh/handbook/library/net/metadata"
 )
 
 var (

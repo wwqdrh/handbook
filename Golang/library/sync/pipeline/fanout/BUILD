@@ -19,7 +19,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["fanout.go"],
-    importpath = "wwqdrh/handbook/librarysync/pipeline/fanout",
+    importpath = "wwqdrh/handbook/library/sync/pipeline/fanout",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

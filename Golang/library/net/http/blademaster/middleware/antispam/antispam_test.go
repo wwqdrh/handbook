@@ -10,10 +10,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"wwqdrh/handbook/librarycache/redis"
-	"wwqdrh/handbook/librarycontainer/pool"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/cache/redis"
+	"wwqdrh/handbook/library/container/pool"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 func TestAntiSpamHandler(t *testing.T) {

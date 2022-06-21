@@ -7,13 +7,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/libraryrate"
-	"wwqdrh/handbook/libraryrate/limit"
-	"wwqdrh/handbook/libraryrate/limit/bench/stress/conf"
-	"wwqdrh/handbook/libraryrate/limit/bench/stress/service"
-	"wwqdrh/handbook/libraryrate/vegas"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/rate"
+	"wwqdrh/handbook/library/rate/limit"
+	"wwqdrh/handbook/library/rate/limit/bench/stress/conf"
+	"wwqdrh/handbook/library/rate/limit/bench/stress/service"
+	"wwqdrh/handbook/library/rate/vegas"
 )
 
 var (

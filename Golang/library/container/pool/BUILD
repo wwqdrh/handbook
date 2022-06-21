@@ -28,7 +28,7 @@ go_library(
         "pool.go",
         "slice.go",
     ],
-    importpath = "wwqdrh/handbook/librarycontainer/pool",
+    importpath = "wwqdrh/handbook/library/container/pool",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = ["//library/time:go_default_library"],

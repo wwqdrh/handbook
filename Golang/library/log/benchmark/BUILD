@@ -15,7 +15,7 @@ go_binary(
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "wwqdrh/handbook/librarylog/benchmark",
+    importpath = "wwqdrh/handbook/library/log/benchmark",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

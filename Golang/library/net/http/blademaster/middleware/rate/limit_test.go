@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
 )
 
 func TestLimiterUrl(t *testing.T) {

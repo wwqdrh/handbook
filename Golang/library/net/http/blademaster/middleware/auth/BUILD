@@ -27,7 +27,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["auth.go"],
-    importpath = "wwqdrh/handbook/librarynet/http/blademaster/middleware/auth",
+    importpath = "wwqdrh/handbook/library/net/http/blademaster/middleware/auth",
     tags = ["automanaged"],
     visibility = ["//visibility:public"],
     deps = [

@@ -10,13 +10,13 @@ import (
 	"testing"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/netutil/breaker"
-	"wwqdrh/handbook/librarynet/rpc/warden"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/netutil/breaker"
+	"wwqdrh/handbook/library/net/rpc/warden"
+	xtime "wwqdrh/handbook/library/time"
 
 	"github.com/stretchr/testify/assert"
 )

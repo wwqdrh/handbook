@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"wwqdrh/handbook/libraryecode"
-	"wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/rpc/context"
-	"wwqdrh/handbook/librarystat"
+	"wwqdrh/handbook/library/ecode"
+	"wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/rpc/context"
+	"wwqdrh/handbook/library/stat"
 
 	"golang.org/x/time/rate"
 )

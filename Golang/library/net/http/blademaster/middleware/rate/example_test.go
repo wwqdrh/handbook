@@ -1,8 +1,8 @@
 package rate_test
 
 import (
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/rate"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/rate"
 )
 
 // This example create a rate middleware instance and attach to a blademaster engine,

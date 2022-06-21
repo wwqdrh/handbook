@@ -1,8 +1,8 @@
 package cache
 
 import (
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/cache/store"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/cache/store"
 )
 
 // Cache is the abstract struct for any cache impl

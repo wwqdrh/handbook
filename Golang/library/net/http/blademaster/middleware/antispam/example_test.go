@@ -3,11 +3,11 @@ package antispam_test
 import (
 	"time"
 
-	"wwqdrh/handbook/librarycache/redis"
-	"wwqdrh/handbook/librarycontainer/pool"
-	"wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/librarynet/http/blademaster/middleware/antispam"
-	xtime "wwqdrh/handbook/librarytime"
+	"wwqdrh/handbook/library/cache/redis"
+	"wwqdrh/handbook/library/container/pool"
+	"wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/net/http/blademaster/middleware/antispam"
+	xtime "wwqdrh/handbook/library/time"
 )
 
 // This example create a antispam middleware instance and attach to a blademaster engine,

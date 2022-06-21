@@ -3,12 +3,12 @@ package aqm
 import (
 	"context"
 
-	"wwqdrh/handbook/librarycontainer/queue/aqm"
-	"wwqdrh/handbook/libraryecode"
-	bm "wwqdrh/handbook/librarynet/http/blademaster"
-	"wwqdrh/handbook/libraryrate"
-	"wwqdrh/handbook/libraryrate/limit"
-	"wwqdrh/handbook/librarystat/prom"
+	"wwqdrh/handbook/library/container/queue/aqm"
+	"wwqdrh/handbook/library/ecode"
+	bm "wwqdrh/handbook/library/net/http/blademaster"
+	"wwqdrh/handbook/library/rate"
+	"wwqdrh/handbook/library/rate/limit"
+	"wwqdrh/handbook/library/stat/prom"
 )
 
 const (

@@ -19,13 +19,13 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"wwqdrh/handbook/libraryconf/dsn"
-	"wwqdrh/handbook/libraryconf/env"
-	xlog "wwqdrh/handbook/librarylog"
-	"wwqdrh/handbook/librarynet/metadata"
-	"wwqdrh/handbook/librarynet/rpc/context"
-	"wwqdrh/handbook/librarynet/rpc/interceptor"
-	"wwqdrh/handbook/librarynet/trace"
+	"wwqdrh/handbook/library/conf/dsn"
+	"wwqdrh/handbook/library/conf/env"
+	xlog "wwqdrh/handbook/library/log"
+	"wwqdrh/handbook/library/net/metadata"
+	"wwqdrh/handbook/library/net/rpc/context"
+	"wwqdrh/handbook/library/net/rpc/interceptor"
+	"wwqdrh/handbook/library/net/trace"
 
 	pkgerr "github.com/pkg/errors"
 )

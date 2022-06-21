@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"wwqdrh/handbook/libraryconf/env"
-	"wwqdrh/handbook/libraryqueue/databus"
+	"wwqdrh/handbook/library/conf/env"
+	"wwqdrh/handbook/library/queue/databus"
 
 	"github.com/pkg/errors"
 )

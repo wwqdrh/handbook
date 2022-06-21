@@ -32,7 +32,7 @@ go_library(
     name = "go_default_library",
     srcs = ["databus.go"],
     embed = [":databus_go_proto"],
-    importpath = "wwqdrh/handbook/libraryqueue/databus",
+    importpath = "wwqdrh/handbook/library/queue/databus",
     tags = ["automanaged"],
     deps = [
         "//library/cache/redis:go_default_library",
@@ -71,7 +71,7 @@ proto_library(
 go_proto_library(
     name = "databus_go_proto",
     compilers = ["@io_bazel_rules_go//proto:gogofast_proto"],
-    importpath = "wwqdrh/handbook/libraryqueue/databus",
+    importpath = "wwqdrh/handbook/library/queue/databus",
     proto = ":databus_proto",
     tags = ["automanaged"],
     deps = ["@com_github_gogo_protobuf//gogoproto:go_default_library"],
