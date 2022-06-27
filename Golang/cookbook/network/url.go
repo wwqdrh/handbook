@@ -6,12 +6,9 @@ import (
 	"net/url"
 )
 
-func ParseURL() {
-
-	// 我们将解析这个 URL 示例，它包含了一个 scheme、
-	// 认证信息、主机名、端口、路径、查询参数以及查询片段。
-	s := "postgres://user:pass@host.com:5432/path?k=v#f"
-
+// 我们将解析这个 URL 示例，它包含了一个 scheme、
+// 认证信息、主机名、端口、路径、查询参数以及查询片段。
+func ParseURL(s string) {
 	// 解析这个 URL 并确保解析没有出错。
 	u, err := url.Parse(s)
 	if err != nil {
@@ -45,5 +42,4 @@ func ParseURL() {
 	fmt.Println(u.RawQuery)
 	m, _ := url.ParseQuery(u.RawQuery)
 	fmt.Println(m)
-	fmt.Println(m["k"][0])
 }
