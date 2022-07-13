@@ -155,10 +155,10 @@ func MultiProducerConsumer() {
 	//用channel来传递"产品", 不再需要自己去加锁维护一个全局的阻塞队列
 	ch := make(chan int)
 	go producer("生产者1", ch)
-	go producer("生产者2", ch)
+	// go producer("生产者2", ch)
 	go consumer("消费者1", ch)
 	go consumer("消费者2", ch)
-	time.Sleep(10 * time.Second)
+	time.Sleep(3 * time.Second)
 	close(ch)
-	time.Sleep(10 * time.Second)
+	time.Sleep(3 * time.Second)
 }
