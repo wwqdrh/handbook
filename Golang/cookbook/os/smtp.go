@@ -15,7 +15,6 @@ type Mail struct {
 }
 
 func SendSimpleEmail() {
-
 	sender := "john.doe@example.com"
 
 	to := []string{
