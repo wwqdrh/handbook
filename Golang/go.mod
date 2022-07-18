@@ -5,6 +5,7 @@ go 1.17
 require (
 	cloud.google.com/go/datastore v1.6.0
 	github.com/BurntSushi/toml v1.1.0
+	github.com/ClickHouse/clickhouse-go/v2 v2.2.0
 	github.com/afex/hystrix-go v0.0.0-20180502004556-fa1af6a1f4f5
 	github.com/antchfx/htmlquery v1.2.5
 	github.com/apex/go-apex v1.0.0
@@ -54,6 +55,7 @@ require (
 	github.com/rabbitmq/amqp091-go v1.3.4
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475
 	github.com/reactivex/rxgo v1.0.1
+	github.com/samsarahq/thunder v0.5.0
 	github.com/samuel/go-zookeeper v0.0.0-20201211165307-7117e9ea2414
 	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/sirupsen/logrus v1.8.1
@@ -100,7 +102,6 @@ require (
 require (
 	cloud.google.com/go v0.100.2 // indirect
 	cloud.google.com/go/compute v1.6.1 // indirect
-	github.com/ClickHouse/clickhouse-go/v2 v2.2.0 // indirect
 	github.com/DataDog/zstd v1.5.2 // indirect
 	github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible // indirect
 	github.com/KyleBanks/depth v1.2.1 // indirect
@@ -200,8 +201,11 @@ require (
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.32.1 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
+	github.com/rakyll/statik v0.1.7 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rjeczalik/notify v0.9.1 // indirect
+	github.com/samsarahq/go/oops v0.0.0-20220211150445-4b291d6feac4 // indirect
+	github.com/samsarahq/go/snapshotter v0.0.0-20220211150445-4b291d6feac4 // indirect
 	github.com/shopspring/decimal v1.3.1 // indirect
 	github.com/smartystreets/assertions v1.2.0 // indirect
 	github.com/spf13/afero v1.8.2 // indirect
