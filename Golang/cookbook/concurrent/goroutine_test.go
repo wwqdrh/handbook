@@ -2,14 +2,24 @@ package concurrent
 
 import (
 	"runtime"
+	"sync"
 	"testing"
 	"time"
 )
 
 func TestGroutinTimeout(t *testing.T) {
-	for i := 0; i < 1000; i++ {
-		timeout(doGoodthing)
+	wait := sync.WaitGroup{}
+	for i := 0; i < 10; i++ {
+		wait.Add(1)
+		go func() {
+			defer wait.Done()
+			timeout(5*time.Second, doGoodthing)
+		}()
 	}
-	time.Sleep(time.Second * 2)
+	wait.Wait()
 	t.Log(runtime.NumGoroutine())
+}
+
+func TestCrossPrint(t *testing.T) {
+	crossPrint()
 }
