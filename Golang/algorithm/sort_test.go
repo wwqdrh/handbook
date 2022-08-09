@@ -60,3 +60,13 @@ func TestMutilFieldSort(t *testing.T) {
 
 	fmt.Println(records)
 }
+
+func TestMergerMulti(t *testing.T) {
+	nums := [][]int{
+		{3, 4, 6, 7, 8, 10},
+		{3, 5, 34, 123},
+		{3, 6, 13, 35},
+	}
+
+	fmt.Println(mergeMulti(nums))
+}

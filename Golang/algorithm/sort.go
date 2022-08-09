@@ -297,6 +297,33 @@ func merge(left []int, right []int) []int {
 	return result
 }
 
+// n路归并 n=len(nums)
+func mergeMulti(nums [][]int) []int {
+	var result []int
+
+	n := len(nums)
+	idxs := make([]int, n) // 记录各个部分当前遍历到的数据的下标
+	for {
+		// 选取最小的一个加入到数据中，并将这个
+		minVal := 1 << 31
+		minIdx := -1
+		for i := 0; i < n; i++ {
+			if idxs[i] < len(nums[i]) && nums[i][idxs[i]] < minVal {
+				minVal = nums[i][idxs[i]]
+				minIdx = i
+			}
+		}
+		if minIdx == -1 {
+			// 没有数据了
+			break
+		}
+
+		result = append(result, minVal)
+		idxs[minIdx]++
+	}
+	return result
+}
+
 /*
 sort.Ints 性能测试 https://codeforces.com/contest/977/submission/75301978
 BFPRT https://en.wikipedia.org/wiki/Median_of_medians
