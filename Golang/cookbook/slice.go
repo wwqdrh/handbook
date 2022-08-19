@@ -2,6 +2,7 @@ package cookbook
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func doArray(a [4]int) {
@@ -108,4 +109,14 @@ func DoSlice3(n int) {
 	fmt.Printf("slice2: %p %p\n", slice2, &slice2)
 	slice2 = append(slice2, 100)
 	fmt.Printf("slice2: %p %p\n", slice2, &slice2)
+}
+
+func arr2slice() {
+	a := [...]int{1, 2, 3}
+	b := a[:]
+	fmt.Println(b)
+
+	fmt.Println(reflect.TypeOf(b))
+
+	fmt.Println(reflect.TypeOf(b).Kind())
 }

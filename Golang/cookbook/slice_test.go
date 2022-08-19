@@ -13,3 +13,7 @@ func TestSliceDo2(t *testing.T) {
 func TestDoSlice(t *testing.T) {
 	DoSlice3(3)
 }
+
+func TestArr2Slice(t *testing.T) {
+	arr2slice()
+}
