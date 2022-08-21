@@ -162,3 +162,34 @@ func MultiProducerConsumer() {
 	close(ch)
 	time.Sleep(3 * time.Second)
 }
+
+func immediateClose() {
+	ch := make(chan int, 100)
+	close(ch)
+
+	// A
+	go func() {
+		defer func() {
+			if err := recover(); err != nil {
+				fmt.Println("a error: ", err)
+			}
+		}()
+		for i := 0; i < 10; i++ {
+			ch <- i
+		}
+	}()
+	// B
+	go func() {
+		for {
+			a, ok := <-ch
+			if !ok {
+				fmt.Println("close")
+				return
+			}
+			fmt.Println("a: ", a)
+		}
+	}()
+	fmt.Println("ok")
+	time.Sleep(time.Second * 10)
+	fmt.Println("here")
+}

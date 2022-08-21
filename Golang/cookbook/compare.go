@@ -5,6 +5,14 @@ import (
 	"reflect"
 )
 
+func compareNil() {
+	var a map[int]int
+	fmt.Println(a == nil)
+
+	var b interface{} = a
+	fmt.Println(b == nil)
+}
+
 func comparePointer() {
 	var a *int
 	var b *string

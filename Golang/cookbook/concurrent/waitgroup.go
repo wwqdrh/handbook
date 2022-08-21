@@ -45,3 +45,14 @@ func WaitTimeout(wg *sync.WaitGroup, timeout time.Duration) bool {
 
 	return <-ch
 }
+
+func multiadd() {
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		fmt.Println("1")
+		wg.Done()
+		// wg.Add(1) // 不能在调用了wait之后又添加add
+	}()
+	wg.Wait()
+}

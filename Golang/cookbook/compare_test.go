@@ -12,3 +12,7 @@ func TestComparePinter(t *testing.T) {
 func TestCompareMap(t *testing.T) {
 	fmt.Println(compareMap())
 }
+
+func TestCompareNil(t *testing.T) {
+	compareNil()
+}
