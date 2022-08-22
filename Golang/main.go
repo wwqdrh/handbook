@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 const (
@@ -57,7 +58,32 @@ func alwaysFalse() bool {
 	return false
 }
 
+func foo(s []int) {
+	// fmt.Printf("%p \n", &s) // 0xc00000c080
+	arrPointer := unsafe.Pointer(uintptr(unsafe.Pointer(&s)) + uintptr(0))
+	fmt.Printf("%d \n", uintptr(arrPointer))
+	s = append(s, 666)
+}
+
 func main() {
+	slice := []int{1, 2}
+	// fmt.Printf("%p \n", &slice) // 0xc00000c060
+	arrPointer := unsafe.Pointer(uintptr(unsafe.Pointer(&slice)) + uintptr(0))
+	// fmt.Printf("%p \n", arrPointer)
+	fmt.Printf("%d \n", uintptr(arrPointer))
+
+	foo(slice)
+	// fmt.Printf("%p \n", &slice) // 0xc00000c060
+	arrPointer = unsafe.Pointer(uintptr(unsafe.Pointer(&slice)) + uintptr(0))
+	fmt.Printf("%d \n", uintptr(arrPointer))
+
+	// fmt.Printf("%p \n", arrPointer)
+
+	numa, numb := 1, 2
+	fmt.Println(numa, numb)
+	numa, numb = numb, numa
+	fmt.Println(numa, numb)
+
 	aa0, aa, aa1, aa2, aa3 := byte(0), byte(1), byte(128), byte(64), byte(129)
 	fmt.Println(aa, -aa, aa0, -aa0, aa1, -aa1, aa2, -aa2, aa3, -aa3)
 	count := 0
