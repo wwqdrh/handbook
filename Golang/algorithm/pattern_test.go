@@ -17,11 +17,42 @@ func TestSunday(t *testing.T) {
 }
 
 func TestKMPString(t *testing.T) {
-	if StringKMP("abcdecdfg", "cdfg") != 5 {
-		t.Error("KMP算法出错")
+	tables := []struct {
+		word   string
+		match  string
+		expect int
+	}{
+		{"ababcababcdadsadsa", "abcabcdefabc", -1},
+		{"abcdecdfg", "cdfg", 5},
+		{"abcdecdeffg", "cdef", 5},
+		{"abcabcd", "abcd", 3},
+		{"abababcd", "ababcd", 2},
+		{"ababcababcd", "ababcd", 5},
 	}
-	if StringKMP("abcdecdeffg", "cdef") != 5 {
-		t.Error("KMP算法出错")
+	for i, table := range tables {
+		if StringKMP(table.word, table.match) != table.expect {
+			t.Error(fmt.Printf("%d - kmp匹配出错", i))
+		}
+	}
+}
+
+func TestKMPString2(t *testing.T) {
+	tables := []struct {
+		word   string
+		match  string
+		expect int
+	}{
+		{"abcabcdefbabcabcdefabc", "abcabcdefabc", 10},
+		{"abcdecdfg", "cdfg", 5},
+		{"abcdecdeffg", "cdef", 5},
+		{"abcabcd", "abcd", 3},
+		{"abababcd", "ababcd", 2},
+		{"ababcababcd", "ababcd", 5},
+	}
+	for i, table := range tables {
+		if stringkmp2(table.match, table.word) != table.expect {
+			t.Error(fmt.Printf("%d - kmp匹配出错", i))
+		}
 	}
 }
 

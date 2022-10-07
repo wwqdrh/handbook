@@ -278,8 +278,8 @@ func StringKMP(mainStr, subStr string) int {
 			idx := j
 			for ; idx > 1; idx-- {
 				if nextArr[idx] >= 1 {
-					i = i + (j - nextArr[j]) // 移动i, y
-					y = nextArr[j]
+					i = i + (idx - nextArr[idx]) // 移动i, y
+					y = nextArr[idx]
 					break
 				}
 			}
@@ -291,6 +291,56 @@ func StringKMP(mainStr, subStr string) int {
 		}
 	}
 	return index
+}
+
+func stringkmp2(pattern, word string) int {
+	m, n := len(pattern), len(word)
+
+	// 指定往前跳转
+	pi := make([]int, m)
+	j := 0
+	for i := 1; i < m; i++ {
+		if j > 0 && pattern[i] != pattern[j] {
+			j = pi[j-1]
+		}
+		if pattern[i] == pattern[j] {
+			j += 1
+		}
+		pi[i] = j
+	}
+
+	// kmp
+	i, y := 0, 0
+	// i+y: mainStr开始匹配的位置 y: subStr开始匹配的位置 index: 结果
+	for i <= n-m {
+		for j := y; j <= m; j++ {
+			// 匹配到一个
+			if j == m {
+				return i
+			}
+
+			// 相等继续
+			if word[i+j] == pattern[j] {
+				continue
+			}
+
+			// 这个位置匹配失败 根据nextArr寻找
+			idx := j
+			for ; idx > 1; idx-- {
+				if pi[idx] >= 1 {
+					i = i + (idx - pi[idx] + 1) // 移动i, y
+					y = pi[idx]
+					break
+				}
+			}
+			if idx <= 1 {
+				i++
+				y = 0
+			}
+			break
+		}
+	}
+	return -1
 }
 
 // BM算法也是一种精确字符串匹配算法，它采用从右向左比的方法，

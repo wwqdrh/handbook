@@ -17,3 +17,7 @@ func TestDoSlice(t *testing.T) {
 func TestArr2Slice(t *testing.T) {
 	arr2slice()
 }
+
+func TestSliceSort(t *testing.T) {
+	slicesort()
+}

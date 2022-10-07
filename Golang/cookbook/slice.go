@@ -3,6 +3,7 @@ package cookbook
 import (
 	"fmt"
 	"reflect"
+	"sort"
 )
 
 func doArray(a [4]int) {
@@ -119,4 +120,13 @@ func arr2slice() {
 	fmt.Println(reflect.TypeOf(b))
 
 	fmt.Println(reflect.TypeOf(b).Kind())
+}
+
+func slicesort() {
+	nums := []int{2, 3, 4, 12, 12, 3, 4, 1, 4}
+	sort.Slice(nums, func(i, j int) bool {
+		fmt.Println(i, j)
+		return true
+	})
+	fmt.Println(nums)
 }
