@@ -1,0 +1,64 @@
+version: "3"
+
+networks:
+  ap:
+
+services:
+  mysql_1_master:
+    image: mysql/master1
+    networks:
+      - ap
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=123456
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 3307:3306
+  
+  mysql_2_master:
+    image: mysql/master2
+    networks:
+      - ap
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=123456
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 3308:3306
+    
+  mysql_1_slave1:
+    image: mysql/slave1
+    networks:
+      - ap
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=123456
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 3309:3306
+  
+  mysql_2_slave2:
+    image: mysql/slave2
+    networks:
+      - ap
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=123456
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 3310:3306
+
+
+  
