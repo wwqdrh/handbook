@@ -1,0 +1,43 @@
+version: "3"
+
+networks:
+  cluster:
+
+volumes:
+  mysqlcluster:
+    external: true
+
+services:
+  mysql1:
+    image: mysql/mysql-server:8.0
+    networks:
+      - cluster
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysqlcluster:/var/lib/mysql
+
+  mysql2:
+    image: mysql/mysql-server:8.0
+    networks:
+      - cluster
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysqlcluster:/var/lib/mysql        # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Mysql 数据的目录挂载到容器中 /var/lib/mysql 目录
+  
+  mysql3:
+    image: mysql/mysql-server:8.0
+    networks:
+      - cluster
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysqlcluster:/var/lib/mysql        # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Mysql 数据的目录挂载到容器中 /var/lib/mysql 目录
