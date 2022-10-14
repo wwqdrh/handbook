@@ -1,0 +1,89 @@
+version: "3.9"
+
+networks:
+  redis-network:
+
+services:
+  # redis-proxy:
+  #   image: wwqdrh/redis-proxy
+  #   networks:
+  #     - redis-network
+  #   command: 'redis-cluster-proxy 10.0.0.11:6379 10.0.0.12:6379 10.0.0.13:6379 10.0.0.14:6379 10.0.0.15:6379 10.0.0.16:6379'
+  #   depends_on:
+  #     - redis-cluster
+
+  redis-cluster:
+    image: redis:6-alpine
+    command: 'redis-cli --cluster create 
+    redis1:6379 redis2:6379 redis3:6379 
+    redis4:6379 redis5:6379 redis6:6379 
+    --cluster-yes --cluster-replicas 1'
+    networks:
+      - redis-network
+    depends_on:
+      - redis1
+      - redis2
+      - redis3
+      - redis4
+      - redis5
+      - redis6
+
+  redis1:
+    image: redis:6-alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - redis-network
+    volumes:
+      - type: bind
+        source: ./redis.conf
+        target: /usr/local/etc/redis/redis.conf
+  
+  redis2:
+    image: redis:6-alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - redis-network
+    volumes:
+      - type: bind
+        source: ./redis.conf
+        target: /usr/local/etc/redis/redis.conf
+  
+  redis3:
+    image: redis:6-alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - redis-network
+    volumes:
+      - type: bind
+        source: ./redis.conf
+        target: /usr/local/etc/redis/redis.conf
+  
+  redis4:
+    image: redis:6-alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - redis-network
+    volumes:
+      - type: bind
+        source: ./redis.conf
+        target: /usr/local/etc/redis/redis.conf
+  
+  redis5:
+    image: redis:6-alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - redis-network
+    volumes:
+      - type: bind
+        source: ./redis.conf
+        target: /usr/local/etc/redis/redis.conf
+  
+  redis6:
+    image: redis:6-alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - redis-network
+    volumes:
+      - type: bind
+        source: ./redis.conf
+        target: /usr/local/etc/redis/redis.conf

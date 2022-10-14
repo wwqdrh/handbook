@@ -1,4 +1,4 @@
-SHELL := /bin/bash -o pipefile
+SHELL := /bin/bash -o pipefail
 
 .PHONY: grant
 grant:
