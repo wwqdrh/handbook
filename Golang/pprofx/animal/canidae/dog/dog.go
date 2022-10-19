@@ -3,7 +3,7 @@ package dog
 import (
 	"log"
 
-	"github.com/wolfogre/go-pprof-practice/constant"
+	"pprofx/constant"
 )
 
 type Dog struct {

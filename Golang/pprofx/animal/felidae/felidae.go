@@ -1,6 +1,6 @@
 package felidae
 
-import "github.com/wolfogre/go-pprof-practice/animal"
+import "pprofx/animal"
 
 type Felidae interface {
 	animal.Animal

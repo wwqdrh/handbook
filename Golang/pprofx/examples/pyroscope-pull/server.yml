@@ -1,0 +1,12 @@
+---
+log-level: debug
+scrape-configs:
+  - job-name: testing
+    enabled-profiles: [cpu, mem, goroutines, mutex, block]
+    static-configs:
+      - application: test-app
+        spy-name: gospy
+        targets:
+          - code-server:6060
+        labels:
+          env: dev

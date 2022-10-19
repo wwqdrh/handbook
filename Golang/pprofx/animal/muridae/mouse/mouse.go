@@ -3,7 +3,7 @@ package mouse
 import (
 	"log"
 
-	"github.com/wolfogre/go-pprof-practice/constant"
+	"pprofx/constant"
 )
 
 type Mouse struct {

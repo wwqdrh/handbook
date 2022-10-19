@@ -1,6 +1,6 @@
 package muridae
 
-import "github.com/wolfogre/go-pprof-practice/animal"
+import "pprofx/animal"
 
 type Muridae interface {
 	animal.Animal
