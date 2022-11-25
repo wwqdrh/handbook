@@ -11,7 +11,7 @@ void Merge(int A[], int p, int q, int r)
         L[i] = A[p + i];
     L[n1] = 1000000;
     for (int j = 0; j < n2; ++j)
-        R[i] = A[q + i + 1];
+        R[j] = A[q + j + 1];
     R[n2] = 1000000;
     i = j = 0;
     while (p <= r)
