@@ -4,35 +4,14 @@ version = "0.1.0"
 authors = ["wwqdrh <huiloademail@163.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 rand = "0.8.0"
 piston_window = "0.122.0"
-# html parser
 nipper = "0.1.9"
 anyhow = "1"
 lazy_static = "1.4"
-# regex
 regex = "1.5.5"
-# http client
 reqwest = { version = "0.11", features = ["blocking", "json"] }
 clap = {version = "3.1.8", features = ["derive"]}
 crossbeam-channel = "0.5"
 crossterm = "0.23"
-
-[[example]]
-name = "rsnake"
-path = "examples/rsnake.rs"
-
-[[example]]
-name = "ipsniffer"
-path = "examples/ipsniffer.rs"
-
-[[example]]
-name = "chat-server"
-path = "examples/chat-server.rs"
-
-[[example]]
-name = "chat-client"
-path = "examples/chat-client.rs"

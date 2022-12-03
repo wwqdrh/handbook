@@ -1,4 +1,5 @@
 use std::{fs, io::prelude::*};
+
 /**
  * webserver主要涉及两个主要协议、超文本传输(http)以及传输控制协议(tcp)
 */
@@ -6,7 +7,7 @@ use std::{
     net::{TcpListener, TcpStream},
     thread,
 };
-use crate::ThreadPool;
+use crate::server::pool::ThreadPool;
 
 fn handle_connection(mut stream: TcpStream) {
     let mut buffer = [0; 1024]; // 1024个字节的缓冲区
