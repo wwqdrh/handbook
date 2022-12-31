@@ -1,3 +1,5 @@
+使用`github.com/samsarahq/thunder`包构建graphql service
+
 核心就是
 
 ```go
