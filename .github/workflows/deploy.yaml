@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: ./gendoc.sh ./rust/src rs && cp -r ./docs /tmp/docs
+      - run: ./gendoc.sh ./rust/src rs && ./gendoc.sh ./Python/src py && ./gendoc.sh ./cpp/src cpp && cp -r ./docs /tmp/docs
       - name: Checkout code
         uses: actions/checkout@v2
         with:

@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::path::Path;
 
-// 创建文件并写入一些内容
+// @autodoc title 创建文件
 fn createFile() -> std::io::Result<()> {
     let mut file = File::create("foo.txt")?;
     file.write_all(b"Hello, world!")?;
@@ -10,7 +10,7 @@ fn createFile() -> std::io::Result<()> {
 }
 
 
-// @autodoc title: 读取文件
+// @autodoc title 读取文件
 fn cat(path: &Path) -> std::io::Result<String> {
     let mut f = File::open(path)?;
     let mut s = String::new();
@@ -18,19 +18,19 @@ fn cat(path: &Path) -> std::io::Result<String> {
     Ok(s)
 }
 
-// 删除文件
+// @autodoc title 删除文件
 fn deleteFile() -> std::io::Result<()> {
     fs::remove_file("foo.txt")?;
     Ok(())
 }
 
-// 创建文件夹
+// @autodoc title 创建文件夹
 fn createFolder() -> std::io::Result<()> {
     fs::create_dir("bar")?;
     fs::create_dir_all("a/b/c")?;
 }
 
-// 删除文件夹
+// @autodoc title 删除文件夹
 fn deleteFolder() -> std::io::Result<()> {
     fs::remove_dir("bar")?;
     fs::remove_dir_all("a")?;
