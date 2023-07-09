@@ -1,0 +1,28 @@
+name: Gitpage Deploy
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: ./gendoc.sh ./rust/src rs && cp -r ./docs /tmp/docs
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          repository: wwqdrh/wwqdrh.github.io
+          branch: main
+          token: ${{ secrets.REPO_TOKEN }}
+      - name: Copy files
+        run: cp -r /tmp/docs cookbook
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "update cookbook"
+          git push --force origin main

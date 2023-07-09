@@ -1,0 +1,11 @@
+<html><head><title>Result</title></head><body><ul>
+<li>./rust/src/file.rs: title: 读取文件</li>
+<pre><code>
+fn cat(path: &amp;Path) ->gt; std::io::Result<lt;String>gt; {
+let mut f = File::open(path)?;
+let mut s = String::new();
+f.read_to_string(&amp;mut s)?;
+Ok(s)
+}
+</code></pre>
+</ul></body></html>
