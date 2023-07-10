@@ -18,7 +18,7 @@ jobs:
           branch: main
           token: ${{ secrets.REPO_TOKEN }}
       - name: Copy files
-        run: cp -r /tmp/docs cookbook
+        run: rm -rf cookbook && cp -r /tmp/docs/* cookbook/
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions"
