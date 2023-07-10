@@ -1,4 +1,5 @@
 use std::fs::File;
+use std::fs;
 use std::io::prelude::*;
 use std::path::Path;
 
@@ -28,6 +29,7 @@ fn deleteFile() -> std::io::Result<()> {
 fn createFolder() -> std::io::Result<()> {
     fs::create_dir("bar")?;
     fs::create_dir_all("a/b/c")?;
+    Ok(())
 }
 
 // @autodoc title 删除文件夹
