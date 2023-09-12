@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// @autodoc title 向文件写入内容
 void writeFileFromString(const string &filename, const string &body)
 {
     ofstream ofile(filename);

@@ -1,2 +1,2 @@
 doc:
-	./gendoc.sh ./rust/src rs && ./gendoc.sh ./Python/src py && ./gendoc.sh ./cpp/src cpp
+	rm -rf docs/_sidebar.md && ./gendoc.sh ./rust/src rs && ./gendoc.sh ./python/src py && ./gendoc.sh ./cpp/src cpp

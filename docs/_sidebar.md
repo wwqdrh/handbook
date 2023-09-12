@@ -5,6 +5,7 @@
 * [python](assets/python/README.md)
 ** [file.py](assets/py/file.py.md)
 * [cpp](assets/cpp/README.md)
-** [1036.Escape-a-Large-Maze.cpp](assets/cpp/1036.Escape-a-Large-Maze.cpp.md)
+** [1036.Escape-a-Large-Maze.cpp](assets/cpp/algorithm/bfs/1036.Escape-a-Large-Maze.cpp.md)
 ** [file.cpp](assets/cpp/file.cpp.md)
 ** [encoding.cpp](assets/cpp/encoding.cpp.md)
+** [file.cpp](assets/cpp/os/file.cpp.md)

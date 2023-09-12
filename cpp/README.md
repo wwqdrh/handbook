@@ -1,3 +1,20 @@
+# usage
+
+
+```bash
+wget https://xmake.io/shget.text -O - | bash
+
+xmake project -k compile_commands
+
+xmake build test_os
+
+xmake run test_os
+```
+
+# 语法
+
+c++17, 才有std::filesystem
+
 1、包含基础语法
 2、各个版本之间的新增语法
 

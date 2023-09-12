@@ -33,18 +33,22 @@ fi
 
 # 创建[文件名].md文件
 mkdir -p "docs/assets/$suffix"
-echo "* [$language](assets/$language/README.md)" >> $sidebar
+echo "* [$language](assets/$suffix/README.md)" >> $sidebar
+
+mdcontent=$(cat $language/README.md)
+echo $mdcontent > docs/assets/$suffix/README.md
 
 # 遍历路径下的所有文件
 for file in $(find $path -type f -name "*.$suffix"); do
   # 获取文件名和文件路径
   filename=$(basename -- "$file")
-  filepath=$(dirname -- "$file")
-  echo "** [$filename](assets/$suffix/$filename.md)" >> $sidebar
+  filedirpath=$(dirname -- "$file")
+  fileprefix="${filedirpath#$path}"
 
-  mdindexfile="docs/assets/$suffix/README.md"
-  echo "some code" > $mdindexfile
-  mdfile="docs/assets/$suffix/$filename.md"
+  echo "** [$filename](assets/$suffix$fileprefix/$filename.md)" >> $sidebar
+  mddir="docs/assets/$suffix$fileprefix"
+  mkdir -p $mddir
+  mdfile="$mddir/$filename.md"
   echo "" > $mdfile
 
   # 设置一个标志位，表示是否开始读取代码块
