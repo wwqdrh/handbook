@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: ./gendoc.sh ./rust/src rs && ./gendoc.sh ./Python/src py && ./gendoc.sh ./cpp/src cpp && cp -r ./docs /tmp/docs
+      - run: make doc && cp -r ./docs /tmp/docs
       - name: Checkout code
         uses: actions/checkout@v2
         with:
@@ -18,7 +18,7 @@ jobs:
           branch: main
           token: ${{ secrets.REPO_TOKEN }}
       - name: Copy files
-        run: rm -rf cookbook && cp -r /tmp/docs/* cookbook/
+        run: rm -rf cookbook && mkdir cookbook && cp -r /tmp/docs/* cookbook/
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions"
